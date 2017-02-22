@@ -1,6 +1,6 @@
 语言：
 1，熟练掌握html5，css3，javascript，ajax
-2，掌握PHP、java、pyphon中至少一种web开发语言（不少公司都有特定需求吧，奇虎还招golang）
+2，掌握PHP、java、pyphon中至少一种web开发语言
 
 3，框架/库:MooTools,YUI,Angular,jQuery,Dojo.
 
