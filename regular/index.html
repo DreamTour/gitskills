@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regular</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .body-bg {
+            height: 1000px;
+            background: url(bg.png) repeat-x #eae2d7;
+        }
+        .login_box {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            width: 960px;
+            height: 340px;
+            background: url(larger_img.jpg) no-repeat;
+        }
+        .login_form {
+            position: absolute;
+            left: 120px;
+            bottom: -110px;
+        }
+        .labels {
+            display: inline-block;
+            width: 80px;
+            text-align: right;
+            margin-right: 10px;
+            margin-top: 24px;
+        }
+        .inputs {
+            width: 235px;
+            height: 27px;
+            line-height: 27px;
+            padding: 0 5px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #93735b;
+            border: 2px solid #d5c7b3;
+        }
+        .btn {
+            width: 82px;
+            height: 32px;
+            margin-left: 50px;
+            border: 0 none;
+            background: url(login.jpg) no-repeat;
+            text-align: center;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="body-bg">
+    <div class="login_box">
+        <form name="" action="" method="post" class="login_form">
+            <label class="labels">用户名</label><input name="" type="text" value="" class="inputs" id="user_name" />
+            <label class="labels">密码</label><input name="" type="password" value="" class="inputs" id="user_pas" /><br />
+            <label class="labels">手机号码</label><input name="" type="text" value="" class="inputs" id="user_tel" />
+            <input name="" type="button" value="登录" class="btn" id="user_btn" />
+        </form>
+    </div>
+</body>
+<script>
+    window.onload = function() {
+        /**
+         *
+         * @param nameId 用户名
+         * @param pasId 密码
+         * @param telId 手机号码
+         */
+        function validate(nameId, pasId, telId){
+            //声明变量
+            var regName = new RegExp("^[0-9]*$");
+            var regPas = new RegExp("^[0-9]*$");
+            var regTel = new RegExp("^[0-9]*$");
+            var objName = document.getElementById(nameId);
+            var objPas = document.getElementById(pasId);
+            var objTel = document.getElementById(telId);
+
+            //判断输入是否符合正则标准
+            if ( !regName.test (objName.value) && objName.value == "" ) {
+                alert("用户名是由2-4个汉字组成");
+            }
+            else {
+               alert("登录成功");
+            }
+            if ( !regPas.test (objPas.value) && objPas.value == "" ) {
+                alert("密码是由5-10位字母加数字组成");
+            }
+            else {
+                alert("登录成功");
+            }
+            if ( !regTel.test (objTel.value) && objTel.value == "" ) {
+                alert("请输入正确的电话号码");
+            }
+            else {
+                alert("登录成功");
+            }
+
+        }
+
+        //当按钮点击的时候执行验证函数
+        var btn = document.getElementById("user_btn");
+        btn.onclick = function() {
+            validate("user_name", "user_pas", "user_tel");
+        };
+    };
+</script>
+</html>
