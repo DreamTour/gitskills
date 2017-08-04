@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type='text/javascript' src='http://www.yumukeji.com/library/jquery-1.11.2.min.js'></script>
+</head>
+<body>
+<div class="fadeBanner">
+	<ul class="fadeList">
+  	<li style="background:#F90"></li>
+    <li style="background:#6CF"></li>
+    <li style="background:#0CF"></li>
+  </ul>
+  <ul class="fadeSort"></ul>
+</div>
+<style>
+*{ margin:0; padding:0;}
+ul,li{ list-style-type:none;}
+
+img{ border:none; display:block; width:100%;}
+.fadeBanner{ position:relative; width:600px; margin:100px auto; overflow:hidden;}
+.fadeBanner .fadeList{ height:375px;}
+.fadeBanner .fadeList li{ position:absolute; width:600px; height:375px;}
+.fadeSort{ position:absolute; bottom:10px; z-index:1; width:100%; text-align:center;}
+.fadeSort li{ display:inline-block; color:transparent; width:10px; height:10px; border-radius:50%; background:#fff; margin:0 3px;}
+.cur{ background:#F60 !important}
+</style>
+<script>
+
+$(function(){
+	fadeBanner({
+		fadeList:'.fadeList',
+		fadeSort:'.fadeSort'
+	})	
+})
+function fadeBanner(a){
+		
+		var timer = null;
+		var conf = {
+				list:$(a.fadeList),
+				sorts:$(a.fadeSort)
+		},
+		length = conf.list.find('li').length;
+		//创建排序号
+		for(var i = 0;i<length;i++){
+				conf.sorts.append('<li>'+i+'</li>');
+		}
+		
+		conf.sorts.find('li:first').addClass('cur');
+		
+		var onSort = conf.sorts.find('li');
+		var index = 0;
+		onSort.click(function()
+		{
+			clearInterval(timer)
+			index = $(this).index();
+			$(this).addClass('cur').siblings().removeClass('cur');
+			setFade(conf.list.find('li'),index,300);
+			interval();
+		});
+		//渐变函数
+		var setFade = function(objFade,objIndex,animateTime){
+			objFade.eq(objIndex).animate({opacity:1},animateTime).css({'z-index':1}).siblings().animate({opacity:0},animateTime).css({'z-index':0})
+		}
+		//自动运行
+		var count = -1;
+		interval();
+		function interval(){
+			timer = setInterval(function(){
+				count++;
+				if(count == length){
+						count = 0;
+				}
+				onSort.eq(count).addClass('cur').siblings().removeClass('cur');
+				setFade(conf.list.find('li'),count,300);
+			},2500);
+		}
+		//鼠标事件
+		conf.list.find('li').mouseover(function(){
+			clearInterval(timer)
+		});
+		conf.list.find('li').mouseout(function(){
+			interval();
+		});
+}
+</script>
+</body>
+</html>

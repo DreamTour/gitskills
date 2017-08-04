@@ -1,0 +1,542 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>沈阳相亲-个人中心</title>
+<link type="text/css" rel="stylesheet" href="public_style.css">
+<link type="text/css" rel="stylesheet" href="personal_center.css">
+<script type='text/javascript' src='http://www.yumukeji.com/library/jquery-1.11.2.min.js'></script> 	
+</head>
+<body>
+<!--头部-->
+    	<div class="header">
+        	<a class="logo" href="javascript:;"><img src="images/logo.png"></a>
+            <div class="tel_number">
+            	<div class="tel_text"><i class="tel icon"></i>全国咨询热线</div>
+                <div class="number">13595807848</div>
+            </div>
+        </div>
+        <!--导航-->
+        <ul class="nav_bar of">
+            <li class="nav_pink fl"> <a href="index.html" class="fz16 col fw1">首页</a></li>
+            <li class="nav_pink fl"> <a href="personal_center.html" class="fz16">个人中心</a></li>
+            <li class="nav_pink fl"><a href="search.html" class="fz16">搜索意中人</a></li>
+            <li class="nav_pink fl"><a href="success_stories.html" class="fz16">牵手成功</a></li>
+            <li class="nav_pink fl"><a href="activity.html" class="fz16">活动展示 </a></li>
+            <li class="nav_pink fl"><a href="business.html" class="fz16">商务合作</a></li>      
+            <li class="nav_pink fl"><a href="contact_us.html" class="fz16">联系我们</a></li>
+        </ul>
+        <style>
+		.nav_current{background-color:#ff7f00;color:#fff;}
+		</style>
+        <script>
+		$(document).ready(function(){
+         	$(".nav_bar li").click(function(){
+				$(this).addClass(".nav_current").siblings().removeClass(".nav_current");
+			});   
+        });
+		</script>
+        <div class="line"></div>
+    <!--内容-->
+    <div class="personal_letter">
+   		<!--左边-->
+    	<div class="personal_box">
+        	<!--个人资料-->
+        	<div class="personal">
+				<img src="images/personal.png">
+            <div class="personal_message">
+                <div class="personal_message_head"><h2 class="personal_title">苏暮烟</h2><i class="personal_icon"></i></div>
+            </div>
+            <div class="function_tab_box">
+                <a class="function_tab" href="javascript:;"><span class="function_tab_message">4</span><div class="function_tab_text">信件</div></a>
+                <a class="function_tab function_tab_special" href="javascript:;"><span class="function_tab_message">8</span><div class="function_tab_text">礼物</div></a>
+                <a class="function_tab" href="activity.html"><span class="function_tab_message">25</span><div class="function_tab_text">活动</div></a>
+            </div>
+            <div class="look_box of">
+            	<a href="javascript:;" style="width:80px;border-right:1px solid #fff;">谁看过我</a>
+                <a href="javascript:;" style="margin-left:5px;">谁关注我</a>
+            </div>
+            </div>
+            <!--推荐服务-->
+            <div class="personal_service">
+            	<div class="ps-line of"><p class="fl"></p><h2 class="fl">推荐服务</h2></div>
+                <div class="personal_member">
+                	<i class="personal_service_icon personal_service_icon01"></i>
+                    <span>看信包月</span>
+                     <a href="javascript:;">开通</a>
+                     <p>当月免费查看所有信件</p>
+                     <p>尊贵会员身份标识</p>
+                </div>
+                <div class="personal_member">
+                	<i class="personal_service_icon personal_service_icon02"></i>
+                    <span>看信包年</span>
+                     <a href="javascript:;">开通</a>
+                     <p>当年免费查看所有信件</p>
+                     <p>尊贵会员身份标识</p>
+                </div>
+                <div class="personal_member">
+                	<i class="personal_service_icon personal_service_icon03"></i>
+                    <span>排名提前</span>
+                     <a href="javascript:;">开通</a>
+                     <p>个人资料优先展示</p>
+                     <p>吸引更多异性关注</p>
+                </div>
+                <div class="personal_member">
+                	<i class="personal_service_icon personal_service_icon04"></i>
+                    <span>查看微信</span>
+                     <a href="javascript:;">开通</a>
+                     <p>查看对方微信号</p>
+                     <p>沟通顺畅无阻碍</p>
+                </div>
+            </div>
+            <!--推广链接-->
+            <div class="ad_link">
+            	<h2 class="fz16 col fw2">邀请就送免费看信</h2>
+                <i class="link_icon"></i>
+                <p>A注册后推广给B B成功注册后 给予A一天24小时的免费看信的待遇 B推广C C成功注册后AB同时遇 B推广C C成功注册后AB同时．．．</p>
+                <a href="share.html" class="link_btn fz14">立即邀请领取</a>
+            </div>
+        </div>
+        <!--右边个人信息-->
+        <div class="center_box">
+        	<div class="center_head" id="tabBtn">
+            	<a href="javascript:;" class="current" data-num='1'>基本资料</a>
+                <a href="javascript:;" data-num='2'>我的相册</a>
+                <a href="javascript:;" data-num='3'>内心独白</a>
+                <a href="javascript:;" data-num='4'>择偶意向</a>
+            </div>
+             <!--基本资料-->
+            <div class="center_body switch_tab" data-show-num='1'>
+            	<!--基本信息-->
+            	<div class="basic_information">
+                	<h2>基本信息</h2>
+                  <div class="basic_information_content of">
+                  	<!--基本信息左边-->
+                 	 <div class="fl basic_information_left">
+                        <div class="information">
+                            <span>昵称：</span>
+                            <input type=“text”>
+                        </div>
+                        <div class="information">
+                            <span>性别：</span>
+                            <select>
+                            <option>请选择</option>
+                            <option>男</option>
+                            <option>女</option>
+                            </select>
+                        </div>
+                        <div class="information">
+                            <span>生日：</span>
+                            <select>
+                            <option>请选择</option>
+                            </select>
+                        </div>
+                        <div class="information">
+                            <span>星座：</span>
+                            <select>
+                            <option>请选择</option>
+                            <option>白羊座</option>
+                            <option>金牛座</option>
+                            <option>双子座</option>
+                            <option>巨蟹座</option>
+                            <option>狮子座</option>
+                            <option>处女座</option>
+                            <option>天秤座</option>
+                            <option>天蝎座</option>
+                            <option>射手座</option>
+                            <option>摩羯座</option>
+                            <option>水瓶座</option>
+                            <option>双鱼座</option>
+                            </select>
+                        </div>
+                        <div class="information">
+                            <span>属相：</span>
+                            <select>
+                            <option>请选择</option>
+                            <option>鼠</option>
+                            <option>牛</option>
+                            <option>虎</option>
+                            <option>兔</option>
+                            <option>龙</option>
+                            <option>蛇</option>
+                            <option>马</option>
+                            <option>羊</option>
+                            <option>猴</option>
+                            <option>鸡</option>
+                            <option>狗</option>
+                            <option>猪</option>
+                            </select>
+                        </div>
+                        <div class="information">
+                            <span>身高：</span>
+                            <select>
+                            <option>请选择</option>
+                            <option>150cm及以下</option>
+                            <option>150-155cm</option>
+                            <option>160-165cm</option>
+                            <option>165-170cm</option>
+                            <option>170-175cm</option>
+                            <option>175-180cm</option>
+                            <option>180-185cm</option>
+                            <option>185-190cm</option>
+                            <option>190cm及以上</option>
+                            </select>
+                        </div>
+                        <div class="information">
+                            <span>学历：</span>
+                            <select>
+                            <option>请选择</option>
+                            <option>请选择</option>
+                           	<option>高中及以下</option>
+                            <option>大专</option>
+                            <option>本科</option>
+                            <option>硕士</option>
+                            <option>博士及以上</option>
+                            </select>
+                        </div>
+                        <div class="information">
+                            <span>职业：</span>
+                            <input type=“text”>
+                        </div>
+                    </div>
+                    <!--基本信息右边-->
+                    <div class="fl information_r">
+                    <div class="information">
+                        <span>婚姻状况：</span>
+                        <select>
+                        <option>请选择</option>
+                        <option>未婚</option>
+                        <option>离异</option>
+                        <option>丧偶</option>
+                        </select>
+                    </div>
+                    <div class="information">
+                        <span>子女情况：</span>
+                        <select>
+                        <option>请选择</option>
+                        <option>无小孩</option>
+                        <option>有小孩归对方</option>
+                        <option>有小孩归自己</option>
+                        </select>
+                    </div>
+                    <div class="information">
+                        <span>所在地区：</span>
+                        <select>
+                        <option>请选择</option>
+                        </select>
+                    </div>
+                    <div class="information">
+                        <span>所在地区：</span>
+                        <select>
+                        <option>请选择</option>
+                        </select>
+                    </div>
+                    <div class="information">
+                        <span>月收入：</span>
+                        <select>
+                        <option>请选择</option>
+                        </select>
+                    </div>
+                    <div class="information">
+                        <span>购房情况：</span>
+                        <select>
+                        <option>请选择</option>
+                        <option>已购房</option>
+                        <option>暂未购房</option>
+                        </select>
+                    </div>
+                    <div class="information">
+                        <span>购车情况：</span>
+                        <select>
+                        <option>请选择</option>
+                        <option>已购车</option>
+                        <option>暂未购车</option>
+                        </select>
+                    </div>
+					<div class="information">
+                        <span>身份证号：</span>
+                        <input type=“text”>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <!--详细信息-->
+                <div class="contact_information of">
+                  <h2>详细信息</h2>
+                  <div class="contact_information_content fl" style="margin-right:140px;">
+					<div class="information02">
+                        <span>吸烟：</span>
+                        <select>
+                        <option>请选择</option>
+                        <option>不吸</option>
+                        <option>社交时偶尔吸</option>
+                        <option>有烟瘾</option>
+                        </select>
+                    </div>
+                    <div class="information02">
+                        <span>饮酒：</span>
+                        <select>
+                        <option>请选择</option>
+                        <option>不喝</option>
+                        <option>社交时偶尔喝</option>
+                        <option>每天都喝</option>
+                        </select>
+                    </div>
+					<div class="information02">
+                        <span>优点：</span>
+                        <input type=“text”>
+                    </div>
+                    <div class="information02">
+                        <span>缺点：</span>
+                        <input type=“text”>
+                    </div>
+                  </div>
+                  <div class="contact_information_content fl">
+                    <div class="information01">
+                        <span>贷款：</span>
+                        <select>
+                        <option>请选择</option>
+                        <option>有贷款</option>
+                        <option>无贷款</option>
+                        </select>
+                    </div>
+                    <div class="information01">
+                        <span>家中排行：</span>
+                        <select>
+                        <option>请选择</option>
+                        <option>独生子女</option>
+                        <option>老大</option>
+                        <option>老二</option>
+                        <option>老三及更小</option>
+                        <option>老幺</option>
+                        </select>
+                    </div>
+					<div class="information01">
+                        <span>兴趣爱好：</span>
+                        <input type=“text”>
+                    </div>
+                    <div class="information01">
+                        <span>微信号：</span>
+                        <input type=“text”>
+                    </div>
+                  </div>
+                </div>
+                <div class="center_btn_box"><button class="center_btn" type="submit">保存</button></div>
+            </div>
+            <!--我的相册-->
+            <div id="switch_tab" class="switch_tab" data-show-num='2' style="display:none;">
+                <div class="photo_album">
+                    <img src="images/album1.jpg">
+                    <img src="images/album1.jpg">
+                    <img src="images/album1.jpg">
+                    <img src="images/album1.jpg">
+                    <img src="images/album1.jpg">
+                    <img src="images/album1.jpg">
+                </div>
+                <div class="center_btn_box"><label id="upload-label" class="center_btn">上传</label> 
+                <input type="file" id="upload" style="display:none;"></div>
+            </div>
+            <!--内心独白-->
+            <div class="switch_tab" data-show-num='3' style="display:none;">
+            	<div class="monologue"><textarea>我想要的爱情两人心是善良的，因为生活中可以缺钱缺物质，但不能缺善良，缺物质与金钱可能是暂时的，缺善良有很大可能是长久的，善良是一个人为人处事的根基，根如果坏了，很多东西也会接着坏;我要的爱情两人都深深的信任着对方，只有信任才能同心，同心才能同行，信任是两人相处的根基;我要的爱情两人都有颗真诚忏悔的心，生活中谁都避免不了做错事，做错事后有颗真诚忏悔的心，才能走好以后人生的每一天，如果现在遇到这么一个女子，我不管你的过去，不管你现在如何如何，只要我们有些情况大致合适，我会用自己一颗真心对她，可以把自己的心完全交给她。我现在说的不是冲动的话，是经过深思熟虑才说这些话的，不管别人认为爱情有多复杂，我相信自己这三条简单的观点是没有错的。最后，我想说的是自己现在只是一个没什么学历没什么能力没什么家庭背景普通的不能再普通的一个普通人，我知道在现在很多人贪图物欲享受的今天，自己一无所有说再多语言都显得太苍白无力，望慎重考虑！的一个普通人，我知道在现在很多人贪图物欲享受的今天，自己一无所有说再多语言都显得太苍白无力，望慎重考虑！</textarea></div>
+                <div class="center_btn_box"><button class="center_btn" type="submit">保存</button></div>
+            </div>
+            <!--择偶意向-->
+        <div class="center_body switch_tab" data-show-num='4' style="display:none;">
+            	<!--基本信息-->
+            	<div class="basic_information">
+                	<h2>择偶意向</h2>
+                  <div class="basic_information_content of">
+                  	<!--择偶意向左边-->
+                 	 <div class="fl basic_information_left">
+                        <div class="information">
+                            <span>年龄：</span>
+                            <select>
+                            <option>请选择</option>
+                            </select>
+                        </div>
+                        <div class="information">
+                            <span>身高：</span>
+                            <select>
+                            <option>请选择</option>
+                            <option>150cm及以下</option>
+                            <option>150-155cm</option>
+                            <option>160-165cm</option>
+                            <option>165-170cm</option>
+                            <option>170-175cm</option>
+                            <option>175-180cm</option>
+                            <option>180-185cm</option>
+                            <option>185-190cm</option>
+                            <option>190cm及以上</option>
+                            </select>
+                        </div>
+                        <div class="information">
+                            <span>学历：</span>
+                            <select>
+                            <option>请选择</option>
+                            <option>请选择</option>
+                           	<option>高中及以下</option>
+                            <option>大专</option>
+                            <option>本科</option>
+                            <option>硕士</option>
+                            <option>博士及以上</option>
+                            </select>
+                        </div>
+                    <div class="information">
+                        <span>民族：</span>
+                        <select>
+                        <option>请选择</option>
+                        <option>汉</option>
+                        <option>少数民族</option>
+                        </select>
+                    </div>
+                    <div class="information">
+                            <span>职业：</span>
+                            <select>
+                            <option>请选择</option>
+                            </select>
+                    </div>
+                    </div>
+                    <!--择偶意向右边-->
+                    <div class="fl information_r">
+                    <div class="information">
+                        <span>婚姻状况：</span>
+                        <select>
+                        <option>请选择</option>
+                        <option>未婚</option>
+                        <option>离异</option>
+                        <option>丧偶</option>
+                        </select>
+                    </div>
+                    <div class="information">
+                        <span>所在地区：</span>
+                        <select>
+                        <option>请选择</option>
+                        </select>
+                    </div>
+                    <div class="information">
+                        <span>月收入：</span>
+                        <select>
+                        <option>请选择</option>
+                        </select>
+                    </div>
+                    <div class="information">
+                        <span>购房情况：</span>
+                        <select>
+                        <option>请选择</option>
+                        <option>已购房</option>
+                        <option>暂未购房</option>
+                        </select>
+                    </div>
+                    <div class="information">
+                        <span>购车情况：</span>
+                        <select>
+                        <option>请选择</option>
+                        <option>已购车</option>
+                        <option>暂未购车</option>
+                        </select>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+         <div class="center_btn_box"><button class="center_btn" type="submit">保存</button></div>
+        </div>
+        </div>
+    </div>
+    <script>
+	//文件上传
+	(function(){
+		var M={
+			getId:function(id){
+				return document.getElementById(id);
+			},
+			init:function(){
+				var label = M.getId('upload-label');
+				label.onclick= function(){
+					M.getId('upload').click();
+				}
+			}
+		}
+		M.init();
+	})()
+	//选修卡切换
+	$(function(){
+		$("#tabBtn>a").click(function(){
+			$(this).addClass('current').siblings().removeClass('current');
+			var num =$(this).attr("data-num");
+			$(".switch_tab").hide();
+			$("[data-show-num = "+num+"]").fadeIn(300);
+		});
+	});
+	</script>
+    <div class="ad">
+        <a href="javascript:;"><img src="images/personal_ad.jpg"></a>
+    </div>
+<!--底部-->
+    <div class='footer'>
+            	<div class='footer_title_box'>
+                   <p class="footer_title">联系方式</p>
+                </div>
+                <div class='footer_content'>
+                	<div class='footer_content_top'>
+                    	<ul class='footer_contact'>
+                        	<li>电话：13595807848</li>
+                            <li>传真：135958078481</li>
+                            <li>地址：重庆市南岸区国际社区海悦府15-2</li>
+                            <li>邮箱：2813140631@qq.com</li>
+                        </ul>
+                        <div class='footer_barcode'>
+                        	<a href='javascript:;'>
+                                <div class='footer_barcode_weixin'>
+                                    <div class='weixin_barcode'>
+                                    	<img src='images/weixin_code.png'>
+                                    </div>
+                                    <div class='weixin_text'>
+                                    	<h1>微信公众号</h1>
+                                        <p>每时每刻掌控最新动态随时随地知晓沈阳资讯</p>
+                                    </div>	
+                                </div>
+                            </a>
+                            <a href='javascript:;'>
+                            <div class='footer_barcode_weibo'>
+                                    <div class='weibo_barcode'>
+                                    	<img src='images/weixin_code.png'>
+                                    </div>
+                                    <div class='weibo_text'>
+                                    	<h1>微信公众号</h1>
+                                        <p>每时每刻掌控最新动态随时随地知晓沈阳资讯</p>
+                                    </div>	
+                            </div>
+                            </a>
+                            <a href='javascript:;'>
+                            <div class='footer_barcode_qq'>	
+                                    <div class='qq_barcode'>
+                                    	<img src='images/weixin_code.png'>
+                                    </div>
+                                    <div class='qq_text'>
+                                    	<h1>微信公众号</h1>
+                                        <p>每时每刻掌控最新动态随时随地知晓沈阳资讯</p>
+                                    </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class='footer_content_bottom'>
+                    	<div class="footer_content_box">
+                        	<a href='javascript:;'>首页</a>　<span>|</span>　
+                            <a href='javascript:;'>诚聘英才</a>　<span>|</span>　
+                            <a href='javascript:;'>沈阳地图</a>　<span>|</span>　
+                            <a href='javascript:;'>沈阳相亲</a>　<span>|</span>　
+                            <a href='javascript:;'>法律事务部</a>　<span>|</span>
+                            <a href='javascript:;'>联系方式</a>　<span>|</span>　
+                            <a href='javascript:;'>意见反馈</a>　<span>|</span>
+                            <a href='javascript:;'>最新资讯</a>
+                        </div>
+                        <p class="copyright">版权所有 © 沈阳相亲  渝ICP备：52136854号 技术支持：雨木科技</p>
+                        <p>免费咨询：13595807848 E-mail:2813140631@qq.com  地址：重庆市南岸区国际社区海悦府15-2</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .clear{zoom: 1;}
+        .clear:after{content: ""; display: block; clear: both;}
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .img-tab{width: 752px; height: 447px;}
+        .img-tab .small-img{width: 160px; height: 433px;}
+        .img-tab .small-img li{margin-bottom: 10px; padding:2px;}
+        .img-tab .small-img .active{ border: 1px solid #f00;}
+        .img-tab .big-img{width: 577px; height: 412px; position: relative;}
+        .img-tab .big-img li{float: left; position: absolute; top: 0;left: 0;}
+    </style>
+    <script src="jquery-3.1.0.min.js"></script>
+    <script>
+        $(function() {
+            //声明变量
+            var oDiv = $('.img-tab');
+            var aSLi = $('.img-tab .small-img ul li');
+            var aBLi = $('.img-tab .big-img ul li');
+            var iNow = 0;
+            var timer = null;
+            //初始化
+            fnFade();
+            //点击事件
+            aSLi.click(function() {
+                iNow = $(this).index();
+                fnFade();
+            });
+            //鼠标移入移出
+            oDiv.hover(function() {
+                clearInterval(timer);
+            }, autoPlay);
+            //自动播放
+            function autoPlay() {
+                timer = setInterval(function() {
+                    iNow++;
+                    iNow%=aSLi.length;
+                    fnFade();
+                }, 2000)
+            }
+            autoPlay();
+            //淡入淡出
+            function fnFade() {
+                aBLi.each(function(i) {
+                    if(i != iNow ) {
+                        aBLi.eq(i).fadeOut().css('zIndex',1);
+                        aSLi.eq(i).removeClass('active');
+                    } else {
+                        aBLi.eq(i).fadeIn().css('zIndex',2);
+                        aSLi.eq(i).addClass('active');
+                    }
+                })
+            }
+        });
+    </script>
+</head>
+<body>
+<div class="img-tab clear">
+    <div class="small-img fl">
+        <ul>
+            <li class="active"><img src="images/tab-img/1.jpg" width="150" height="100" alt="" /></li>
+            <li><img src="images/tab-img/2.jpg" width="150" height="100" alt="" /></li>
+            <li><img src="images/tab-img/3.jpg" width="150" height="100" alt="" /></li>
+        </ul>
+    </div>
+    <div class="big-img fr">
+        <ul>
+            <li><img src="images/tab-img/1.jpg" width="577" height="412" alt="" /></li>
+            <li><img src="images/tab-img/2.jpg" width="577" height="412" alt="" /></li>
+            <li><img src="images/tab-img/3.jpg" width="577" height="412" alt="" /></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

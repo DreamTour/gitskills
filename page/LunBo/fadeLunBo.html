@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+	body{
+		margin: 0;
+	}
+	ul{
+		margin: 0;
+		padding: 0;	
+		list-style: none;
+	}
+	img{
+		width: 100%;
+		display:block;
+		border: none;	
+	}
+   .ad_change{
+		height: 400px; 
+		position:relative;  
+	}
+	.change_main li{
+		position: absolute;
+		height: 400px;
+	}
+	.change_num{
+		position: absolute;	
+		top: 370px;
+		left: 900px;
+		z-index: 2;
+	}
+	.change_num li{
+		width: 30px;
+		height: 5px;
+		background: #fff;
+		display: inline-block;
+		margin-right: 5px;
+		color:transparent;
+		cursor: pointer;
+	}
+	.change_num .change_num-active{
+		background: green;	
+	}
+	.change_prev,.change_next{
+		display: block;
+		width: 30px;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		background: rgba(33,33,33,0.5);
+		font-size: 30px;
+		color: #fff;
+		position:absolute;
+		top: 170px;
+		z-index:2;	
+		cursor: pointer;
+	}
+	.change_prev{
+		left:0;		
+	}
+	.change_next{
+		right: 0;	
+	}
+</style>
+ 
+<script src="jquery-3.1.0.min.js" type="text/javascript"></script>
+<script>
+	$(function() {
+		changeBanner($('.change_main'), $('.change_num'));
+	})
+	
+	function changeBanner(changeMain,changeNum){
+		//声明变量
+		var mainLi = changeMain.find('li'),
+		container = $('.ad_change'),
+		count = 0,
+		timer = null,
+		length = mainLi.length,
+		prev = $('.change_prev'),
+		next = $('.change_next'),
+		flip = $('.ad_change').children('a');
+		
+		//创建序列号
+		for(var i=0;i<length;i++){
+			changeNum.append('<li></li>');	
+		} 
+		
+		//初始化
+		changeNum.find('li:first').addClass('change_num-active');
+		mainLi.eq(0).css({'z-index':2});
+		flip.hide();
+		
+		//设置变化函数
+		var numLi = changeNum.find('li');
+		function setChange(changeObj, changeIndex, changeTime) {
+			changeObj.eq(changeIndex).animate({opacity:1},changeTime).css({'z-index':2})
+			.siblings().animate({opacity:0},changeTime).css({'z-index':1});
+				
+			numLi.eq(changeIndex).addClass('change_num-active')
+				.siblings().removeClass('change_num-active');
+		}
+		
+		//numLI点击事件
+		numLi.click(function() {
+			clearInterval(timer);
+			$(this).addClass('change_num-active')
+			.siblings().removeClass('change_num-active');
+			setChange(mainLi,$(this).index(),300);
+			autoChange();
+		}) 	
+		
+		//自动运行
+		function autoChange(){
+			clearInterval(timer);
+			timer = setInterval(function() {	
+				count++;
+				if(count == length) {
+					count = 0;	
+				}
+				setChange(mainLi,count,300);
+			},2000);
+		}
+		autoChange();
+		
+		//鼠标移入移除
+		container.hover(function() {
+			clearInterval(timer);
+			flip.show();	
+		},function(){
+			autoChange();
+			flip.hide();	
+		})
+		
+		//向右点击
+		next.click(function() {
+			clearInterval(timer);
+			count++;
+			if(count == length) {
+				count = 0;	
+			}
+			setChange(mainLi,count,300);
+			return false;	
+		})
+		
+		//向左点击
+		prev.click(function() {
+			clearInterval(timer);
+			count--;
+			if(count == -length-1) {
+				count = -1;
+			}
+			setChange(mainLi,count,300);
+			return false;	
+		})
+		
+	}	
+</script>
+<!--<script type="text/javascript">
+	$(function() {
+            //声明变量
+            var oDiv = $('.ad_change');
+			var aMain = $('.change_main li');
+            var aSort = $('.change_num li');
+            var iNow = 0;
+            var timer = null;
+			
+            //初始化
+            fnFade();
+			
+            //点击事件
+            aSort.click(function() {
+                iNow = $(this).index();
+                fnFade();
+            });
+			
+            //鼠标移入移出
+            oDiv.hover(function() {
+                clearInterval(timer);
+            }, autoPlay);
+			
+            //自动播放
+            function autoPlay() {
+				clearInterval(timer);
+                timer = setInterval(function() {
+                    iNow++;
+                    iNow%=aSort.length;
+                    fnFade();
+                }, 2000)
+            }
+            autoPlay();
+			
+            //淡入淡出
+            function fnFade() {
+                aMain.each(function(index) {
+                    if(index != iNow ) {
+                        aMain.eq(index).fadeOut().css('zIndex',1);
+                        aSort.eq(index).removeClass('change_sotr-active');
+                    } else {
+                        aMain.eq(index).fadeIn().css('zIndex',2);
+                        aSort.eq(index).addClass('change_sotr-active');
+                    }
+                })
+            }
+        });	
+</script>-->
+
+<body>
+	<div class="ad_change">
+    	<ul class="change_main">
+        	<li><a href="#"><img src="1.jpg" /></a></li>
+        	<li><a href="#"><img src="2.jpg" /></a></li>
+            <li><a href="#"><img src="3.jpg" /></a></li>
+        </ul>
+        <ul class="change_num"></ul>
+        <a class="change_prev"><</a>
+        <a class="change_next">></a>
+    </div>
+</body>
+</html>

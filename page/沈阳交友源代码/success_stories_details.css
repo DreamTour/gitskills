@@ -1,0 +1,37 @@
+@charset "utf-8";
+.stories_details{
+	width:1000px;
+	margin:30px auto 50px;
+	border:1px solid #ff7c7c;
+}
+.go_back{
+	width:100%;
+	background-color:#fecad1;
+	padding-left:15px;
+}
+.go_back a{
+	color:#000;
+	line-height:40px;
+	font-size:14px;
+}
+.stories_header{
+	margin:auto;
+	width:950px;
+	text-align:center;
+	border-bottom:1px dashed #000;
+	margin-bottom:15px;
+}
+.stories_header h1{
+	line-height:50px;
+	font-size:18px;
+	color:#ff6600;
+}
+.stories_details p{
+	text-indent:2em;
+	color:#000;
+	font-size:14px;
+	margin-bottom:15px;
+}
+.stories_details_content{
+	padding:0 20px 30px;
+}

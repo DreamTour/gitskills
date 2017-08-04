@@ -1,0 +1,105 @@
+@charset "utf-8";
+/*广告*/
+.ad{
+	width:1000px;
+	height:90px;
+	clear:both;
+	margin:20px auto 15px;
+}
+/*左侧*/
+.share_content{width:1000px; margin:20px auto;}
+.share-left{width:680px;}
+.share_line{width:3px;height:20px;background-color:#ff7c7c;margin:4px 3px 0 0;}
+.share_list{margin-bottom:20px;}
+.share_list h5,.share_code{font-size:20px;}
+.share_code{color:#ff7c7c;}
+.sp{width:680px;padding:15px;line-height:24px;border:1px solid #ddd;margin-top:15px;}
+.share_table{width:340px;text-align:center;border:1px solid #ddd;}
+.share_table dt,.share_table dd{line-height:40px;}
+.share_table dt{color:#fff;background-color:#ff7c7c;font-size:16px;}
+.share_table dd{font-size:14px;border-bottom:1px solid #ddd;}
+.share_table:last-child{border-left:none;}
+.share_table dd:last-child{border:none;}
+/*右侧服务中心*/
+.meet_love{
+	border:1px solid #d9d9d9;
+}
+.meet_love{
+	width:280px;	
+	height:550px;
+	float:right;
+}
+.meet_love_title{
+	height:42px;
+	line-height:42px;
+	text-align:center;
+	background-color:#f6f6f6;	
+}
+.meet_love_icon{
+	margin:9px 5px 0 18px;
+	width:25px;
+	height:25px;
+	display:inline-block;
+	float:left;
+}
+.meet_love_icon{
+	background-position:-20px -199px;
+}
+.meet_love_title h2{
+	float:left;
+	font-size:16px;
+	font-weight:bold;
+	color:#000;
+}
+.shop_box{
+	height:126px;
+}
+.shop{
+	width:250px;
+	height:126px;
+	border-bottom:1px dotted #d9d9d9;
+	margin:0 15px;
+	padding-top:30px;
+}
+.shop_icon{
+	float:left;
+	display:inline-block;
+	width:65px;
+	height:65px;
+}
+.shop_icon01{
+	background-position:-90px -31px;
+}
+.shop_icon02{
+	background-position:-90px -105px;
+}
+.shop_icon03{
+	background-position:-90px -180px;
+}
+.shop_icon04{
+	background-position:-90px -262px;
+}
+.shop_text{
+	float:left;
+	margin-left:15px;
+}
+.shop_text_title{
+	font-size:14px;
+	color:#f55173;
+	text-decoration:underline;
+	margin-bottom:12px;
+}
+.shop_text_content1{
+	margin:10px 0 4px 0;
+}
+.shop_text_icon{
+	width:0;
+	height:0;
+	border-top:5px solid transparent;
+	border-bottom:5px solid transparent;
+	border-left:5px solid #f55173;
+	margin-right:2px;
+}
+#shop-special{
+	border-bottom:none;
+}

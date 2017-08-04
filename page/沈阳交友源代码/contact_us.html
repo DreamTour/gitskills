@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>相约盘州-关于我们</title>
+<link type="text/css" rel="stylesheet" href="public_style.css">
+<link type="text/css" rel="stylesheet" href="contact_us.css">
+</head>
+<script>
+	
+function firstChild(obj){
+	return obj.firstChild.previousSibling;	
+}
+
+window.onload = function(){
+	
+	console.log(firstChild(document.getElementById('div')))
+		
+}	
+</script>
+
+
+
+<body>
+<!--头部-->
+    	<div class="header">
+        	<a class="logo" href="javascript:;"><img src="images/logo.png"></a>
+            <div class="tel_number">
+            	<div class="tel_text"><i class="tel icon"></i>全国咨询热线</div>
+                <div class="number">13595807848</div>
+            </div>
+        </div>
+        <!--导航-->
+        <ul class="nav_bar of">
+            <li class="nav_pink fl"> <a href="index.html" class="fz16 col fw1">首页</a></li>
+            <li class="nav_pink fl"> <a href="personal_center.html" class="fz16">个人中心</a></li>
+            <li class="nav_pink fl"><a href="search.html" class="fz16">搜索意中人</a></li>
+            <li class="nav_pink fl"><a href="success_stories.html" class="fz16">牵手成功</a></li>
+            <li class="nav_pink fl"><a href="activity.html" class="fz16">活动展示 </a></li>
+            <li class="nav_pink fl"><a href="business.html" class="fz16">商务合作</a></li>      
+            <li class="nav_pink fl"><a href="contact_us.html" class="fz16">联系我们</a></li>
+        </ul>
+        <div class="line"></div>
+    <!--内容-->
+        <div class="contact_us">
+        	<div id="tabBtn" class="contact_us_head">
+            	<a href="javascript:;" class="current">公司介绍</a>
+                <a href="javascript:;">联系我们</a>
+            </div>
+            <div class="switch_tab">
+            	<div class="company_info">
+            	<h1>沈阳相亲网络科技有限公司</h1>
+                <div class="company_info_content">
+                    <p>沈阳相亲络科技有限公司，成立于2016年11月，在这个收获的季节里，我们正蓄势待发，相亲约会策划有限公司致力于打造中国最大、最专业的浪漫约会、创意约会、约会专家、单身约会、已婚浪漫约会企业，拥有庞大的服务网点，相亲约会策划有限公司高覆盖、高效率的服务获得多家公司和机构的认可。相亲约会策划有限公司将以最专业的精神为您提供安全、经济、专业的服务。</p>
+                    <p>沈阳相亲经营的范围有：网络技术开发；软件开发、设计;网页制作；计算机技术开发、信息咨询服务；互联网广告设计、制作、代理发布；商务信息咨询服务；文化传媒制作，网络信息服务；电子商务综合服务。</p>
+                    <p>现公司主营：微信代运营，网站托管等基础业务</p>
+                    <p>旗下正重磅打造盘州市第一交友婚恋网——《相约盘州》，立足于本土，结合盘县人自己的特点，打造属于沈阳人自己的交友婚恋网！！！</p>
+                    <p>时光飞逝，物换星移，贵州镌诚将携手与您共创美好未来！！！</p>
+                    <p>公司联系电话:     13595807848 (座机）</p>
+                    <p>常用联系电话：    13698594168</p>
+                    <p>《沈阳相亲》客服电话：   18685853578</p>
+                </div>
+                </div>
+            </div>
+            <div id="switch_tab" class="switch_tab" style="display:none">
+            	<div class="map"></div>
+            	<p class="contact_way"><s>电话：</s><span>13595807848</span><s>邮箱：</s><span>2813140631@qq.com</span></p>
+            	<p class="contact_way"><s>传真：</s><span>13595807848</span><s>地址：</s><span>2813140631@qq.com</span></p>
+            </div>
+        </div>
+        <script>
+			var btn = document.getElementById('tabBtn').getElementsByTagName('a');
+			
+			var switchTab = document.getElementsByClassName('switch_tab');
+			
+			
+			for(var i =0;i<btn.length;i++){
+				btn[i].dataId = i;
+				btn[i].onclick = function(){
+					for(var i =0;i<btn.length;i++){
+						switchTab[i].style.display = 'none';
+						btn[i].className = '';
+					}
+					this.className = 'current'
+					switchTab[this.dataId].style.display = 'block';
+				}
+			}
+		</script>
+        <style>
+		.current{    border-color: #f9a61c !important;
+    color: #f9a61c !important;}
+		</style>
+<!--底部-->
+    <div class='footer'>
+            	<div class='footer_title_box'>
+                   <p class="footer_title">联系方式</p>
+                </div>
+                <div class='footer_content'>
+                	<div class='footer_content_top'>
+                    	<ul class='footer_contact'>
+                        	<li>电话：13595807848</li>
+                            <li>传真：135958078481</li>
+                            <li>地址：重庆市南岸区国际社区海悦府15-2</li>
+                            <li>邮箱：2813140631@qq.com</li>
+                        </ul>
+                        <div class='footer_barcode'>
+                        	<a href='javascript:;'>
+                                <div class='footer_barcode_weixin'>
+                                    <div class='weixin_barcode'>
+                                    	<img src='images/weixin_code.png'>
+                                    </div>
+                                    <div class='weixin_text'>
+                                    	<h1>微信公众号</h1>
+                                        <p>每时每刻掌控最新动态随时随地知晓沈阳资讯</p>
+                                    </div>	
+                                </div>
+                            </a>
+                            <a href='javascript:;'>
+                            <div class='footer_barcode_weibo'>
+                                    <div class='weibo_barcode'>
+                                    	<img src='images/weixin_code.png'>
+                                    </div>
+                                    <div class='weibo_text'>
+                                    	<h1>微信公众号</h1>
+                                        <p>每时每刻掌控最新动态随时随地知晓沈阳资讯</p>
+                                    </div>	
+                            </div>
+                            </a>
+                            <a href='javascript:;'>
+                            <div class='footer_barcode_qq'>	
+                                    <div class='qq_barcode'>
+                                    	<img src='images/weixin_code.png'>
+                                    </div>
+                                    <div class='qq_text'>
+                                    	<h1>微信公众号</h1>
+                                        <p>每时每刻掌控最新动态随时随地知晓沈阳资讯</p>
+                                    </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class='footer_content_bottom'>
+                    	<div class="footer_content_box">
+                        	<a href='javascript:;'>首页</a>　<span>|</span>　
+                            <a href='javascript:;'>诚聘英才</a>　<span>|</span>　
+                            <a href='javascript:;'>沈阳地图</a>　<span>|</span>　
+                            <a href='javascript:;'>沈阳相亲</a>　<span>|</span>　
+                            <a href='javascript:;'>法律事务部</a>　<span>|</span>
+                            <a href='javascript:;'>联系方式</a>　<span>|</span>　
+                            <a href='javascript:;'>意见反馈</a>　<span>|</span>
+                            <a href='javascript:;'>最新资讯</a>
+                        </div>
+                        <p class="copyright">版权所有 © 沈阳相亲  渝ICP备：52136854号 技术支持：雨木科技</p>
+                        <p>免费咨询：13595807848 E-mail:2813140631@qq.com  地址：重庆市南岸区国际社区海悦府15-2</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+</body>
+</html>

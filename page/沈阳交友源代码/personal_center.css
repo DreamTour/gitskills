@@ -1,0 +1,299 @@
+@charset "utf-8";
+.personal_service_icon{
+	width:20px;
+	height:20px;
+	background-image:url(images/personal_service_icon.png);
+	vertical-align:top;
+	margin-right:2px;
+}
+/*内容*/
+.personal_letter{
+	width:1000px;
+	margin:20px auto 20px;
+	overflow:hidden;
+}
+/*左边*/
+.personal_box{
+	width:160px;
+	float:left;
+}
+/*个人资料*/
+.personal{
+	height:300px;
+	border:1px solid #d4d4d4;
+}
+.personal img{
+	margin:20px 25px;
+}
+.upload_pictures_btn,.edit_profile_btn{
+	display:inline-block;
+	width:65px;
+	line-height:22px;
+	text-align:center;
+	border:1px solid #ff7c7c;
+	border-radius:12px;
+	color:#ff7c7c;
+}
+.upload_pictures_btn{
+	margin-left:10px;
+	margin-right:4px;
+}
+.personal_message{
+	text-align:center;
+}
+.personal_title{
+	font-size:16px;
+	color:#000;
+	margin-right:5px;
+	display:inline-block;
+}
+.personal_icon{
+	width:16px;
+	height:16px;
+	background-image:url(images/personal_icon.png);
+	background-position:0 0;
+	margin-bottom:-2px;
+}
+.id_number span{
+	font-size:14px;
+	color:#ff7c7c;
+}
+#yellow{
+	color:#f9a61c;
+}
+.personal_message_head{
+	overflow:hidden;
+	margin-bottom:5px;
+}
+.function_tab_box{
+	text-align:center;
+}
+.function_tab{
+	display:inline-block;
+	width:50px;
+	height:36px;
+	
+}
+.function_tab_special{
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+}
+.function_tab_message,.function_tab_text{
+	color:#ff7c7c;
+	font-size:14px;
+}
+.function_tab_message{
+	color:#ff7c7c;
+}
+.function_tab_text{
+	color:#000;
+}
+.publish_btn{
+	width:100%;
+	display:inline-block;
+	line-height:44px;
+	font-size:20px;
+	text-align:center;
+	background-color:#ff7c7c;
+	color:#fff;
+	margin-top:25px;
+}
+.look_box{background-color:#ff7c7c;line-height:40px;height:40px;margin-top:12px;}
+.look_box a{display:inline-block;font-size:14px;color:#fff;text-align:center;}
+/*推荐服务*/
+.personal_service{
+	height:310px;
+	margin-top:15px;
+	padding-left:10px;
+	border:1px solid #d4d4d4;
+}
+.ps-line p{width:3px;height:20px;background-color:#ff7f00;margin-right:5px;}
+.ps-line{
+	margin:15px 0;
+}
+.ps-line h2{
+	color:#333;
+	font-size:18px;
+	margin-top:-2px;
+}
+.personal_member{
+	margin-bottom:10px;
+}
+.personal_member a{
+	font-size:14px;
+}
+.personal_member p{
+	color:#888;
+}
+.personal_member span{
+	color:#000;
+	font-size:16px;
+	margin-right:5px;
+}
+.personal_member a{
+	display:inline-block;
+	width:40px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	background-color:#ff7f00;
+	color:#fff;
+}
+.personal_service_icon01{
+	background-position:-14px -26px;
+}
+.personal_service_icon02{
+	background-position:-14px -50px;
+}
+.personal_service_icon03{
+	background-position:-14px -74px;
+}
+.personal_service_icon04{
+	background-position:-14px -99px;
+}
+/*推广链接*/
+.ad_link{border:1px solid #ddd;margin-top:15px;background:url(images/new.png)  no-repeat scroll 0 0;text-align:center;padding:36px 15px 15px;}
+.link_icon{display:block;width:52px;height:52px;background:url(images/personal_service_icon.png) no-repeat scroll 0 -138px;margin:10px 35px;}
+.ad_link h2{overflow:hidden;line-height:22px;max-height:44px;}
+.ad_link p{overflow: hidden;line-height:16px;max-height:100px;word-break: break-all;text-align: justify;}
+.link_btn{display:inline-block;width:110px;line-height:30px;background-color:#ff7f00;border-radius:3px;text-align:center;color:#fff;margin-top:10px;}
+/*右边个人信息*/
+.center_box{
+	float:left;
+	margin-left:30px;
+	width:810px;
+}
+.center_head{
+	width:770px;
+	height:50px;
+	line-height:50px;
+	border-bottom:1px solid #ddd;
+	overflow:hidden;
+}
+.center_head a{	
+	font-size:16px;
+	display:block; 
+	height:50px;
+	width:100px; 
+	text-align:center;
+	line-height:50px;
+	float:left;
+	}
+.center_head a:hover{
+	border-bottom:3px solid #ff7c7c;
+	color:#ff7c7c;
+	font-weight:bold;
+}
+.center_body{
+	overflow:hidden;
+}
+.current{border-bottom:3px solid #ff7c7c;font-weight:bold;color:#ff7c7c;!important}
+/*基本信息*/
+.basic_information h2,.contact_information h2,.papers h2{
+	color:#000;
+	font-size:16px;
+	padding-left:20px;
+	margin-top:20px;
+	font-weight:normal;
+}
+.contact_information input,.contact_information select,.basic_information input,.basic_information select,.information01 input,.information01 select,.information02 input,.information02 select{
+	display:inline-block;
+	height:24px;
+	line-height:24px;
+	border:1px solid #ddd;
+	padding-left:2px;
+}
+.basic_information input,.basic_information select{
+	width:183px;
+}
+.contact_information input,.contact_information selec{
+	width:153px;
+}
+.information,.information01,.information02{
+	margin:20px;
+	position:relative;
+}
+.information{
+	padding-left:70px;
+}
+.information span,.information01 span,.information02 span{
+	font-size:14px;
+}
+.information01 span{display:inline-block;width:70px;}
+.information02 span{display:inline-block;}
+.information01 input,.information01 select,.information02 input,.information02 select{width:183px;}
+.information_r span{
+	position:absolute;
+	left:0;
+	top:2px;
+	width:70px;
+}
+.basic_information_left{
+	margin-right:140px;
+}
+.basic_information_content{
+	margin-left:-70px;
+}
+/*联系信息*/
+.contact_information01{
+	margin:20px 0;
+	position:relative;
+	padding-left:70px;
+}
+.contact_information01 span{
+	position:absolute;
+	left:0;
+	width:70px;
+}
+/*保存按钮*/
+.center_btn_box{
+	width:100%;
+	margin:auto;
+	text-align:center;
+	margin-top:20px;
+	clear:both;
+}
+.center_btn{
+	clear:both;
+	display:inline-block;
+	width:140px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	background-color:#ff7c7c;
+	color:#fff;
+	border-radius:5px;
+	font-size:16px;
+	border: none;
+}
+/*相册*/
+.photo_album{
+	margin:30px 0;
+}
+.photo_album img{
+	display:inline-block;
+	width:240px;
+	height:150px;
+	border:1px solid #ddd;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+/*内心独白*/
+.monologue textarea{
+	margin:20px 0;
+	width:800px;
+	height:500px;
+	padding:15px;
+	text-indent:2em;
+	line-height:30px;
+	font-size:14px;
+}
+/*择偶意向*/
+
+/*广告*/
+.ad{
+	width:1000px;
+	height:90px;
+	clear:both;
+	margin:50px auto;
+}

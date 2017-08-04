@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,ul,li,ol{margin:0;padding:0;}
+        img{border:0; vertical-align: top;}
+        li,ol{list-style:none;}
+        a{text-decoration: none;}
+        .ad-change{width: 440px; height: 220px; margin: 50px auto; position: relative; overflow: hidden; z-index:2}
+        .img{width: 1760px; height: 220px;float:left; position: absolute; overflow: hidden;}
+        .img li{float:left;}
+        .ad-change .prev,.ad-change .next{display: block; width: 30px; height:40px; background: #9fa4aa;
+            position: absolute; top: 90px; text-align: center; line-height: 40px; font-size: 20px; z-index:1}
+        .ad-change .prev{left:0;}
+        .ad-change .next{right:0;}
+        .num{position: absolute; bottom: 10px; right: 20px;}
+        .num li{float:left; margin-right: 10px; width: 20px; height: 20px; background:#fff; color: #000;
+        text-align: center; line-height:20px; }
+        .num .active{background: yellow;}
+    </style>
+    <script src="jquery-3.1.0.min.js"></script>
+   <script>
+    	$(function() {
+            //声明变量
+            var oDiv = $('.img-tab');
+            var aSLi = $('.num li');
+            var aBLi = $('.img li');
+            var iNow = 0;
+            var timer = null;
+            //初始化
+            fnFade();
+            //点击事件
+            aSLi.click(function() {
+                iNow = $(this).index();
+                fnFade();
+            });
+            //鼠标移入移出
+            oDiv.hover(function() {
+                clearInterval(timer);
+            }, autoPlay);
+            //自动播放
+            function autoPlay() {
+                timer = setInterval(function() {
+                    iNow++;
+                    iNow%=aSLi.length;
+                    fnFade();
+                }, 2000)
+            }
+            autoPlay();
+            //淡入淡出
+            function fnFade() {
+                aBLi.each(function(i) {
+                    if(i != iNow ) {
+                        aBLi.eq(i).fadeOut().css('zIndex',1);
+                        aSLi.eq(i).removeClass('active');
+                    } else {
+                        aBLi.eq(i).fadeIn().css('zIndex',2);
+                        aSLi.eq(i).addClass('active');
+                    }
+                })
+            }
+        });		
+    </script>
+    <!--<script>
+       $(function() {
+           var iNow = 0; //当前index
+           var count = $('.img li').length; //图片总数
+           var timer = null;
+
+           //图片切换的处理函数
+           function changeTo(num) {
+               var left = num * 440;
+               $('.img').animate({left: '-' + left + 'px'}, 500);
+               $('.num').find('li').removeClass('active').eq(num).addClass('active');
+           }
+
+           //右箭头点击处理
+           $('.next').click(function() {
+               //根据iNow进行下一个图片处理
+               iNow = (iNow < count - 1) ? (++iNow) : 0;
+               changeTo(iNow);
+           });
+
+           //左箭头点击处理
+           $('.prev').click(function() {
+               //根据iNow进行上一个图片处理
+               iNow = (iNow > 0) ? (--iNow) : (count - 1);
+               changeTo(iNow);
+           })
+
+           //对右下角按钮index进行事件绑定处理等
+           $('.num').find('li').each(function(i) {
+               $(this).mouseenter(function() {
+                   clearInterval(timer);
+                   changeTo(i);
+                   iNow = i;
+               }).mouseleave(function() {
+                   autoChange();
+               })
+           })
+
+           // 定时器自动变换2秒每次
+           function autoChange() {
+               clearInterval(timer);
+               timer = setInterval(function() {
+                   if(iNow < count-1) {
+                       iNow++;
+                   } else {
+                       iNow = 0;
+                   }
+                   changeTo(iNow);
+               }, 2000)
+           }
+           autoChange();
+
+           //右箭头滑入滑出事件处理
+           $('.next').hover(function() {
+               clearInterval(timer);
+           },function() {
+               autoChange();
+           })
+
+           //左箭头滑入滑出事件处理
+           $('.prev').hover(function() {
+               clearInterval(timer);
+           },function() {
+               autoChange();
+           })
+
+
+
+       })
+   </script>-->
+
+</head>
+<body>
+<div class="ad-change">
+    <ul class="img">
+        <li><a href="#"><img src="images/1.jpg"/></a></li>
+        <li><a href="#"><img src="images/2.jpg"/></a></li>
+        <li><a href="#"><img src="images/3.jpg"/></a></li>
+        <li><a href="#"><img src="images/4.jpg"/></a></li>
+    </ul>
+    <a class="prev" href="#"><</a>
+    <a class="next" href="#">></a>
+    <ol class="num">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+</div>
+
+
+
+
+
+
+<!--<script>-->
+<!--$(function(){-->
+<!--var curIndex = 0, //当前index-->
+<!--imgLen = $(".img li").length; //图片总数-->
+
+<!--// 定时器自动变换2.5秒每次-->
+<!--var autoChange = setInterval(function(){-->
+<!--if(curIndex < imgLen-1){-->
+<!--curIndex ++;-->
+<!--}else{-->
+<!--curIndex = 0;-->
+<!--}-->
+<!--//调用变换处理函数-->
+<!--changeTo(curIndex);-->
+<!--},2500);-->
+
+<!--//左箭头滑入滑出事件处理-->
+<!--$(".prev").hover(function(){-->
+<!--//滑入清除定时器-->
+<!--clearInterval(autoChange);-->
+<!--},function(){-->
+<!--//滑出则重置定时器-->
+<!--autoChangeAgain();-->
+<!--});-->
+<!--//左箭头点击处理-->
+<!--$(".prev").click(function(){-->
+<!--//根据curIndex进行上一个图片处理-->
+<!--curIndex = (curIndex > 0) ? (&#45;&#45;curIndex) : (imgLen - 1);-->
+<!--changeTo(curIndex);-->
+<!--});-->
+
+<!--//右箭头滑入滑出事件处理-->
+<!--$(".next").hover(function(){-->
+<!--//滑入清除定时器-->
+<!--clearInterval(autoChange);-->
+<!--},function(){-->
+<!--//滑出则重置定时器-->
+<!--autoChangeAgain();-->
+<!--});-->
+<!--//右箭头点击处理-->
+<!--$(".next").click(function(){-->
+<!--curIndex = (curIndex < imgLen - 1) ? (++curIndex) : 0;-->
+<!--changeTo(curIndex);-->
+<!--});-->
+
+<!--//清除定时器时候的重置定时器&#45;&#45;封装-->
+<!--function autoChangeAgain(){-->
+<!--autoChange = setInterval(function(){-->
+<!--if(curIndex < imgLen-1){-->
+<!--curIndex ++;-->
+<!--}else{-->
+<!--curIndex = 0;-->
+<!--}-->
+<!--//调用变换处理函数-->
+<!--changeTo(curIndex);-->
+<!--},2500);-->
+<!--}-->
+
+<!--//图片切换的处理函数-->
+<!--function changeTo(num){-->
+<!--var goLeft = num * 440;-->
+<!--$(".img").animate({left: "-" + goLeft + "px"},500);-->
+<!--$(".num").find("li").removeClass("active").eq(num).addClass("active");-->
+<!--}-->
+
+<!--//对右下角按钮index进行事件绑定处理等-->
+<!--$(".num").find("li").each(function(item){-->
+<!--$(this).hover(function(){-->
+<!--clearInterval(autoChange);-->
+<!--changeTo(item);-->
+<!--curIndex = item;-->
+<!--},function(){-->
+<!--autoChangeAgain();-->
+<!--});-->
+<!--});-->
+
+<!--})-->
+<!--</script>-->
+</body>
+</html>
+
+<!--$(function() {
+			var count = $('.img li').length;	
+			var timer = null;
+			var iNow = 0;
+			function change(num) {
+				$('.img').animate({marginLeft: -num * 440 + 'px'});	
+				$('.num').find('li').removeClass('active').eq(num).addClass('active');
+			}
+			
+			$('.next').click(function() {
+				if(iNow < count-1) {
+					iNow++;	
+				}
+				else {
+					iNow = 0;	
+				}
+				change(iNow);
+			})
+			
+			$('.prev').click(function() {
+				if(iNow > 0) {
+					iNow--;	
+				}
+				else{
+					iNow = count -1;	
+				}
+				change(iNow);	
+			})
+			
+			$('.num').find('li').each(function(index) {
+				$(this).mouseenter(function() {
+					clearInterval(timer);
+					change(index);
+					iNow = index;	
+				})
+			})
+			
+			function autoChange() {
+				timer = setInterval(function() {
+					if(iNow < count-1) {
+						iNow++;	
+					}
+					else {
+						iNow = 0;	
+					}
+					change(iNow);	
+				}, 2000)	
+			}
+			
+			autoChange();
+			
+			$('.ad-change').hover(function() {
+				clearInterval(timer);	
+			},function() {
+				autoChange();	
+			})
+			
+		})
+    </script>-->

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>沈阳相亲—发信</title>
+<link type="text/css" rel="stylesheet" href="public_style.css">
+<link type="text/css" rel="stylesheet" href="send_letter.css">
+<script type='text/javascript' src='http://www.yumukeji.com/library/jquery-1.11.2.min.js'></script>
+
+</head>
+<style>
+.gift_content1{ display:inline-block; position:relative;}
+.gift_content1 >i{ display: block;height: 13px;width: 13px;position: absolute;bottom: 0px;right: 0px;}
+</style>
+<body>
+<div class="gift_zzc" id="bg-let"></div>
+<div class="gift" id="let-q">
+    <div class="gift_header">
+        <span>发信</span>
+        <i class="pop-up" id="close-let" style="cursor:pointer;"></i>
+    </div>
+    <div class="send_letter_content" style="padding:0;">
+    <textarea style="width: 435px;height: 345px; padding:10px;">
+    你好..
+    </textarea>
+    </div>
+    <a href="javascript:;" class="pop-up_btn" id="send-let">点击发布</a>
+</div>
+<script>
+var LG ={
+	show:function(){
+		$('#bg-let').show();
+		$('#let-q').fadeIn(300);
+	},
+	hide:function(){
+		$('#bg-let').hide();
+		$('#let-q').hide();
+	},
+	sent_gift:function(){
+		$('#close-let').click(function(){
+			LG.hide();
+		});
+	}
+}
+LG.sent_gift();
+</script>
+</body>
+</html>

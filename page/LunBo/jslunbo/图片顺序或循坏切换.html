@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <style type="text/css">
+        #div1{width:440px; height: 510px; margin: 150px auto;
+        position:relative;}
+        #div2{width:440px; height: 440px; border:10px solid #a3b0b7;
+        position: relative; margin-top:40px;}
+        #btn1{margin:0 10px 0 150px;}
+        #prev,#next{position:absolute; top:195px; width:30px; height:40px;
+        background:#5b5b5b; color:#fff; text-decoration:none; font-size: 20px;
+        line-height:40px; text-align:center; border:3px solid #b9b2ff;
+        font-weight: bold; filter:alpha(opacity=50); opacity:0.5;}
+        #div2 a:hover{filter:alpha(opacity=80); opacity:0.8;}
+        #prev{left:10px;}
+        #next{right: 10px;}
+        #number,#text{position:absolute; left:0; width:440px; height:30px;
+        line-height: 30px; text-align: center; background: #000; color: #fff;
+        filter:alpha(opacity=60); opacity:0.6;}
+        #number{top:0;}
+        #text{bottom:0; margin:0;}
+        #pic{border:0;}
+        #describe1,#describe2{position:absolute; top:15px; left:80px;}
+        #describe2{display:none;}
+    </style>
+</head>
+<body>
+<div id="div1">
+    <input id="btn1" type="button" value="循环切换" />
+    <input id="btn2" type="button" value="顺序切换" />
+    <p id="describe1">图片可从最后一张跳转到第一张循环切换</p>
+    <p id="describe2">图片可从第一张跳转到最后一张顺序切换</p>
+    <div id="div2">
+        <a id="prev" href="#"><</a>
+        <a id="next" href="#">></a>
+        <span id="number">数量正在加载中……</span>
+        <p id="text">文字正在加载中……</p>
+        <img id="pic" src="images/loading.jpg" width="440" height="440" />
+    </div>
+</div>
+<script type="text/javascript">
+    window.onload = function() {
+        //获取元素
+        var oBtn1 = document.getElementById("btn1");
+        var oBtn2 = document.getElementById("btn2");
+        var oPrev = document.getElementById("prev");
+        var oNext = document.getElementById("next");
+        var oNumber = document.getElementById("number");
+        var oText = document.getElementById("text");
+        var oPic = document.getElementById("pic");
+        var aUrl = ["images/01.jpg","images/02.jpg","images/03.jpg","images/04.jpg"];
+        var aText = ['范冰冰','李冰冰','刘诗诗','林志玲'];
+        var oDescribe1 = document.getElementById("describe1");
+        var oDescribe2 = document.getElementById("describe2");
+        var num = 0;
+        //初始化
+        function change() {
+            oNumber.innerHTML = num + 1 + '/' + aUrl.length;
+            oText.innerHTML = aText[num];
+            oPic.src = aUrl[num];
+        }
+        change();
+        //默认循环切换
+        function loop() {
+            //点击上一张
+            oPrev.onclick = function() {
+                num--;
+                if( num == -1 ) {
+                    num = aUrl.length-1;
+                }
+                change();
+            }
+            //点击下一张
+            oNext.onclick = function() {
+                num++;
+                if( num == aUrl.length ) {
+                    num = 0;
+                }
+                change();
+            }
+        }
+        loop();
+        //点击循环切换
+        oBtn1.onclick = function() {
+            loop();
+            //对描述的改变
+            oDescribe1.style.display = 'block';
+            oDescribe2.style.display = 'none';
+        }
+        //点击顺序切换
+        oBtn2.onclick = function() {
+            //对描述的改变
+            oDescribe2.style.display = 'block';
+            oDescribe1.style.display = 'none';
+            //点击上一张
+            oPrev.onclick = function() {
+                num--;
+                if( num == -1 ) {
+                    num = 0;
+                }
+                change();
+            }
+            //点击下一张
+            oNext.onclick = function() {
+                num++;
+                if( num == aUrl.length ) {
+                    num = aUrl.length-1;
+                }
+                change();
+            }
+        }
+    }
+</script>
+</body>
+</html>

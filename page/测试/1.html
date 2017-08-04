@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="list">
+	<li>相爱的两个人吵架</li>
+    <li>相爱的两个人吵架</li>
+    <li>相爱的两个人吵架</li>
+    <li>相爱的两个人吵架</li>
+    <li>相爱的两个人吵架</li>
+    <li>相爱的两个人吵架</li>
+</ul>
+</body>
+<script>
+
+var slide = function(config){
+		this.init();
+};
+slide.prototype.init = function(config){
+		
+		config = config||{};
+		this.superSlide = config.superSlide;
+		this.move();
+};
+
+slide.prototype.move = function(cont){
+		
+		alert(this.superSlide);
+		
+};
+
+
+
+
+window.onload = function(){
+	new slide({superSlide:document.getElementById('list')});
+}
+
+</script>
+</html>

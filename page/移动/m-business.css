@@ -1,0 +1,15 @@
+@charset "utf-8";
+.bu-current{border-bottom:2px solid #ff7c7c; font-weight:bold;}
+/*头部底部*/
+.footer,.header{ position:fixed;left:0;width:100%;z-index:100;}
+.header{ height:44px; line-height:44px; text-align:center;background:#ff7c7c; color:#fff; padding:0 15px;display:-webkit-box;display:-webkit-flex; display:flex;}
+.head-center{flex:1}
+.footer{position:fixed;bottom:0;left:0;width:100%;display:flex;text-align:center;height:50px;background-color:#fff;align-items:center;border-top:1px solid #ddd;box-shadow:0 0 2px #ddd;}
+.bottom-nav{flex:1;border-right:1px solid #ddd;}
+.bottom-nav:last-child{border:none;}
+/*商务合作*/
+.bu-content{padding:44px 0 0 0;}
+.bu-nav{display:flex;border-bottom:1px solid #ddd;margin-top:15px;}
+.bu-nav li{flex:1;line-height:40px;}
+.bu-in{border:1px solid #ddd;padding:15px;margin:10px;line-height: 24px;text-align: justify;text-indent: 2em;display:none;}
+.bu-in:first-child{display:block;}

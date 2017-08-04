@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="public_style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<style>
+	*{margin:0;padding:0}	
+	div{ width:600px;height:340px; border:1px solid #000; background: #f0f0f0; overflow: hidden; position: relative}
+	ul li{list-style-type:none}
+	.slider:after{ content: ''; display: block; clear: both}
+	.slider li{float:left; width:600px;height:340px;}
+	.button{ position:absolute; bottom:20px;width:100%; z-index: 100; text-align: center}
+	.button li{display: inline-block;width:20px; height:20px; background: #f0f0f0; margin: 0 2px;}
+	.btn{width:50px;height:50px; background: #fff; position:absolute; z-index: 1000; top: 0; bottom: 0; margin: auto;}
+	.prev{ left:0;}
+	.next{right:0}
+</style>
+<div>
+<ul class="slider">
+	<li style="background:red">
+	</li>
+	<li style="background:blue">
+	</li>
+	<li style="background:yellow">
+	</li>
+</ul>
+<div class="btn prev">prev</div>	
+<div class="btn next">next</div>	
+<ul class="button"></ul>
+	
+</div>
+<script type='text/javascript' src='http://www.yumukeji.com/library/jquery-1.11.2.min.js'></script>
+<script>
+
+	//定时器
+	var timer = null;
+	//calc 计算数值
+	var calc = 0;
+	//设置dom{}
+	//获取轮播图
+	var slider = $(".slider");
+	//获取轮播图排序号
+	var button = $(".button");
+	//获取上一个按钮
+	var prev = $(".prev");
+	//获取下一个按钮
+	var next = $(".next");
+	//获取轮播图子元素(li标签)
+	var sliderChild = slider.children("li");
+	//获取轮播图子元素的长度
+	var length = sliderChild.length;
+	//设置轮播图的长度(原理:轮播图子元素的长度 * 轮播图子元素的宽度)
+	slider.css({
+		width:sliderChild.width() * length
+	});
+	//创建轮播图排序号子元素(原理:通过轮播图子元素的长度循环)
+	sliderChild.each(function(len){
+		button.append("<li></li>");
+	});
+	
+	//使用定时器实现轮播图自动切换(原理:定时器每隔2s执行一次calc叠加,然后赋值到animate函数实现切换,当叠加数值大于或者等于轮播图li元素的长度就把calc赋值为0)
+	var set = function(){
+		timer = setInterval(function(){
+			calc ++;
+			if(calc >= length){
+				calc = 0;
+			};
+			slider.animate({
+				marginLeft:- calc * sliderChild.width()
+			},450)
+		},2000);
+	};
+	set();
+	//值同步
+	button.children("li").click(function(){
+		window.clearInterval(timer);
+		calc = $(this).index();
+		slider.animate({
+			marginLeft:- calc * sliderChild.width()
+		},320);
+		set();
+	});
+	//鼠标移入移出控制
+	slider.bind({
+		"mouseover":function(){
+			window.clearInterval(timer);	
+		},
+		"mouseout":function(){
+			set();
+		}
+	});
+	
+	//实现上翻页
+	prev.click(function(){
+		window.clearInterval(timer);
+		calc--;
+		if(calc<=0){
+			calc = 0;
+		}
+		slider.animate({
+			marginLeft:- calc * sliderChild.width()
+		},320);
+		set();
+	
+	});
+	//实现上翻页
+	next.click(function(){
+		window.clearInterval(timer);
+		calc++;
+		if(calc>=length){
+			calc = length - 1;
+			
+		}
+		slider.animate({
+			marginLeft:- calc * sliderChild.width()
+		},320);
+		set();
+	
+	})
+	
+	
+	
+	
+	
+</script>
+
+</body>
+</html>

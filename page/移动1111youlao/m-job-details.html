@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>有劳了-劳务详情</title>
+<link href="m-public.css" type="text/css" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<script type='text/javascript' src='http://www.yumukeji.com/library/jquery-1.11.2.min.js'></script>
+</head>
+
+<body>
+<!--页眉-->
+<header id="top">
+	<div class="index-top clearfix">
+    	<a href="m-index.html"><img src="images/logo.png" class="fl"></a>
+        <div class="fr login-box"><a href="m-co-login .html">企业登录</a>丨<a href="m-pe-login.html">个人登录</a></div>
+    </div>
+</header>
+<ul class="position-nav">
+	<li><a href="m-index.html">首页</a></li>
+    <li><a href="m-position.html">优职</a></li>
+    <li><a href="m-talents.html">优才</a></li>
+    <li><a href="m-partTime.html">学生兼职</a></li>
+    <li><a href="m-info.html">资讯</a></li>
+</ul>
+<div class="way"><a href="m-index.html">首页</a><span>&gt;&gt;</span><a href="m-position.html">优职</a><span>&gt;&gt;</span><a href="m-job-details.html">详情</a></div>
+<!--内容-->
+<section id="job-details">
+	<div class="job-de-content">
+    	<div class="job-de-title">
+            <h2>.NET高级软件工程师(高薪)</h2>
+            <span>重庆南洋恒讯科技有限公司</span>
+        </div>
+        <ul class="job-de-list clearfix">
+        	<li>方式：上门</li>
+            <li>面向：全国</li>
+            <li>薪资：5000-8000元/月</li>
+            <li>需求时间：长期有效</li>
+            <li>类型：全职</li>
+            <li>工作时间：周一至周五</li>
+            <li id="mailBox">邮箱：12345678@qq.com</li>
+            <li id="phone">联系手机：01234567891</li>
+        </ul>
+    </div> 
+</section>
+<section id="m-job-body">
+	<div class="job-body-title clearfix"><h2 class="fl">说明</h2><div class="fr inform-box"><a href="javascript:;"><i class="inform-icon"></i><span id="informBtn">举报</span></a></div></div>
+    <div class="job-body-article">岗位要求：<br/> 
+1、 计算机软件相关专业本科或以上学历，两年以上ASP.NET开发经验； <br/> 
+2、 精通Windows平台下的Web技术开发，具有丰富的项目经验，精通ASP.NET（C#），NET Framework，熟悉Ajax，ORM等相关技术； <br/> 
+3、 对数据库理论知识有较深入的了解，并且具备较强的数据结构设计能力和经验，对数据库性能优化有较深刻的认识； <br/> 
+4、 熟悉HTML、JavaScript、CSS、Ajax等WEB开发技术； <br/> 
+5、 具有良好的代码编写风格，熟悉Web程序代码安全； <br/> 
+6、 熟悉Http协议，软件架构，设计模式，有电子商城开发经验； <br/> 
+7、 具有一定的页面布局、设计、美化能力； <br/> 
+8、 善于与他人沟通、合作，具有团队精神，良好的自学<br/> 
+</div>
+</section>
+<div class="po-bottom clearfix">
+    <div class="collect fl"><a href="jabvascript:;"><i class="po-share-icon"></i><span>分享</span></a></div>
+    <a href="javascript:;" class="po-apply-btn fl" id="lookBtn">查看联系方式</a>
+    <div class="collect fl"><a href="jabvascript:;"><i class="po-co-icon"></i><span>收藏</span></a></div>
+</div> 
+<!--页脚-->
+<footer id="footer">
+    <p>有劳了版权所有©2000-2017</p>
+    <p>youlaole.com 滇ICP备05658956</p>
+</footer>
+<!--举报弹出层-->
+<div id="m-informPopUp">
+    <div id="informClose"><img src="images/informPopUp-close.png"></div>
+	<div class="popUpBox">
+        <form action="" method="post">
+            <label><input type="checkbox" name="inform" value=""><span>虚假信息/冒用他人信息</span></label>
+            <label><input type="checkbox" name="inform" value=""><span>不良信息/违法违规信息</span></label>
+            <label><input type="checkbox" name="inform" value=""><span>有瞒偏和欺诈行为</span></label>
+            <label><input type="checkbox" name="inform" value=""><span>恶意营销、广告</span></label>
+        </form>
+        <p>温馨提示：被连续举报2次以上者发布的内容临时取消展示，信息进入人工审核。</p>
+        <a href="javascript:;" class="inform-btn inform-btn2" id="informBtn2">确认举报</a>
+    </div>
+</div>
+<script>
+window.onload=function(){
+//查看联系方式
+	var mailBox=document.getElementById("mailBox"),
+		phone=document.getElementById("phone"),
+		lookBtn=document.getElementById("lookBtn");
+	lookBtn.onclick=function(){
+		mailBox.style.display="block";
+		phone.style.display="block";
+	};
+//举报弹出层
+	var informBtn=document.getElementById("informBtn"),
+		informPopUp=document.getElementById("m-informPopUp"),
+		informClose=document.getElementById("informClose"),
+		informBtn2=document.getElementById("informBtn2");
+		informBtn.onclick=function(){
+			informPopUp.style.display="block";
+		};
+		informBtn2.onclick=function(){
+			informPopUp.style.display="none";
+		};
+		informClose.onclick=function(){
+			informPopUp.style.display="none";
+		}
+}
+</script>
+</body>
+</html>

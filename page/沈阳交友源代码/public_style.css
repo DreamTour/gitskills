@@ -1,0 +1,196 @@
+@charset "utf-8";
+/*重置*/
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-family:Microsoft YaHei;
+	box-sizing:border-box;
+}
+ul,ol,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	color:#333;
+}
+i{
+	display:inline-block;	
+}
+i,s{
+	text-decoration:none;
+}
+input{
+	border:none;
+	outline:none;
+}
+select{
+	outline:none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-style: normal;
+}
+h1{
+	display:inline-block;
+}
+form,select{
+	display:inline;	
+}
+img{
+	border:none;
+}
+.icon{
+	background-image:url(images/icon.png);
+}
+.activity_icon{
+	background-image:url(images/activity_icon.png);
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.of{
+	overflow:hidden;
+}
+.fz24{
+	font-size:24px;
+}
+.fz18{
+	font-size:18px;
+}
+.fz16{
+	font-size:16px;
+}
+.fz14{
+	font-size:14px;
+}
+.col{
+	color:#ff7f00;
+}
+.fw1{
+	font-weight:bold;
+}
+.fw2{
+	font-weight:normal;
+}
+/*头部*/
+.header{
+	width:1000px;
+	height:64px;
+	margin:auto;
+	overflow:hidden;
+	margin-top:20px; 
+}
+.logo{
+	float:left;
+}
+.tel_number{
+	float:right;
+	overflow:hidden;
+}
+.tel{
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+	margin: 0px 10px 0 0;
+	background-position:-26px -39px;
+}
+.tel_text{
+	float:right;
+	font-size:14px;
+}
+.number{
+	clear:right;
+	float:right;
+	color:#ff7c7c;
+	font-size:22px;
+}
+/*导航*/
+.nav_bar{
+	width:1000px;
+	margin:auto;
+}
+.nav_bar li a{
+	display:inline-block;
+	text-align:center;
+	padding:15px 20px;
+}
+.nav_bar a:hover{
+	color:#fff;
+	background-color:#ff7f00;
+}
+.line{width:100%;height:2px; background-color:#ddd;}
+/*页脚*/
+.footer{
+	background-color:#fff;
+}
+.footer_title_box{
+	background-color:#ff7f00;
+}
+.footer_title{
+	color:#fff;
+	font-size:18px;
+	width:1000px;
+	margin:auto;
+	line-height:40px;
+}
+.footer_content{
+	width:1000px;
+	margin:auto;
+	overflow:hidden;
+}
+.footer_content_top{
+	height:130px;
+	border-bottom:1px solid #d9d9d9;
+}
+.footer_contact{
+	float:left;
+}
+.footer_contact li{
+	margin-top:12px;
+}
+.footer_barcode_weibo,.footer_barcode_qq,.footer_barcode_weixin{
+	width:240px;
+	height:100px;
+	border:1px solid #d9d9d9;
+	margin-top:15px;
+	float:right;
+	margin-left:10px;
+	overflow:hidden;
+}
+.weixin_barcode,.weibo_barcode,.qq_barcode{
+	width:80px;
+	height:80px;
+	float:left;
+	clear:both;
+	margin:10px;
+}
+.weixin_text,.weibo_text,.qq_text{
+	float:left;
+	width:120px;
+	margin-top:10px;
+}
+.weixin_text h1,.weibo_text h1,.qq_text h1{
+	font-size:16px;
+	margin-bottom:5px;
+}
+.footer_content_bottom{
+	height:134px;
+	margin-top:30px;
+}
+.footer_content_bottom>*{
+	text-align:center;
+}
+.footer_content_box{
+	overflow:hidden;
+	margin-bottom:15px;
+}
+.footer_content_box *{
+	dispaly:inline-block;
+	margin-right:5px;
+}
+.copyright{
+	margin:10px 0;
+}

@@ -1,0 +1,18 @@
+*{margin:0;padding:0;-webkit-tap-highlight-color: rgba(255, 0, 0, 0)}*,:after,:before{box-sizing:border-box}a,b,big,em,h1,h2,h3,h4,h5,h6,i,ins,small,strong,u{font-style:normal}a{color:#3a3a3a;text-decoration:none}a,button,input[type=button],input[type=submit]{cursor:pointer}a,input,select,textarea{outline:0}a,img{border:none}img{display:block}button,input,select{background:#fff}li,ol,ul{list-style-type:none}fl,fr{display:inline}.fl{float:left}.fr{float:right}clear:after{clear:both;display:block;content:''}table{width:100%}table th{font-weight:400}table,table td,table th,table tr{border-collapse:collapse}body{background:#f5f5f5;color:#555;font-family:微软雅黑;min-width:320px;max-width:640px;margin:auto;
+font-size:12px;}
+b{font-weight:normal;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+.bo_r{border-right:1px solid #e2e2e3;}
+.bo_b{border-bottom:1px solid #e2e2e3;}
+body{ background:#fff;}
+.course_describe{padding:10px 24px 0 20px;}
+.course_describe .describe_title{font-size:16px;color:#53ceca;font-weight:normal;padding-bottom:8px;}
+.course_describe .describe_title i{display:inline-block;width:5px;height:15px;background:#53ceca;position:relative;top:2px;}
+.course_describe .see_list{ display:flex; padding-top:10px;}
+.course_describe .see_list li{-webkit-flex:1; width:20%; height:60px;margin-right:10px; background:#53ceca; text-align:center; color:#fff;
+padding: 12px 5px 5px 5px;}
+.course_describe P{ line-height:20px; font-size:14px;}
+.course_describe P strong{font-weight:normal; color:#53ceca;}
+.buy_button{ display:block;width:80%;height:40px; text-align:center; line-height:40px; color:#fff; font-size:18px; background:#53ceca;border-radius:5px;
+margin: 50px auto 20px auto;}

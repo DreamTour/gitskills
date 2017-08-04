@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mplayer</title>
+<link type="text/css" rel="stylesheet" href="mplay.css">
+</head>
+<body>
+<style>
+html,body{ background:#E91E63}
+#media-player{ margin:50px auto;}
+*{ margin:0; padding:0;}	
+</style>
+<!--@media-player-->
+<div id="media-player" class="media-player" onContextMenu="return false;">
+  <div class="media-play-title"></div>
+  <div class="meida-play-content">
+    <div class="media-play-mask" style="display:block"> <a href="javascript:;" class="media-play-maskBtn" title="播放"></a> </div>
+    <video class="media-plugin"></video>
+  </div>
+  <div class="media-play-cotrolbar">
+    <div class="media-play-button"></div>
+    <div class="media-play-currentTime"></div>
+    <div class="media-play-progressBar">
+      <div class="media-play-progressTrack"></div>
+    </div>
+    <div class="media-play-durationTime"></div>
+    <div class="media-play-volumeWrap">
+      <div class="media-play-volumeBtn"></div>
+      <div class="media-play-volumeInner" style="display:none">
+        <div class="media-play-volumeBar">
+          <div class="media-play-volumeTrack"></div>
+        </div>
+      </div>
+    </div>
+    <div class="media-play-fullScreen"></div>
+  </div>
+</div>
+<!--@media-player--> 
+<script src="mplayer.min.js"></script> 
+<script>
+	mPlayer({
+		container:'media-player',
+		width:900,//播放器宽度
+		title:'Selena Gomez & the Scene - My Dilemma',//视频名称
+		replay:true,//是否重复播放
+		autoplay:false,//是否自动播放
+		keyEnabled:true,//是否键盘控制
+		source:'牛奶咖啡 - 明天,你好.mkv'	//视频播放源
+	});
+</script>
+</body>
+</html>

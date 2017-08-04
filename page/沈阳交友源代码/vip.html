@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>沈阳相亲-会员资料详情</title>
+<link type="text/css" rel="stylesheet" href="public_style.css">
+<link type="text/css" rel="stylesheet" href="vip.css">
+<script type='text/javascript' src='http://www.yumukeji.com/library/jquery-1.11.2.min.js'></script>
+</head>
+
+<body>
+<!--头部-->
+    	<div class="header">
+        	<a class="logo" href="javascript:;"><img src="images/logo.png"></a>
+            <div class="tel_number">
+            	<div class="tel_text"><i class="tel icon"></i>全国咨询热线</div>
+                <div class="number">13595807848</div>
+            </div>
+        </div>
+        <!--导航-->
+        <ul class="nav_bar of">
+            <li class="nav_pink fl"> <a href="index.html" class="fz16 col fw1">首页</a></li>
+            <li class="nav_pink fl"> <a href="personal_center.html" class="fz16">个人中心</a></li>
+            <li class="nav_pink fl"><a href="search.html" class="fz16">搜索意中人</a></li>
+            <li class="nav_pink fl"><a href="success_stories.html" class="fz16">牵手成功</a></li>
+            <li class="nav_pink fl"><a href="activity.html" class="fz16">活动展示 </a></li>
+            <li class="nav_pink fl"><a href="business.html" class="fz16">商务合作</a></li>      
+            <li class="nav_pink fl"><a href="contact_us.html" class="fz16">联系我们</a></li>
+        </ul>
+        <div class="line"></div>
+<!--基本资料-->
+<div class="news_place"><i class="news_place_icon" id="news_btn"></i><span>您所在的位置：</span><a href="search.html">搜索意中人</a><span>>></span><a href="vip.html">会员详情</a></div>
+<div id="layout-top">
+	<div id="user-image" class="user-image-view">
+    	<div id="image-big" class="user-image-big">
+        	<img src="images/vip_img1.jpg">
+        </div>
+        <div class="user-image-list">
+        	<div id="prev" class="image-switch-btn vip_icon" style="background-position: -22px -18px;"></div>
+            <div id="next" class="image-switch-btn vip_icon" style="background-position: -3px -34px;"></div>
+        	<ul id="image-list">
+            	<li>
+                	<img src="images/vip_img1.jpg">
+                </li>
+                <li>
+                	<img src="images/vip_img2.jpg">
+                </li>
+                <li>
+                	<img src="images/vip_img1.jpg">
+                </li>
+                <li>
+                	<img src="images/vip_img2.jpg">
+                </li>
+                <li>
+                	<img src="images/vip_img1.jpg">
+                </li>
+                <li>
+                	<img src="images/vip_img2.jpg">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="user-data" class="user-data">
+    	<div class="proto-text" style="font-weight:600;">蜗牛先生</div>
+        <div class="proto-text">
+        	<div>会员身份：<span>月会员</span><i class="vip_icon vip_icon2"></i></div>
+        	<div class="proto-text proto-text2">30岁，未婚，来自重庆</div>
+            <ul class="proto-list">
+            	<li><span class="proto-label">学历：</span><p>本科</p></li>
+                <li><span class="proto-label">身高：</span><p>173cm</p></li>
+                <li><span class="proto-label">购车：</span><p>已购车</p></li>
+                <li><span class="proto-label">月薪：</span><p>5000~1000元</p></li>
+                <li><span class="proto-label">住房：</span><p>需要时购置</p></li>
+                <li><span class="proto-label">属相：</span><p>牛</p></li>
+                <li><span class="proto-label">星座：</span><p>摩羯座</p></li>
+                <li><span class="proto-label">民族：</span><p>汉</p></li>
+                <li><span class="proto-label">职业：</span><p>自由职业</p></li>
+                <li><span class="proto-label">子女情况：</span><p>无小孩</p></li>
+            </ul>
+        </div>
+        <div class="proto-text" id="proto-text">
+        	<a href="javascript:;" class="proto-btn first-btn">发信</a>
+            <a href="javascript:;" class="proto-btn second-btn">送礼物</a>
+        </div>
+    </div>
+    <img id="user-advem" class="user-advem" src="images/vip_ad.jpg">
+</div>
+
+<script>
+
+var swiper = function() {
+		var b = 0,
+			c = function(a) {
+				//获取id号
+				if (a) return document.getElementById(a)
+			},
+			d = function(a, b) {
+				//获取对象css
+				return a.currentStyle ? a.currentStyle[b] : getComputedStyle(a, !1)[b]
+			},
+			m = c("image-big"),
+			g = c("image-list"),
+			e = g.getElementsByTagName("li"),
+			f = e.length,
+			h = c("prev"),
+			k = c("next"),
+			c = d(e[0], "width"),
+			n = d(e[0], "height"),
+			d = d(e[0], "margin-right"),
+			l = parseInt(c.replace(/px/, ""));
+		handleHeight = parseInt(n.replace(/px/, ""));
+		handleMargin = parseInt(d.replace(/px/, ""));
+		init = function() {
+			//初始化对象
+			g.style.width = (l + handleMargin) * f + "px";
+			k && (k.onclick = function() {
+				b++;
+				b >= f && (b = f);
+				move(b)
+			}, h && (h.onclick = function() {
+				b--;
+				0 >= b && (b = 0);
+				move(b)
+			}))
+		};
+		move = function(a) {
+			//执行列表图运行
+			a >= f || (g.style.marginLeft = -(l + handleMargin) * a + "px")
+		};
+		selectImage = function() {
+			//赋值src
+			for (var a = 0; a < f; a++) e[a].onclick = function() {
+				var a = this.getElementsByTagName("img")[0].src;
+				m.getElementsByTagName("img")[0].src = a
+			}
+		};
+		selectImage();
+		init()
+};
+
+/*
+var swiper = function(){
+	var cont = 0,
+		getElement = function(s){
+			if(!s)return;return document.getElementById(s);
+		},
+		getStyle = function(obj, attr)  
+		{  
+			if(obj.currentStyle)  
+			{  
+				return obj.currentStyle[attr];  
+			}  
+			else  
+			{  
+				return getComputedStyle(obj,false)[attr];  
+			}  
+		},
+		imageBig = getElement('image-big'),
+		imageList = getElement('image-list'),
+		imageListChild = imageList.getElementsByTagName('li'),
+		length = imageListChild.length,
+		prevBtn = getElement('prev'),
+		nextBtn = getElement('next'),
+		objWidth = getStyle(imageListChild[0],'width'),
+		objHeight = getStyle(imageListChild[0],'height'),
+		objMargin = getStyle(imageListChild[0],'margin-right'),
+		handleWidth = parseInt(objWidth.replace(/px/,''));
+		handleHeight = parseInt(objHeight.replace(/px/,''));
+		handleMargin = parseInt(objMargin.replace(/px/,''));
+		init = function(){
+			
+			//设置宽度
+			imageList.style.width = (handleWidth + handleMargin) * length+'px';
+			if(!nextBtn){
+				return;	
+			}else{
+				nextBtn.onclick = function(){
+					cont ++;
+					if(cont >= length){
+						cont = length;	
+					}
+					move(cont);
+				}
+			};
+			if(!prevBtn){
+				return;	
+			}else{
+				prevBtn.onclick = function(){
+					cont --;
+					if(cont <= 0){
+						cont = 0;	
+					}
+					move(cont);
+				}
+			};
+		},
+		move = function(lengths){
+			if(lengths >= length){
+				return;
+			}else{
+				imageList.style.marginLeft = - (handleWidth + handleMargin) * lengths+'px';	
+			}
+		},
+		selectImage = function(){
+			
+			var src = '';
+			
+			for(var i =0;i<length;i++){
+				imageListChild[i].onclick = function(){
+					var thisImage = this.getElementsByTagName('img')[0].src;
+					imageBig.getElementsByTagName('img')[0].src = thisImage
+				}
+			}
+				
+		};
+		selectImage();
+		init();
+}
+*/
+window.onload = function(){
+	swiper();
+}
+</script>
+<!--会员资料-->
+    <div class="vip_content of">
+    	<!--左边-->
+    	<div class="vip_content_left">
+        	<!--详细资料-->
+            <div class="left_column2">
+            	<i class="vip_icon vip_icon1" ></i>
+                <span style="font-size:18px;">详细资料</span>
+                 <ul class="proto-list" style="line-height:30px;">
+                    <li><span class="proto-label">吸烟：</span><p>社交时偶尔吸</p></li>
+                    <li><span class="proto-label">饮酒：</span><p>不喝</p></li>
+                    <li><span class="proto-label">贷款：</span><p>无</p></li>
+                    <li><span class="proto-label">家中排行：</span><p>独生子女</p></li>
+                    <li><span class="proto-label">优点：</span><p>--</p></li>
+                    <li><span class="proto-label">缺点：</span><p>--</p></li>
+                    <li><span class="proto-label">兴趣爱好：</span><p>足球</p></li>
+                    <li><span class="proto-label">微信号：</span><a href="javascript:;" class="fz14">点击查看<span class="col fz14">(8元/次)</span></a></li>
+                </ul>
+            </div>
+        	<!--内心独白-->
+        	<div class="left_column1">
+            	<i class="vip_icon vip_icon1" ></i>
+                <span style="font-size:18px;">内心独白</span>
+                <p style="margin-top:10px;text-indent:2em;line-height:30px;font-size:14px;">我想要的爱情两人心是善良的，因为生活中可以缺钱缺物质，但不能缺善良，缺物质与金钱可能是暂时的，缺善良有很大可能是长久的，善良是一个人为人处事的根基，根如果坏了，很多东西也会接着坏;我要的爱情两人都深深的信任着对方，只有信任才能同心，同心才能同行，信任是两人相处的根基;我要的爱情两人都有颗真诚忏悔的心，生活中谁都避免不了做错事，做错事后有颗真诚忏悔的心，才能走好以后人生的每一天，如果现在遇到这么一个女子，我不管你的过去，不管你现在如何如何，只要我们有些情况大致合适，我会用自己一颗真心对她，可以把自己的心完全交给她。我现在说的不是冲动的话，是经过深思熟虑才说这些话的，不管别人认为爱情有多复杂，我相信自己这三条简单的观点是没有错的。最后，我想说的是自己现在只是一个没什么学历没什么能力没什么家庭背景普通的不能再普通的一个普通人！</p>
+            </div>
+            <!--择偶要求-->
+            <div class="left_column2">
+            	<i class="vip_icon vip_icon1" ></i>
+                <span style="font-size:18px;">择偶要求</span>
+                 <ul class="proto-list" style="line-height:30px;">
+                    <li><span class="proto-label">年龄：</span><p>22-30岁</p></li>
+                    <li><span class="proto-label">身高：</span><p>155-170cm</p></li>
+                    <li><span class="proto-label">民族：</span><p>不限</p></li>
+                    <li><span class="proto-label">学历：</span><p>不限</p></li>
+                    <li><span class="proto-label">婚姻状况：</span><p>不限</p></li>
+                    <li><span class="proto-label">居住地：</span><p>不限</p></li>
+                    <li><span class="proto-label">购房：</span><p>不限</p></li>
+                    <li><span class="proto-label">购车：</span><p>不限</p></li>
+                    <li><span class="proto-label">职业：</span><p>不限</p></li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧帮你遇见爱-->
+        <div class="meet_love">
+            <div class="meet_love_title">
+                <i class="meet_love_icon icon"></i>
+                <h2>服务中心</h2>
+            </div>
+            <div class="meet_love_content">
+                <div class="shop_box">
+                    <div class="shop">
+                        <i class="shop_icon01 shop_icon icon"></i>
+                        <div class="shop_text">
+                             <a class="shop_text_title" href="javascript:;">看信包月>></a>
+                             <div class="shop_text_content1">
+                                <i class="shop_text_icon"></i>
+                                <span>当月免费查看所有信件</span>
+                             </div>
+                             <div class="shop_text_content">
+                                <i class="shop_text_icon"></i>
+                                <span>尊贵会员身份标识</span>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop_box">
+                    <div class="shop">
+                        <i class="shop_icon02 shop_icon icon"></i>
+                        <div class="shop_text">
+                             <a class="shop_text_title" href="javascript:;">看信包年>></a>
+                             <div class="shop_text_content1">
+                                <i class="shop_text_icon"></i>
+                                <span>一年免费查看所有信件</span>
+                             </div>
+                             <div class="shop_text_content">
+                                <i class="shop_text_icon"></i>
+                                <span>尊贵会员身份标识</span>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop_box">
+                    <div class="shop">
+                        <i class="shop_icon03 shop_icon icon"></i>
+                        <div class="shop_text">
+                             <a class="shop_text_title" href="javascript:;">排名提前>></a>
+                             <div class="shop_text_content1">
+                                <i class="shop_text_icon"></i>
+                                <span>个人资料优先展示</span>
+                             </div>
+                             <div class="shop_text_content">
+                                <i class="shop_text_icon"></i>
+                                <span>吸引更多异性关注</span>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop_box">
+                    <div class="shop" id="shop-special">
+                        <i class="shop_icon04 shop_icon icon"></i>
+                        <div class="shop_text">
+                             <a class="shop_text_title" href="javascript:;">查看微信>></a>
+                             <div class="shop_text_content1">
+                                <i class="shop_text_icon"></i>
+                                <span>查看对方微信号</span>
+                             </div>
+                             <div class="shop_text_content">
+                                <i class="shop_text_icon"></i>
+                                <span>沟通顺畅无阻碍</span>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--右侧广告-->
+        <div class="side_ad fr">
+        	<a href="javascript:;"><img src="images/ad2.jpg"></a>
+        </div>
+    </div>
+<!--底部-->
+    <div class='footer'>
+            	<div class='footer_title_box'>
+                   <p class="footer_title">联系方式</p>
+                </div>
+                <div class='footer_content'>
+                	<div class='footer_content_top'>
+                    	<ul class='footer_contact'>
+                        	<li>电话：13595807848</li>
+                            <li>传真：135958078481</li>
+                            <li>地址：重庆市南岸区国际社区海悦府15-2</li>
+                            <li>邮箱：2813140631@qq.com</li>
+                        </ul>
+                        <div class='footer_barcode'>
+                        	<a href='javascript:;'>
+                                <div class='footer_barcode_weixin'>
+                                    <div class='weixin_barcode'>
+                                    	<img src='images/weixin_code.png'>
+                                    </div>
+                                    <div class='weixin_text'>
+                                    	<h1>微信公众号</h1>
+                                        <p>每时每刻掌控最新动态随时随地知晓沈阳资讯</p>
+                                    </div>	
+                                </div>
+                            </a>
+                            <a href='javascript:;'>
+                            <div class='footer_barcode_weibo'>
+                                    <div class='weibo_barcode'>
+                                    	<img src='images/weixin_code.png'>
+                                    </div>
+                                    <div class='weibo_text'>
+                                    	<h1>微信公众号</h1>
+                                        <p>每时每刻掌控最新动态随时随地知晓沈阳资讯</p>
+                                    </div>	
+                            </div>
+                            </a>
+                            <a href='javascript:;'>
+                            <div class='footer_barcode_qq'>	
+                                    <div class='qq_barcode'>
+                                    	<img src='images/weixin_code.png'>
+                                    </div>
+                                    <div class='qq_text'>
+                                    	<h1>微信公众号</h1>
+                                        <p>每时每刻掌控最新动态随时随地知晓沈阳资讯</p>
+                                    </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class='footer_content_bottom'>
+                    	<div class="footer_content_box">
+                        	<a href='javascript:;'>首页</a>　<span>|</span>　
+                            <a href='javascript:;'>诚聘英才</a>　<span>|</span>　
+                            <a href='javascript:;'>沈阳地图</a>　<span>|</span>　
+                            <a href='javascript:;'>沈阳相亲</a>　<span>|</span>　
+                            <a href='javascript:;'>法律事务部</a>　<span>|</span>
+                            <a href='javascript:;'>联系方式</a>　<span>|</span>　
+                            <a href='javascript:;'>意见反馈</a>　<span>|</span>
+                            <a href='javascript:;'>最新资讯</a>
+                        </div>
+                        <p class="copyright">版权所有 © 沈阳相亲  渝ICP备：52136854号 技术支持：雨木科技</p>
+                        <p>免费咨询：13595807848 E-mail:2813140631@qq.com  地址：重庆市南岸区国际社区海悦府15-2</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+</body>
+</html>

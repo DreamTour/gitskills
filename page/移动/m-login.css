@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*头部底部*/
+.header{ position:fixed;left:0;width:100%;z-index:100;}
+.header{ height:44px; line-height:44px; text-align:center;background:#ff7c7c; color:#fff; padding:0 15px;display:-webkit-box;display:-webkit-flex; display:flex;}
+.head-center{flex:1}
+/*登录*/
+.login{padding:59px 15px 15px;}
+.login input{width:100%;margin:auto;height:40px;font-size:14px; border:none; padding:0 10px; border:1px solid #ddd;}
+.login input:last-child{ border-top:none;}
+.login input:first-child{ border-radius:4px 4px 0 0;}
+.login input:last-child{ border-radius:0 0 4px 4px ;}
+.login-btn{display:flex;padding-left:15px;}
+.login-btn-re,.login-btn-lo{border-radius:5px;height:42px;line-height:42px;text-align:center;flex:1;margin-right:15px;}
+.login-btn-re{border:1px solid #ddd;}
+.login-btn-lo{border:1px solid #ff7c7c;}
+.login-logo{width:100%;padding:50px 25px;}

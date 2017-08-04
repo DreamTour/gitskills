@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<script type='text/javascript' src='http://www.yumukeji.com/library/jquery-1.11.2.min.js'></script>
+</head>
+
+<body>
+
+<style>
+*
+{
+          margin: 0;
+          padding: 0;
+          -webkit-tap-highlight-color: rgba(255, 0, 0, 0)
+}
+*, :after, :before { box-sizing: border-box }
+a, b, big, em, h1, h2, h3, h4, h5, h6, i, ins, small, strong, u { font-style: normal }
+a
+{
+          color: #3a3a3a;
+          text-decoration: none
+}
+a, button, input[type=button], input[type=submit] { cursor: pointer }
+a, input, select, textarea, button { outline: 0 }
+a, img, select, button { border: none }
+img { display: block }
+p
+{
+          white-space: pre-line;
+          word-break: break-all;
+}
+button, input, select { background: #fff; font-size:15px;}
+li, ol, ul { list-style-type: none }
+fl, fr { display: inline }
+fl { float: left }
+fr { float: right }
+clear:after
+{
+          clear: both;
+          display: block;
+          content: ''
+}
+table { width: 100% }
+table th { font-weight: 400 }
+table, table td, table th, table tr { border-collapse: collapse }
+body
+{
+          background: #ffffff;
+          color: #555;
+          font-size: 14px;
+          font-family: Arial;
+          min-width: 320px;
+          max-width: 760px;
+          margin: auto
+}
+::-webkit-scrollbar {
+width:0;
+}
+</style>
+
+<div class="popup-background"></div>
+<div class="popup-box">
+	<div class="popup-box__hd">
+			<div class="popup-hd-ctrl" role="button" aria-label="close"></div>
+			<div class="popup-hd-title">支付</div>
+	</div>
+	<div class="popup-box__bd">
+			<p class="popup-new-attr">手机充值</p>
+			<p class="popup-new-attr"><big>￥9.50</big></p>
+			<div class="popup-new-check" id="check">
+					<label><span role="radio" class="spanCheck" name="pay"></span><span>微信</span></label>
+					<label><span role="radio" class="spanCheck" name="pay"></span><span>支付宝</span></label>
+			</div>
+	</div>	
+	<div class="popup-box__fd">
+			<a href="javascript:;" class="popup-btn popup-btn0" role="button">确认支付</a>
+	</div>
+</div>
+<style>
+
+.popup-background,.popup-box{position:fixed}
+.popup-background{top:0;right:0;bottom:0;left:0;z-index:1000;margin:auto;width:100%;height:100%;background:rgba(0,0,0,.4)}
+.popup-box{top:20%;left:50%;z-index:1001;margin-left:-40%;width:80%;border-radius:10px;background:#fff;box-shadow:0 1px 6px #555;color:#000;font-family:-apple-system-font,Helvetica Neue,Helvetica,sans-serif;-webkit-margin-start:-40%;margin-start:-40%}
+.popup-box__hd{position:relative;padding:1pc 15px;border-bottom:1px solid #0c6;text-align:center;font-size:22px}
+.popup-box__bd{padding:15px 20px;text-align:center}
+.popup-box__fd{padding:0 20px 20px}
+/*****----------------------*************/
+.popup-new-attr{font-size:18px}
+.popup-new-attr big{font-weight:400;font-size:40px}
+.popup-new-check{display:flex;margin:10px auto;padding:15px 0;border-top:1px solid #ddd;border-bottom:1px solid #eee;font-size:1pc;align-items:center}
+.popup-new-check span[role="radio"]{display:inline-block;margin-right:6px;width:1pc;height:1pc;border:1px solid #ddd;border-radius:2px;-webkit-appearance:none;appearance:none}
+.popup-new-check label{display:block;flex:1}
+.popup-new-check span{vertical-align:middle}
+.popup-btn{display:block;width:100%;height:50px;border-radius:4px;background:#1aac19;box-shadow:0 0 0 1px #428e42;color:#fff;text-align:center;font-size:20px;line-height:50px}
+.popup-hd-ctrl{position:absolute;top:0;bottom:0;left:15px;margin:auto;width:20px;height:20px;background:url(ico/close.png) no-repeat scroll center/cover;}
+.checked{ background:url(ico/checked.png) no-repeat scroll center/cover;}
+
+</style>
+<script>
+
+var check = document.getElementsByClassName('spanCheck');
+
+for( var i=0;i<check.length;i++ ){
+	check[i].onclick = function(){
+	for( var i=0;i<check.length;i++ ){
+		
+		check[i].className = "spanCheck"
+			
+	}
+	this.className = "spanCheck checked";
+	}
+}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<link rel="stylesheet" href="css/css.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/youyi.js"></script><script type="text/javascript">
+		$(window).scroll( function() {
+		var height=$(this).scrollTop(); 
+		var height1=$(".tan").height();
+		$(".tan").css('margin-top',(height-height1/2));
+		});
+		$(function(){
+			$("#mackbg").click(function(){
+				$(this).hide();
+				$("#tan1").hide();
+				$("#tan2").hide();
+				$("#tan3").hide();
+				$("#tan4").hide();
+			})
+			$(".xqba4").click(function(){
+				$("#tan1").show();
+				$("#mackbg").show();
+			});
+			$(".xqba1").click(function(){
+				$("#tan2").show();
+				$("#mackbg").show();
+			});
+			$(".xqba3").click(function(){
+				$("#tan3").show();
+				$("#mackbg").show();
+			});
+			$("#shoukuan").click(function(){
+				$("#tan4").show();
+				$("#mackbg").show();
+			});
+		})
+	</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="mcdiv mcdiv12">
+				<div class="title">商家在线收款</div>
+				<p><span>应收金额</span>&nbsp;&nbsp;<input type="text" name="" class="input1" value="请输入应收金额" /></p>
+				<p><span>折扣率</span>&nbsp;&nbsp;<b>10%</b></p>
+				<p><span>实收金额</span>&nbsp;&nbsp;<b>6356</b>  元</p>
+			</div>
+			<a href="#" class="queren" id="shoukuan">确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定</a>
+			
+		<div id="tan4" class="tan"><div class="tan4 tanc">
+			<div class="ctitle">收款二维码</div>
+			<div class="ewm"><img src="images/erweima.jpg" alt="" /></div>
+		</div></div>
+		<div id="mackbg"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>有劳了-求职详情</title>
+<link href="m-public.css" type="text/css" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<script type='text/javascript' src='http://www.yumukeji.com/library/jquery-1.11.2.min.js'></script>
+</head>
+
+<body>
+<!--页眉-->
+<header id="top">
+	<div class="index-top clearfix">
+    	<a href="m-index.html"><img src="images/logo.png" class="fl"></a>
+        <div class="fr login-box"><a href="m-co-login .html">企业登录</a>丨<a href="m-pe-login.html">个人登录</a></div>
+    </div>
+</header>
+<ul class="position-nav">
+	<li><a href="m-index.html">首页</a></li>
+    <li><a href="m-position.html">优职</a></li>
+    <li><a href="m-talents.html">优才</a></li>
+    <li><a href="m-partTime.html">学生兼职</a></li>
+    <li><a href="m-info.html">资讯</a></li>
+</ul>
+<div class="way"><a href="m-index.html">首页</a><span>&gt;&gt;</span><a href="m-talents.html">优才</a><span>&gt;&gt;</span><a href="m-job-wanted.html">详情</a></div>
+<!--内容-->
+<section id="job-details">
+	<div class="job-de-content">
+    	<div class="job-de-title">
+            <h2>求职人事经理/行政经理</h2>
+        </div>
+        <img src="images/pe-img1.jpg" class="je-de-photo">
+        <ul class="job-de-list clearfix">
+        	<li>姓名：杜瑶</li>
+            <li>性别：女</li>
+            <li>年龄：26岁</li>
+            <li>教育程度：本科</li>
+            <li>类型：全职</li>
+            <li>常驻地点：昆明市</li>
+            <li>方式：上门</li>
+            <li>面向:全国</li>
+            <li>收费：5000-8000元/月</li>
+            <li>工作时间：周一至周末</li>
+            <li id="mailBox">邮箱：12345678@qq.com</li>
+            <li id="phone">联系手机：01234567891</li>
+        </ul>
+    </div> 
+</section>
+<section id="m-job-body">
+	<div class="job-body-title clearfix"><h2 class="fl">说明</h2><div class="fr inform-box"><a href="javascript:;"><i class="inform-icon"></i><span id="informBtn">举报</span></a></div></div>
+    <div class="job-body-article">工作能力及其他专长：<br/>
+任职档案管理员期间得益最大的是对文档管理、保存、发放、销毁、保密等有一定的了解，也培养了我的细心、耐心，能从事较为繁琐的事务。任职行政部助理期间，熟练使用办公软件，能独立处理日常办公行政事务。善与人沟通，客观公正的处理人事纠纷，亲和力强，原则性强，有良好的道德素质，能用平常心面对得失。<br/><br/>
+详细个人自传：<br/>
+愿意吃苦受累，积极主动的努力实现自身价值。作风优良、待人诚恳，能合理地统筹安排生活中的事务。工作认真负责，为了自己的目标为了完成自己想要的事情拼命投入力量;乐于与人沟通，生活在群体之中，具有较强的团队合作的精神，能够积极互动努力达成团队的目标。期望自身的浅识能为贵公司及员工提供良好的服务。<br/> 
+</div>
+</section>
+<div class="po-bottom clearfix">
+    <div class="collect fl"><a href="jabvascript:;"><i class="po-share-icon"></i><span>分享</span></a></div>
+    <a href="javascript:;" class="po-apply-btn fl" id="lookBtn">查看联系方式</a>
+    <div class="collect fl"><a href="jabvascript:;"><i class="po-co-icon"></i><span>收藏</span></a></div>
+</div> 
+<!--页脚-->
+<footer id="footer">
+    <p>有劳了版权所有©2000-2017</p>
+    <p>youlaole.com 滇ICP备05658956</p>
+</footer>
+<!--举报弹出层-->
+<div id="m-informPopUp">
+    <div id="informClose"><img src="images/informPopUp-close.png"></div>
+	<div class="popUpBox">
+        <form action="" method="post">
+            <label><input type="checkbox" name="inform" value=""><span>虚假信息/冒用他人信息</span></label>
+            <label><input type="checkbox" name="inform" value=""><span>不良信息/违法违规信息</span></label>
+            <label><input type="checkbox" name="inform" value=""><span>有瞒偏和欺诈行为</span></label>
+            <label><input type="checkbox" name="inform" value=""><span>恶意营销、广告</span></label>
+        </form>
+        <p>温馨提示：被连续举报2次以上者发布的内容临时取消展示，信息进入人工审核。</p>
+        <a href="javascript:;" class="inform-btn inform-btn2" id="informBtn2">确认举报</a>
+    </div>
+</div>
+
+<script>
+window.onload=function(){
+//查看联系方式
+	var mailBox=document.getElementById("mailBox"),
+		phone=document.getElementById("phone"),
+		lookBtn=document.getElementById("lookBtn");
+	lookBtn.onclick=function(){
+		mailBox.style.display="block";
+		phone.style.display="block";
+	};
+//举报弹出层
+	var informBtn=document.getElementById("informBtn"),
+		informPopUp=document.getElementById("m-informPopUp"),
+		informClose=document.getElementById("informClose"),
+		informBtn2=document.getElementById("informBtn2");
+		informBtn.onclick=function(){
+			informPopUp.style.display="block";
+		};
+		informBtn2.onclick=function(){
+			informPopUp.style.display="none";
+		};
+		informClose.onclick=function(){
+			informPopUp.style.display="none";
+		}
+}
+</script>
+</body>
+</html>
