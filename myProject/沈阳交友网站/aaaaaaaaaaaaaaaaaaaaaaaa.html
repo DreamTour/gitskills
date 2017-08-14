@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type='text/javascript' src="../page/JQ/锋利的jQuery（第2版）源码/demo/scripts/jquery.js"></script>
+<style>
+	/*input:focus,textarea:focus{
+		border: 1px solid #f00;
+		background: #fcc;	
+	}*/
+	.focus{
+		border: 1px solid #f00;
+		background:#fcc;
+	}
+	.selected{ background:red;}
+	.hide{ display:none;}
+	 *{ margin:0; padding:0;}
+ body { font:12px/19px Arial, Helvetica, sans-serif; color:#666;}
+ .tab { width:240px;margin:50px;}
+ .tab_menu { clear:both;}
+ .tab_menu li { float:left; text-align:center; cursor:pointer; list-style:none; padding:1px 6px; margin-right:4px; background:#F1F1F1; border:1px solid #898989; border-bottom:none;}
+ .tab_menu li.hover { background:#DFDFDF;}
+ .tab_menu li.selected { color:#FFF; background:#6D84B4;}
+ .tab_box { clear:both; border:1px solid #898989; height:100px;}
+ .hide{display:none}
+</style>
+</head>
+
+<body>
+<!--<form action="#" method="post" id="regForm">
+	<fieldset>
+    	<legend>个人基本信息</legend>
+        <div>
+        	<label for="username">名称</label>
+            <input id="username" type="text" />
+        </div>
+        <div>
+        	<label for="pass">密码</label>
+            <input id="pass" type="password" />
+        </div>
+        <div>
+        	<label for="msg">详细信息</label>
+            <textarea id="msg"></textarea>
+        </div>
+    </fieldset>
+</form>
+-->
+<!--<form>
+	<div class="msg">
+    	<div class="msg_caption">
+        	<span class="bigger">放大</span>
+            <span class="smaller">缩小</span>
+        	<span class="up">向上</span>
+            <span class="down">向下</span>
+        </div>
+        <div>
+        	<textarea id="comment" rows="8" cols="20">
+            	多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化多行文本框高度变化
+            </textarea>
+        </div>
+    </div>
+</form>
+-->
+<!--<form method="post" action="#">
+	你爱好的运动是？<br/>
+    <input type="checkbox" name="items" value="足球" />足球
+    <input type="checkbox" name="items" value="篮球" />篮球
+    <input type="checkbox" name="items" value="羽毛球" />羽毛球
+    <input type="checkbox" name="items" value="乒乓球" />乒乓球
+    <input type="button" id="CheckedAll" value="全 选" />
+    <input type="button" id="CheckedNo" value="全不选" />
+    <input type="button" id="CheckedRev" value="反 选" />
+    <input type="button" id="send" value="提 交" />
+</form>
+-->
+<!--<form method="post" action="#">
+	你爱好的运动是？<br/>
+    <input type="checkbox" id="CheckedAll" />全选/全不选
+    <input type="checkbox" name="items" value="足球" />足球
+    <input type="checkbox" name="items" value="篮球" />篮球
+    <input type="checkbox" name="items" value="羽毛球" />羽毛球
+    <input type="checkbox" name="items" value="乒乓球" />乒乓球
+    <input type="button" id="send" value="提 交" />
+</form>
+-->
+<!--<div class="content">
+	<select multiple id="select1" style="width:100px;height:160px;">
+    	<option value="1">选项1</option>
+        <option value="2">选项2</option>
+        <option value="3">选项3</option>
+        <option value="4">选项4</option>
+        <option value="5">选项5</option>
+        <option value="6">选项6</option>
+        <option value="7">选项7</option>
+        <option value="8">选项8</option>
+    </select>
+    <div>
+    	<span id="add">选中添加到右边&gt;&gt;</span>
+        <span id="add_all">全部添加到右边&gt;&gt;</span>
+    </div>
+</div>
+<div class="content">
+	<select multiple id="select2" style="width:100px;height:160px;">
+    </select>
+    <div>
+    	<span id="remove">&lt;&lt;选中删除到左边</span>
+        <span id="remove_all">&lt;&lt;全部删除到左边</span>
+    </div>
+</div>
+-->
+<!--<form method="post" action="">
+	<div class="int">
+    	<label for="usrname">用户名：</label>
+        <input type="text" id="username" class="required" />
+    </div>
+    <div class="int">
+    	<label for="email">邮箱：</label>
+        <input type="text" id="email" class="required" />
+    </div>
+    <div class="int">
+    	<label for="personinfo">个人资料：</label>
+        <input type="text" id="personinfo" />
+    </div>
+    <div class="sub">
+        <input type="submit" id="send" value="提交" />
+        <input type="reset" id="res" />
+    </div>
+</form>
+-->
+<!--<table>
+	<thead>
+    	<tr><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+    </thead>
+    <tbody>
+    	<tr><td><input type="radio" name="choice" value=""/></td><td>张山</td><td>男</td><td>浙江宁波</td></tr>
+        <tr><td><input type="radio" name="choice" value=""/></td><td>李四</td><td>女</td><td>浙江杭州</td></tr>
+        <tr><td><input type="radio" name="choice" checked value=""/></td><td>王五</td><td>男</td><td>湖南长沙</td></tr>
+        <tr><td><input type="radio" name="choice" value=""/></td><td>赵六</td><td>男</td><td>浙江温州</td></tr>
+        <tr><td><input type="radio" name="choice" value=""/></td><td>Rain</td><td>男</td><td>浙江杭州</td></tr>
+        <tr><td><input type="radio" name="choice" value=""/></td><td>MAXMAN</td><td>女</td><td>浙江杭州</td></tr>
+    </tbody>
+</table>
+-->
+<!--<table>
+	<thead>
+    	<tr><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+    </thead>
+    <tbody>
+    	<tr><td><input type="checkbox" name="choice" value=""/></td><td>张山</td><td>男</td><td>浙江宁波</td></tr>
+        <tr><td><input type="checkbox" name="choice" value=""/></td><td>李四</td><td>女</td><td>浙江杭州</td></tr>
+        <tr><td><input type="checkbox" name="choice" checked value=""/></td><td>王五</td><td>男</td><td>湖南长沙</td></tr>
+        <tr><td><input type="checkbox" name="choice" value=""/></td><td>赵六</td><td>男</td><td>浙江温州</td></tr>
+        <tr><td><input type="checkbox" name="choice" value=""/></td><td>Rain</td><td>男</td><td>浙江杭州</td></tr>
+        <tr><td><input type="checkbox" name="choice" value=""/></td><td>MAXMAN</td><td>女</td><td>浙江杭州</td></tr>
+    </tbody>
+</table>
+-->
+<!--筛选：<input type="text" id="filterName" />
+<table>
+	<thead>
+    	<tr><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+    </thead>
+    <tbody>
+    	<tr class="parent" id="row_01"><td colspan="3">前台设计组</td></tr>
+    	<tr class="child_row_01"><td>张山</td><td>男</td><td>浙江宁波</td></tr>
+        <tr class="child_row_01"><td>李四</td><td>女</td><td>浙江杭州</td></tr>
+        <tr class="parent" id="row_02"><td colspan="3">前台开发组</td></tr>
+        <tr class="child_row_02"><td>王五</td><td>男</td><td>湖南长沙</td></tr>
+        <tr class="child_row_02"><td>赵六</td><td>男</td><td>浙江温州</td></tr>
+        <tr class="parent" id="row_03"><td colspan="3">后台设计组</td></tr>
+        <tr class="child_row_03"><td>Rain</td><td>男</td><td>浙江杭州</td></tr>
+        <tr class="child_row_03"><td>MAXMAN</td><td>女</td><td>浙江杭州</td></tr>
+    </tbody>
+</table>
+-->
+<!--<div class="msg">
+	<div class="msg_caption">
+    	<span class="bigger">放大</span>
+        <span class="smaller">缩小</span>
+    </div>
+    <div>
+    	<p id="para">
+        	This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.
+        </p>
+    </div>
+</div>
+-->
+<!--<div class="tab">
+	<div class="tab_menu">
+    	<ul>
+        	<li class="selected">时事</li>
+            <li>体育</li>
+			<li>娱乐</li>            
+        </ul>
+    </div>
+    <div class="tab_box">
+    	<div>时事</div>
+        <div class="hide">体育</div>
+        <div class="hide">娱乐</div>
+    </div>
+</div>
+-->
+<ul id="skin">
+		<li id="skin_0" title="灰色" class="selected">灰色</li>
+		<li id="skin_1" title="紫色">紫色</li>
+		<li id="skin_2" title="红色">红色</li>
+		<li id="skin_3" title="天蓝色">天蓝色</li>
+		<li id="skin_4" title="橙色">橙色</li>
+		<li id="skin_5" title="淡绿色">淡绿色</li>
+	</ul>
+	<div id="div_side_0">
+		<div id="news">
+			<h1 class="title">时事新闻</h1>
+		</div>
+	</div>
+	<div id="div_side_1">
+		<div id="game">
+			<h1 class="title">娱乐新闻</h1>
+		</div>
+	</div>
+</body>
+<script>
+	$(function(){
+		var div_li = $('div.tab_menu ul li');
+		div_li.click(function(){
+			$(this).addClass('selected').siblings().removeClass('selected');
+			var index = div_li.index(this);
+			$('div.tab_box > div').eq(index).show().siblings().hide();	
+		}).hover(function(){
+			$(this).addClass('hover');	
+		},function(){
+			$(this).removeClass('hover');	
+		})
+/*		$(':input').focus(function(){
+			$(this).addClass('focus');	
+		}).blur(function(){
+			$(this).removeClass('focus');	
+		})*/
+/*		var comment = $('#comment');
+		$('.bigger').click(function(){
+			if(comment.height() < 500){
+				if(!comment.is(':animated')){
+					comment.animate({height:'+=50'},400);	
+				}
+			}	
+		})
+		$('.smaller').click(function(){
+			if(comment.height() > 50){
+				if(!comment.is(':animated')){
+					comment.animate({height:'-=50'},400);	
+				}
+			}	
+		})
+		$('.up').click(function(){
+			if(!comment.is(':animated')){
+				comment.animate({scrollTop:'+=50'},400);	
+			}
+		})
+		$('.down').click(function(){
+			if(!comment.is(':animated')){
+				comment.animate({scrollTop:'-=50'},400);	
+			}
+		})*/
+		/*$('#CheckedAll').click(function(){
+			$('[name=items]:checkbox').attr('checked',true);	
+		})
+		$('#CheckedNo').click(function(){
+			$('[name=items]:checkbox').attr('checked',false);	
+		})
+		$('#CheckedRev').click(function(){
+			$('[name=items]:checkbox').each(function(index, element) {
+                $(this).attr('checked',!$(this).attr('checked'));
+            });	
+		})
+		$('#send').click(function(){
+			var str='你选中的是：\r\n';
+			$('[name=items]:checkbox:checked').each(function(index, element) {
+                str += $(this).val()+'\r\n';
+            });
+			console.log(str);	
+		})*/
+		/*$('#CheckedAll').click(function(){
+			if($(this).attr('checked')){
+				$('[name=items]:checkbox').attr('checked',true);	
+			}else{
+				$('[name=items]:checkbox').attr('checked', false);	
+			}	
+		})*/
+		/*$('#CheckedAll').click(function(){
+			$('[name=items]:checkbox').attr('checked',this.checked);	
+		})*/
+		/*$('[name=items]:checkbox').click(function(){
+			var flag = true;
+			$('[name=items]:checkbox').each(function(index, element) {
+                if(!$(this).attr('checked')){
+					flag = false;	
+				}
+            });
+			$('#CheckedAll').attr('checked', flag);	
+		})*/
+		/*$('[name=items]:checkbox').click(function(){
+			var tmp = $('[name=items]:checkbox');
+			$('#CheckedAll').attr('checked',tmp.length == tmp.filter(':checked').length);	
+		})*/
+		/*$('#add').click(function(){
+			var Options = $('#select1 option:selected');
+			var remove = Options.remove();
+			remove.appendTo('#select2'); 	
+		})*/
+		/*$('#add').click(function(){
+			var Options = $('#select1 option:selected');
+			Options.appendTo('#select2'); 	
+		})
+		$('#add_all').click(function(){
+			var Options = $('#select1 option');
+			Options.appendTo('#select2');	
+		})
+		$('#select1').dblclick(function(){
+			var Options = $('option:selected',$(this));
+			Options.appendTo('#select2');		
+		})*/
+		
+		/*$('form :input.required').each(function(index, element) {
+            var required  = $("<strong style='color:red'>*</strong>");
+			$(this).parent().append(required);
+        });
+		$('form :input').blur(function(){
+			var parent = $(this).parent();
+			parent.find('.formtips').remove();
+			if($(this).is('#username')){
+				if(this.value == '' || this.value.length < 6){
+					var errorMsg = '请输入至少6位的用户名';
+					parent.append("<span class='formtips onError'>"+errorMsg+"</span>");	
+				}else{
+					var okMsg = '输入正确';
+					parent.append("<span class='formtips onSuccess'>"+okMsg+"</span>");	
+				}	
+			}
+			if($(this).is('#email')){
+				if(this.value == '' || (this.value!='' && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value))){
+					var errorMsg = '请输入正确的e-mail地址';
+					parent.append("<span class='formtips onError'>"+errorMsg+"</span>");	
+				}else{
+					var okMsg = '输入正确';
+					parent.append("<span class='formtips onSuccess'>"+okMsg+"</span>");	
+				}	
+			}
+		}).keyup(function(){
+			$(this).triggerHandler('blur');	
+		}).focus(function(){
+			$(this).triggerHandler('blur');	
+		})
+		$('#send').click(function(){
+			$('form :input.required').trigger('blur');
+			var numError = $('form .onError').length;
+			if(numError){
+				return false;	
+			}
+			alert('注册成功，密码已发到你的邮箱，请查收');	
+		})
+		$('#res').click(function(){
+			$('.formtips').remove();	
+		})*/
+		
+		/*$('tbody>tr:odd').css({background:'#ffffee'})
+		$('tbody>tr:even').css({background:'#fff38f'});
+		$('tbody>tr').click(function(){
+			$(this).css({background:'red'})
+			.find(':radio').attr('checked',true);	
+		})
+		//$('table :radio:checked').parents('tr').css({background:'red'});
+		$('tbody>tr:has(:checked)').css({background:'red'});*/
+		/*$('tbody>tr').click(function(){
+			if($(this).hasClass('selected')){
+				$(this).removeClass('selected')
+				.find(':checkbox').attr('checked',false);	
+			}else{
+				$(this).addClass('selected')
+				.find(':checkbox').attr('checked',true);	
+			}
+		})*/
+		/*$('tbody>tr:has(:checked)').addClass('selected');
+		$('tbody>tr').click(function(){
+			var hasSelected = $(this).hasClass('selected');
+			$(this)[hasSelected?'removeClass':'addClass']('selected')
+			.find(':checkbox').attr('checked',!hasSelected);	
+		})*/
+		/*$('tr.parent').click(function(){
+			$(this).toggleClass('selected')
+			.siblings('.child_'+$(this).attr('id')).toggle();	
+		}).click();*/
+		/*$('tr:contains("王五")').addClass('selected');
+		$('table tbody tr').hide().filter(':contains("李")').show();	*/
+		/*$('#filterName').keyup(function(){
+			$('table tbody tr').hide()
+			.filter(':contains("'+($(this).val())+'")').show();	
+		}).keyup();*/
+		/*$('span').click(function(){
+			var thisEle = $('#para').css('font-size');
+			console.log(thisEle);
+			var textFontSize = parseInt(thisEle,10);
+			var Unit = thisEle.slice(-2);
+			var cName = $(this).attr('class');
+			if(cName == 'bigger'){
+				if(textFontSize <= 22){
+					textFontSize += 2;		
+				}
+			}else if(cName == 'smaller'){
+				if(textFontSize >= 12){
+					textFontSize -= 2;	
+				}
+			}
+			$('#para').css({'font-size':textFontSize+Unit});	
+		})*/
+	})
+</script>
+</html>

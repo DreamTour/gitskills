@@ -1,0 +1,891 @@
+/* css reset start */
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form  {margin:0;}
+ol,ul  {margin:0; padding:0;}
+a,input[type="button"],input[type="submit"],input[type="reset"],button,[role="button"],[role="spinbutton"] {cursor: pointer}
+input {border:none;outline:none;}
+a,ins,u,s { text-decoration: none;}
+a {color:#333;}
+i,ins,u,em,font,small,b,big,center { font-style: normal}
+i {display:inline-block;}
+h1,h2,h3,h4,h5,h6 {font-style: normal;}
+img,button {border: none;}
+ul,ol,li,dl,dt,dd { list-style-type: none;}
+table,table tr,table td,table th { border-collapse: collapse; border-spacing: 0;}
+table { width: 100%;}
+body {font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif; font-size: 12px; background-color: #fff;}
+/* css reset end */
+
+/**************************** common start *****************************/
+html {
+    font-size: 62.5%;
+    -webkit-text-size-adjust:none;
+}
+@media only screen and (min-width: 320px){
+    html {
+        font-size: 12px !important;
+    }
+}
+@media only screen and (min-width: 360px){
+    html {
+        font-size: 14px !important;
+    }
+}
+@media only screen and (min-width: 400px){
+    html {
+        font-size: 16px !important;
+    }
+}
+@media only screen and (min-width: 440px){
+    html {
+        font-size: 16px !important;
+    }
+}
+@media only screen and (min-width: 500px){
+    html {
+        font-size: 18px !important;
+    }
+}
+body {
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+}
+.clearfix:after {
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+.clearfix {
+    zoom: 1;
+}
+.fl  {
+    float:left;
+}
+.fr  {
+    float:right;
+}
+.hide {
+    display: none;
+}
+.search {
+    position: relative;
+    padding: 1rem;
+    background: #f1f3f6;
+}
+.search input {
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0 40px 0 70px;
+    line-height: 2.6rem;
+    width: 100%;
+}
+.search i {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/CkQ58150273km.jpg) no-repeat scroll center/20px 20px;
+}
+.select-date, .select-other {
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    height: 2.6rem;
+}
+.select-date select, .select-other select{
+    flex: 1;
+    border: none;
+}
+.select-date span {
+    padding: .8rem .4rem 0 .4rem;
+}
+.select-other select {
+
+}
+    /*header*/
+.header{
+    border-bottom: .3rem solid #006ec9;
+    padding: 1rem;
+    font-size: 1rem;
+    background: #00BCD4;
+}
+.header .logo{
+    width: 10rem;
+    height: 4rem;
+}
+.header .logo img {
+    width: 100%;
+    height: 100%;
+}
+.header .login {
+    text-align: center;
+    color: #fff;
+}
+.header .login a {
+    display: inline-block;
+    padding-top: .6rem;
+    color: #fff;
+ }
+.header .login .phone {
+    padding-top: .5rem;
+}
+/*end header*/
+
+/*footer*/
+.footer{
+    border-top: .3rem solid #00BCD4;
+    width: 100%;
+    padding-top: .5rem;
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    padding-bottom: 5rem;
+    background: #fff;
+    line-height: 2rem;
+}
+/*end footer*/
+/**************************** common end *****************************/
+
+/**************************** 首页 开始 *****************************/
+.mIndex {
+    background: url(../images/page-bg.jpg);
+}
+.index_banner img{width:100%;}
+.index_banner{position:relative;}
+.index_banner .banner_wrap{width:24px;margin:0 auto;}
+.index_banner .banner_count{position:absolute;bottom:10px;}
+.index_banner .banner_count li{float:left;color:transparent;width:8px;height:8px;margin-right:8px;background:#907e75; border-radius:50%;}
+.index_banner .banner_count .on{ background:#fff;}
+.mIndex-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 50;
+    align-items: center;
+}
+.mIndex-boxes a {
+    display: inline-block;
+    padding: .1rem;
+    box-sizing: border-box;
+    width: 50%;
+}
+.mIndex-boxes .box{
+    height: 6rem;
+    position: relative;
+    overflow: hidden;
+}
+.mIndex-boxes .box1{
+    background: url("../images/index/list1.jpg") no-repeat center;
+    background-size: cover;
+}
+.mIndex-boxes .box2{
+    background: url("../images/index/list2.jpg") no-repeat center;
+    background-size: cover;
+}
+.mIndex-boxes .box4{
+    background: url("../images/index/list4.jpg") no-repeat center;
+    background-size: cover;
+}
+.mIndex-boxes .box6{
+    background: url("../images/index/list6.jpg") no-repeat center;
+    background-size: cover;
+}
+.mIndex-boxes .trapezoid{
+    width: 60%;
+    height: 6rem;
+    position: absolute;
+    right: -2rem;
+    background: linear-gradient(top,#fbfbfb,#d2cfd0);
+    background: -webkit-linear-gradient(top,#fbfbfb,#d2cfd0);
+    background: -ms-linear-gradient(top,#fbfbfb,#d2cfd0);
+    background: -moz-linear-gradient(top,#fbfbfb,#d2cfd0);
+    background: -o-linear-gradient(top,#fbfbfb,#d2cfd0);
+    -webkit-transform: skew(-30deg,0deg);
+    -ms-transform: skew(-30deg,0deg);
+    -moz-transform: skew(-30deg,0deg);
+    -o-transform: skew(-30deg,0deg);
+    transform: skew(-30deg,0deg);
+}
+.mIndex-boxes span{
+    position: absolute;
+    top: 2rem;
+    right: .5rem;
+    color: #333;
+    font-size: 1.1rem;
+}
+.mIndex-boxes i{
+    display: block;
+    position: absolute;
+    top: 18%;
+    left: 0;
+    right: 0;
+    width: 3rem;
+    margin: auto;
+    color: #fff;
+}
+
+.pursuit-quality {
+    border-bottom: .3rem solid #00BCD4;
+    padding: 1rem 0 2rem 0;
+    background: #fff;
+}
+.pursuit-quality .pic{
+    width: 100%;
+    height: 5rem;
+    padding-bottom: 1.5rem;
+}
+.pursuit-quality .pic img{
+    width: 100%;
+    height: 100%;
+}
+.pursuit-quality p{
+    line-height: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: arial;
+    color: #999999;
+}
+.pursuit-quality .chinese{
+    font-family: 微软雅黑;
+    color: #333333;
+}
+
+.about-us {
+    background: #fff;
+    padding: 1.2rem;
+}
+.about-us h3 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+}
+.about-us p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    line-height: 2.6rem;
+    font-size: 1.2rem;
+    font-family: arial;
+    color: #999999;
+    text-indent: 2em;
+}
+.about-us .link{
+    color: #999999;
+}
+
+.news-list{
+    background: #fff;
+    padding: .5rem 0;
+}
+.news-list .list{
+    padding: 0;
+    margin: 0;
+}
+.news-list a{
+    color: #585858;
+}
+.news-list-title{
+    padding: 0.5rem 1rem 1rem 1rem;
+    display: inline;
+    border-bottom: 2px solid #00BCD4;
+    font-weight: normal;
+    color: #00BCD4;
+    position: relative;
+    top: 2px;
+}
+.news-list h2{
+    border-bottom: 2px solid #e5eff6;
+}
+.news-list h2 a {
+    padding-right: 0.6rem;
+    color: #005ea8;
+    padding-top: 1rem;
+}
+.news-list li{
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+}
+.news-list span{
+    color: #585858;
+    flex: 1;
+}
+.backTop {
+    box-sizing: border-box;
+    padding-right: 1rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+    background-color: #00BCD4;
+}
+.backTop span {
+    display: inline-block;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem #000 solid;
+    border-right: .5rem solid transparent;
+}
+.nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #00BCD4;
+    padding: .5rem 0;
+}
+.nav li {
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+    float: left;
+}
+.nav i {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.nav .box-phone {
+    background: url(../images/关于我们.png) no-repeat center;
+    background-size: cover;
+}
+.nav .box-dynamic {
+    background: url(../images/动态.png) no-repeat center;
+    background-size: cover;
+}
+.nav .box-assess {
+    background: url(../images/评测.png) no-repeat center;
+    background-size: cover;
+}.nav .box-contact {
+     background: url(../images/联系我们.png) no-repeat center;
+     background-size: cover;
+ }
+.nav span {
+    color: #fff;
+}
+/**************************** 首页 结束 *****************************/
+
+/**************************** 关于我们 开始 *****************************/
+.mAbout {
+    background: #fff;
+}
+.mAbout h3 {
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.mAbout p {
+    padding: 1rem .5rem;
+    background: #fff;
+    text-indent: 2em;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+}
+.mAbout img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+/**************************** 关于我们 结束 *****************************/
+
+/**************************** 业界动态 开始 *****************************/
+.public-title {
+    background: #fff;
+    border-bottom: 2px solid #e5eff6;
+}
+.public-title div {
+    padding: 1rem;
+    display: inline;
+    border-bottom: 2px solid #00BCD4;
+    font-weight: normal;
+    color: #00BCD4;
+    position: relative;
+    top: 2px;
+}
+.public-title a {
+    padding-right: 0.6rem;
+    color: #005ea8;
+    padding-top: 1.4rem;
+}
+.mDynamic a {
+    display: flex;
+    padding: .6rem;
+}
+.mDynamic .picture {
+    width: 40%;
+}
+.mDynamic img {
+   width: 100%;
+}
+.mDynamic .message {
+    flex: 1;
+    width: 100%;
+    padding: .5rem;
+}
+.mDynamic h3 {
+    font-weight: normal;
+}
+.mDynamic span {
+    display: inline-block;
+   padding-top: .5rem;
+}
+/**************************** 业界动态 结束 *****************************/
+
+/**************************** 联系我们 开始 *****************************/
+.mContact h3 {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 0 1rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.3rem;
+    background-color: #f1f3f5;
+}
+.mContact div {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.mContact img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+/**************************** 联系我们 结束 *****************************/
+
+/**************************** 登录 结束 *****************************/
+.mUsLogin {
+    background: url(../images/login-bg.jpg) no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.mUsLogin h2 {
+    font-size: 4rem;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 11rem;
+    padding-bottom: 4rem;
+    color: #fff;
+}
+.mUsLogin h2 img {
+    width: 62%;
+}
+.mUsLogin input {
+    display: block;
+    border-radius: 2rem;
+    border: 1px solid #fff;
+    margin: 1.5rem auto 0 auto;
+    text-indent: 2rem;
+    width: 20rem;
+    height: 3rem;
+    font-size: 1rem;
+    background: transparent;
+}
+.mUsLogin input:-moz-placeholder {
+    color: #b2d3db;
+    opacity:1;
+}
+
+.mUsLogin input::-moz-placeholder {
+    color: #b2d3db;opacity:1;
+}
+
+.mUsLogin input:-ms-input-placeholder{
+    color: #b2d3db;opacity:1;
+}
+
+.mUsLogin input::-webkit-input-placeholder{
+    color: #b2d3db;opacity:1;
+}
+.mUsLogin button {
+    display: block;
+    border-radius: 2rem;
+    margin: 1.5rem auto 0 auto;
+    width: 20rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    background: #56b3f5;
+    color: #fff;
+}
+.mUsLogin a {
+    display: inline-block;
+    padding-top: .5rem;
+    font-size: 1rem;
+    color: #b2d3db;
+}
+/**************************** 登录 结束 *****************************/
+
+/**************************** 用户中心 开始 *****************************/
+.mUser-avatar {
+    position: relative;
+    height: 10rem;
+    background: #9d9d9d;
+    background: url(../images/11111.JPG);
+ }
+.mUser-avatar div {
+    position: absolute;
+    top: -15%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+}
+.mUser-avatar span {
+    display: block;
+    padding-top: .4rem;
+    font-size: 1.1rem;
+}
+.mUser-avatar img {
+    border-radius: 50%;
+    width: 100%;
+}
+.mUser-option h2 {
+    border-bottom: 1px solid #dfdfdf;
+    padding: 0px 16px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #333;
+    background-color: #fffeff;
+}
+.mUser-option .title {
+    text-align: center;
+}
+.mUser-option .bigList_num, .middleList_num {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #4d9ade;
+    text-align: center;
+    line-height: 22px;
+    font-size: 14px;
+    margin-top: 9px;
+}
+.mUser-option li {
+    height: 40px;
+    background: #f3fafb;
+    font-size: 14px;
+    line-height: 40px;
+    padding-left: 30px;
+    padding-right: 16px;
+    border-bottom: 1px solid #dfdfdf;
+    color: #333333;
+    font-weight: normal;
+}
+
+
+.middleList_arrow_right {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background-size: cover;
+    vertical-align: middle;
+    margin-top: 13px;
+    margin-left: 19px;
+}
+.middleList_arrow {
+    display: inline-block;
+    width: 15px;
+    height: 8px;
+    background-size: cover;
+    vertical-align: middle;
+    margin-top: 15px;
+    margin-left: 12px;
+}
+ .middleList_arrow_right {
+    background: url(../images/middleList_arrow_right.png) no-repeat center;
+    background-size: cover;
+}
+.middleList_arrow {
+    background: url(../images/middleList_arrow.png) no-repeat center;
+    background-size: cover;
+}
+/**************************** 用户中心 结束 *****************************/
+
+/**************************** 用户中心 开始 *****************************/
+.device ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 50;
+}
+.device li {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 50%;
+    box-shadow: 0px 1px 2px #eee;
+}
+.device a img {
+    width: 100%;
+}
+.device span img {
+    position: relative;
+    top: -.4rem;
+    left: -.4rem;
+    width: 2.2rem;
+    height: 2.2rem;
+}
+.device h3 {
+    padding-top: .5rem;
+    font-weight: normal;
+}
+.device span {
+    display: flex;
+    padding-top: .5rem;
+}
+.device span a {
+    flex: 1;
+}
+.device .reserve {
+    color: #ff503c;
+}
+.device .complaint {
+    color: #aaa;
+}
+/**************************** 用户中心 结束 *****************************/
+
+/**************************** 摆位图 结束 *****************************/
+.sketchMap ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 50;
+}
+.sketchMap li {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 50%;
+    box-shadow: 0px 1px 2px #eee;
+}
+.sketchMap img {
+    width: 100%;
+}
+.sketchMap h3 {
+    padding-top: .5rem;
+    font-weight: normal;
+}
+/**************************** 摆位图 结束 *****************************/
+
+/**************************** 设备详情 结束 *****************************/
+.deviceDetails-h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #57be58;
+    padding-top: 10px;
+    padding-left: 5px;
+    text-align: center;
+}
+.courseList{margin-top:10px;padding-left:15px; background:#fff;}
+.courseList li{display:flex;font-size:14px;border-bottom:1px solid #e2e2e3;padding: 13px 20px 13px 8px; line-height:22px;}
+.courseList li .courseList_content{-webkit-flex:1; text-align:right;}
+.courseList .cost_count1{color:#c9c9c9;padding-right:18px;}
+.deviceDetails-btn {
+    display: flex;
+}
+.deviceDetails-btn a {
+    width:26%;height:50px;line-height:50px; text-align:center;color: #fff;border-radius:5px; margin: 40px auto 30px auto;
+    font-size:18px;
+    box-shadow: 0px 1px 5px #9E9E9E;
+}
+.deviceDetails-btn .btn-reservation {
+    background: #2196F3;
+}
+.deviceDetails-btn .btn-Complaints {
+    background: #e0dedf;
+}
+.deviceDetails-btn .btn-back {
+    background: #8BC34A;
+}
+.course_button{width:80%;height:50px;line-height:50px; text-align:center;color: #fff;background: #53ceca;border-radius:5px; margin: 10px auto 30px auto;
+    font-size:18px;box-shadow: 0px 1px 5px #9E9E9E;}
+/**************************** 设备详情 结束 *****************************/
+
+/**************************** 服务预约 开始 *****************************/
+.bespeak {
+    width: 100%;
+    height: 100%;
+    background: url(../images/login-bg.jpg) no-repeat;
+    background-size: cover;
+}
+.bespeak input, .bespeak select, .bespeak textarea {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 1rem auto 0 auto;
+    padding-left: 1rem;
+    width: 15rem;
+    height: 2.2rem;
+}
+.bespeak textarea {
+    height: 5rem;
+}
+.bespeak h2 {
+    text-align: center;
+    padding-top: 3rem;
+    color: #2196F3;
+    font-size: 1.4rem;
+}
+.bespeak button {
+    display: block;
+    border-radius: 5px;
+    margin: 2rem auto 0 auto;
+    background-color: #86ea8a;
+    width: 8rem;
+    height: 2.5rem;
+    box-shadow: 0px 1px 4px #4CAF50;
+}
+/**************************** 服务预约 结束 *****************************/
+
+/**************************** 投诉 开始 *****************************/
+.complain {
+    width: 100%;
+    height: 100%;
+    background: url(../images/login-bg.jpg) no-repeat;
+    background-size: cover;
+}
+.complain textarea {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 1rem auto 0 auto;
+    padding-left: 1rem;
+    width: 22rem;
+    height: 16rem;
+}
+.complain h2 {
+    text-align: center;
+    padding-top: 3rem;
+    color: #2196F3;
+    font-size: 1.4rem;
+}
+.complain button {
+    display: block;
+    border-radius: 5px;
+    margin: 2rem auto 0 auto;
+    background-color: #86ea8a;
+    width: 8rem;
+    height: 2.5rem;
+    box-shadow: 0px 1px 4px #4CAF50;
+}
+/**************************** 投诉 结束 *****************************/
+
+/**************************** 反馈 开始 *****************************/
+.mFeedback {
+    width: 100%;
+    height: 100%;
+    background: url(../images/login-bg.jpg) no-repeat;
+    background-size: cover;
+}
+.mFeedback h2 {
+    text-align: center;
+    padding-top: 3rem;
+    color: #2196F3;
+    font-size: 1.4rem;
+}
+.mFeedback .content {
+    margin: 2rem auto 0 auto;
+    border: 1px solid #8BC34A;
+    background-color: #e4f3ff;
+    padding: 1.4rem;
+    width: 20rem;
+    min-height: 30rem;
+    font-size: 1.1rem;
+}
+/**************************** 反馈 结束 *****************************/
+
+/**************************** 记录列表 开始 *****************************/
+.mRecordList li {
+    display: flex;
+    padding: .6rem;
+}
+.mRecordList li a {
+    display: inline-block;
+    margin: .5rem .3rem 0 .4rem;
+    padding: .4rem .9rem;
+    border-radius: 5px;
+    color: #fff;
+}
+.mRecordList li .delete {
+    background: #9E9E9E;
+}
+.mRecordList li .details {
+    background: #00A5FF;
+}
+.mRecordList li .feedback {
+    background: #F44336;
+}
+.mRecordList .picture {
+    width: 40%;
+}
+.mRecordList img {
+    width: 100%;
+}
+.mRecordList .message {
+    flex: 1;
+    width: 100%;
+    padding: .5rem;
+}
+.mRecordList h3 {
+    font-weight: normal;
+}
+.mRecordList span {
+    display: block;
+    padding-top: .5rem;
+}
+/**************************** 记录列表 结束 *****************************/
+
+/**************************图纸弹出层***************************/
+.shade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(33,33,33,.5);
+}
+.shade img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 90%;
+}
+/**************************二维码弹出层***************************/
+.qr-code-shade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(33,33,33,.5);
+}
+.qr-code-shade img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 40%;
+    background: #fff;
+}

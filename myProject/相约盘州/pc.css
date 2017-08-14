@@ -1,0 +1,912 @@
+@charset "utf-8";
+/*重置*/
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	color:#666;
+	font-family:Microsoft YaHei;
+	box-sizing:border-box;
+}
+ul,ol,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+i{
+	display:inline-block;	
+}
+i,s{
+	text-decoration:none;
+}
+input{
+	border:none;
+	outline:none;
+}
+select{
+	outline:none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-style: normal;
+}
+h1{
+	display:inline-block;
+}
+form,select{
+	display:inline;	
+}
+img{
+	border:none;
+}
+.icon{
+	background-image:url(http://www.yumukeji.com/project/xiangyuepanzhou/img/WebsiteImg/haR49860774vy.jpg);
+}
+.activity_icon{
+	background-image:url(http://www.yumukeji.com/project/xiangyuepanzhou/img/WebsiteImg/dBp49932947OO.jpg);
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.of{
+	overflow:hidden;
+}
+.fw1{
+	font-weight:normal;
+}
+.fw2{
+	font-weight:bold;
+}
+.fz18{
+	font-size:18px;
+}
+.fz16{
+	font-size:16px;
+}
+.fz14{
+	font-size:14px;
+}
+/*头部*/
+.header{
+	width:1000px;
+	height:64px;
+	margin:auto;
+	overflow:hidden;
+	margin-top:20px; 
+}
+.logo{
+	float:left;
+}
+.tel_number{
+	float:right;
+	overflow:hidden;
+}
+.tel{
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+	margin: 0px 10px 0 0;
+	background-position:-26px -39px;
+}
+.tel_text{
+	float:right;
+	font-size:14px;
+}
+.number{
+	clear:right;
+	float:right;
+	color:#ff536a;
+	font-size:22px;
+}
+/*导航*/
+.nav_box{
+	width:100%;
+	height:40px;
+	border-bottom:2px solid #CCC;
+}
+.nav{
+	width:1000px;
+	margin:auto;
+	margin-top:20px; 
+}
+.nav_bar{
+	float:left;
+	overflow:hidden;
+}
+.nav_bar *{
+	float:left;
+	font-size:16px;
+	color:#000;
+	margin-right:15px;
+}
+.nav_bar li{
+	width:70px;
+	height:37px;
+	border-bottom:3px solid #fff;
+	display:inline-block;
+	text-align:center;
+}
+.nav_bar li:hover{
+	border-color:#ff536a;
+}
+.nav_item01{
+	color:#ff536a;
+	font-weight:800;
+	text-align:center;
+}
+.login{
+	float:right;
+	vertical-align:middle;
+}
+.login a{
+	display:inline-block;
+	width:60px;
+ 	height:30px;
+	background:#f9a61c;
+	border-radius:3px;
+	font-size:14px;
+	line-height:30px;
+	color:#fff;	
+	text-align:center;
+	margin-top:-5px;
+}
+/*页脚*/
+.footer{
+	background-color:#fff;
+}
+.footer_title_box{
+	background-color:#ff536a;
+}
+.footer_title{
+	color:#fff;
+	font-size:18px;
+	width:1000px;
+	margin:auto;
+	line-height:40px;
+}
+.footer_content{
+	width:1000px;
+	margin:auto;
+	overflow:hidden;
+}
+.footer_content_top{
+	height:130px;
+	border-bottom:1px solid #d9d9d9;
+}
+.footer_contact{
+	float:left;
+}
+.footer_contact li{
+	width: 330px;
+	margin-top:12px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.footer_barcode_weibo,.footer_barcode_qq,.footer_barcode_weixin{
+	width:210px;
+	height:100px;
+	border:1px solid #d9d9d9;
+	margin-top:15px;
+	float:right;
+	margin-left:10px;
+	overflow:hidden;
+}
+.weixin_barcode,.weibo_barcode,.qq_barcode{
+	width:80px;
+	height:80px;
+	float:left;
+	clear:both;
+	margin:10px;
+}
+.weixin_barcode img,.weibo_barcode img,.qq_barcode img{width:80px;height:80px;}
+.weixin_text,.weibo_text,.qq_text{
+	float:left;
+	width:105px;
+	margin-top:10px;
+}
+.weixin_text h1,.weibo_text h1,.qq_text h1{
+	font-size:16px;
+	margin-bottom:5px;
+}
+.footer_content_bottom{
+	height:134px;
+	margin-top:30px;
+}
+.footer_content_bottom>*{
+	text-align:center;
+}
+.footer_content_box{
+	overflow:hidden;
+	margin-bottom:15px;
+}
+.footer_content_box *{
+	dispaly:inline-block;
+	margin-right:5px;
+}
+.copyright{
+	margin:10px 0;
+}
+/****个人中心****/
+.personal_service_icon{
+	width:20px;
+	height:20px;
+	background-image:url(http://www.yumukeji.com/project/xiangyuepanzhou/img/WebsiteImg/XWo49933012yf.jpg);
+	vertical-align:top;
+	margin-right:2px;
+}
+/*内容*/
+.personal_letter{
+	width:1000px;
+	margin:20px auto 20px;
+	overflow:hidden;
+}
+/*左边*/
+.personal_box{
+	width:160px;
+	float:left;
+}
+/*个人资料*/
+.personal,.personal_service{
+	height:360px;
+	border:1px solid #d4d4d4;
+}
+.personal img{
+	margin:20px 0 15px 30px;
+}
+.upload_pictures_btn,.edit_profile_btn{
+	display:inline-block;
+	width:65px;
+	line-height:22px;
+	text-align:center;
+	border:1px solid #ff536a;
+	border-radius:12px;
+	color:#ff536a;
+}
+.upload_pictures_btn{
+	margin-left:10px;
+	margin-right:4px;
+}
+.personal_message{
+	text-align:center;
+	margin:20px 0 20px;
+}
+.personal_title{
+	font-size:16px;
+	color:#000;
+	margin-right:5px;
+	display:inline-block;
+}
+.personal_icon{
+	width:16px;
+	height:16px;
+	background-image:url(http://www.yumukeji.com/project/xiangyuepanzhou/img/WebsiteImg/Xjt49933068IX.jpg);
+	background-position:0 0;
+	margin-bottom:-2px;
+}
+.id_number span{
+	font-size:14px;
+	color:#ff536a;
+}
+#yellow{
+	color:#f9a61c;
+}
+.personal_message_head{
+	overflow:hidden;
+	margin-bottom:5px;
+}
+.function_tab_box{
+	text-align:center;
+}
+.function_tab{
+	display:inline-block;
+	width:50px;
+	height:36px;
+	
+}
+.function_tab_special{
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+}
+.function_tab_message,.function_tab_text{
+	color:#ff536a;
+	font-size:14px;
+}
+.function_tab_message{
+	color:#ff536a;
+}
+.function_tab_text{
+	color:#000;
+}
+.publish_btn{
+	width:100%;
+	display:inline-block;
+	line-height:44px;
+	font-size:20px;
+	text-align:center;
+	background-color:#ff536a;
+	color:#fff;
+	margin-top:25px;
+}
+/*推荐服务*/
+.personal_service{
+	margin-top:20px;
+	padding-left:10px;
+}
+.personal_service h2,.personal_use h2{
+	color:#333;
+	font-size:18px;
+	margin:25px 0;
+}
+.personal_member{
+	margin-bottom:15px;
+}
+.personal_member a,.personal_member p{
+	font-size:14px;
+}
+.personal_member span{
+	color:#000;
+	font-weight:bold;
+	font-size:16px;
+	margin-right:5px;
+}
+.personal_member a{
+	display:inline-block;
+	width:40px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	background-color:#ff536a;
+	color:#fff;
+}
+.personal_service_icon01{
+	background-position:-14px -26px;
+}
+.personal_service_icon02{
+	background-position:-14px -50px;
+}
+.personal_service_icon03{
+	background-position:-14px -74px;
+}
+.personal_service_icon04{
+	background-position:-14px -99px;
+}
+/*个人应用*/
+.personal_use{
+	margin-top:20px;
+	padding-left:10px;
+	border:1px solid #d4d4d4;
+}
+.personal_use_content{
+	display:inline-block;
+	margin-bottom:15px;
+}
+.personal_use_content span{
+	color:#000;
+	font-size:14px;
+	font-weight:bold;	
+}
+.personal_use_icon01{
+	background-position:-14px -142px;
+}
+.personal_use_icon02{
+	background-position:-14px -225px;
+}
+.personal_use_icon03{
+	background-position:-14px -196px;
+}
+.personal_use_icon04{
+	background-position:-14px -256px;
+}
+.personal_use_icon05{
+	background-position:-14px -169px;
+}
+/*右边个人信息*/
+.center_box{
+	float:left;
+	margin-left:30px;
+}
+.center_head{
+	width:770px;
+	height:50px;
+	line-height:50px;
+	border-bottom:1px solid #ff536a;
+}
+.center_head a{	
+	color:#000;
+	font-size:16px;
+	margin-right:40px; 
+	display:inline-block; 
+	height:50px;
+	width:130px; 
+	text-align:center;
+	line-height:50px;
+	}
+.center_head a:hover{
+	background-color:#ff536a;
+	color:#fff;
+}
+.center_body{
+	overflow:hidden;
+}
+/*基本信息*/
+.basic_information h2,.contact_information h2,.papers h2{
+	color:#000;
+	font-size:16px;
+	padding-left:20px;
+	margin-top:20px;
+	font-weight:normal;
+}
+.contact_information input,.contact_information select,.basic_information input,.basic_information select{
+	display:inline-block;
+	height:24px;
+	line-height:24px;
+	border:1px solid #ddd;
+	padding-left:2px;
+}
+.basic_information input,.basic_information select{
+	width:183px;
+}
+.contact_information input,.contact_information selec{
+	width:153px;
+}
+.information{
+	margin:20px;
+	position:relative;
+	padding-left:70px;
+}
+.information span,.contact_information01 span{
+	font-size:14px;
+}
+.information_r span{
+	position:absolute;
+	left:0;
+	top:2px;
+	width:70px;
+}
+.basic_information_left{
+	margin-right:140px;
+}
+.basic_information_content{
+	margin-left:-70px;
+}
+/*联系信息*/
+.contact_information{
+	clear:both;
+	float:left;
+	margin-right:180px;
+}
+.contact_information_content{
+	margin-left:20px;
+}
+.contact_information h2{
+	margin-bottom:20px;
+}
+.contact_information01{
+	margin:20px 0;
+	position:relative;
+	padding-left:70px;
+}
+.contact_information01 span{
+	position:absolute;
+	left:0;
+	width:70px;
+}
+/*上传证件*/
+.papers{
+	float:left;
+}
+.papers h2{
+	margin-bottom:20px;
+	margin-left:-20px;
+}
+.papers_btn{
+	width:130px;
+	height:28px;
+	border:1px solid #ddd;
+	background-color:#f6f6f6;
+	text-align:center;
+	line-height:28px;
+	margin-bottom:20px;
+	border-radius:2px;
+}
+/*保存按钮*/
+.center_btn_box{
+	width:100%;
+	margin:auto;
+	text-align:center;
+	margin-top:20px;
+}
+.center_btn{
+	clear:both;
+	display:inline-block;
+	width:140px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	background-color:#ff536a;
+	color:#fff;
+	border-radius:5px;
+	font-size:16px;
+}
+/****最新活动****/
+/*广告*/
+.ad{
+	width:1000px;
+	height:90px;
+	clear:both;
+	margin:50px auto;
+}
+/*活动内容*/
+.activity_container_box{
+	background-color:#f6f7fb;
+	margin-top:20px;
+	overflow:hidden;	
+}
+.activity_container{
+	width:1000px;
+	margin:auto;
+}
+.activity_top{
+	height:60px;
+	background-color:#fff;
+	margin:20px 0;
+	overflow:hidden;
+}
+.business,.off-line{
+	float:left;
+	line-height:60px;
+	font-size:18px;
+}
+.off-line{
+	width:130px;
+	background-color:#ff536a;
+	text-align:center;
+	color:#fff;
+}
+.business{
+	float:left;
+	color:#000;
+	margin-left:40px;
+}
+.my_activity{
+	float:right;
+	line-height:60px;
+	font-size:18px;
+	color:#f9a61c;
+	margin-right:20px;
+}
+.activity_content01{
+	height:260px;
+	background-color:#fff;
+	border:1px solid #d4d4d4;
+	padding:20px 30px;
+	margin-bottom:15px;
+}
+.activity_content01 h1{
+	font-size:20px;
+	font-weight:bold;
+	color:#000;
+	margin-bottom:15px;
+}
+.activity_body_introduce{
+	width:560px;
+	float:right;
+	position:relative;
+}
+.activity_body_introduce p{
+	color:#000;
+	font-size:14px;
+	overflow:hidden;
+	margin-bottom:10px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	position:relative;
+    line-height:1.4em;
+    height:4.2em;
+}
+.activity_body_introduce p:after{
+	 content:"";
+    font-weight:bold;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:0 20px 1px 45px;
+}
+.activity_time,.activity_place{
+	margin-bottom:10px;
+}
+.activity_time i,.activity_place i{
+	width:22px;
+	height:22px;
+	margin-bottom:-4px;
+}
+.activity_time span,.activity_place span{
+	color:#747474;
+	font-size:16px;
+	margin-left:5px;
+}
+.sign_up{
+	color:#000;
+	font-size:16px;
+	margin-left:4px;
+}
+.sign_up a{
+	color:#ff536a;
+	font-size:16px;
+	margin:0 3px;
+	text-decoration:underline;
+}
+.sign_up_btn{
+	position:absolute;
+	right:0px;
+	bottom:-8px;
+	display:inline-block;
+	width:130px;
+	height:40px;
+	background-color:#ff536a;
+	color:#fff;
+	font-size:18px;
+	line-height:40px;
+	text-align:center;
+}
+.activity_icon01{
+	background-position:-18px -9px;
+}
+.activity_icon02{
+	background-position:-18px -37px;
+}
+.activity_btn_item{
+	display:inline-block;
+	width:30px;
+	height:30px;
+	border:1px solid #d4d4d4;
+	text-align:center;
+	font-size:16px;
+	line-height:30px;
+	background-color:#fff;
+	margin-right:5px;
+}
+.activity_btn_icon01{
+	background-position:-12px -61px;
+}
+.activity_btn_icon01,.activity_btn_icon02{	color:transparent;}
+.activity_btn_icon02{
+	background-position:-9px -85px;
+}
+.activity_btn_current{
+	background-color:#ff536a;
+	color:#fff;
+}
+.activity_btn{
+	text-align:center;
+	margin:30px 0 50px;
+}
+/****搜索****/
+/*****成功故事******/
+/*成功故事*/
+.success_stories_show{
+	width:1000px;
+	margin:0 auto 20px;
+	overflow:hidden;
+	
+}
+.success_stories_show h2{
+	line-height:40px;
+	border-bottom:1px solid #d4d4d4;
+	font-size:16px;
+	margin-bottom:10px;
+	color:#000;
+}
+.success_stories_show img{
+	float:left;
+	margin:0 1px 1px 0;
+}
+/*成功案例*/
+.success_stories{
+	margin-top:20px;
+	overflow:hidden;	
+}
+.stories_container{
+	width:1000px;
+	margin:auto;
+}
+.stories_top{
+	height:60px;
+	background-color:#fff;
+	margin:20px 0;
+	overflow:hidden;
+}
+.business,.off-line{
+	float:left;
+	line-height:60px;
+	font-size:18px;
+}
+.off-line{
+	width:130px;
+	background-color:#ff536a;
+	text-align:center;
+	color:#fff;
+}
+.business{
+	float:left;
+	color:#000;
+	margin-left:40px;
+}
+.my_stories{
+	float:right;
+	line-height:60px;
+	font-size:18px;
+	color:#f9a61c;
+	margin-right:20px;
+}
+.stories_content01{
+	height:260px;
+	background-color:#fff;
+	border:1px solid #d4d4d4;
+	padding:20px 30px;
+	margin-bottom:15px;
+	position:relative;
+}
+.stories_content01 h1{
+	font-size:20px;
+	font-weight:bold;
+	color:#000;
+	margin-bottom:15px;
+}
+.stories_introduce{
+	width:560px;
+	float:right;
+	position:relative;
+}
+.stories_introduce p{
+	clear:both;
+	color:#000;
+	font-size:14px;
+	overflow:hidden;
+	margin:10px 0;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+}
+.details_title,.details_content{
+	font-size:14px;
+	color:#000;
+}
+.details_title{
+	font-weight:bold;
+}
+.details_box{
+	overflow:hidden;
+}
+.details_box01{
+	margin-top:5px;
+}
+.details_box h5,.details_box span{
+	float:left;
+}
+.details_content{
+	margin-right:100px;
+}
+.stories_date{
+	float: right;
+}
+.details_title,.details_content{
+	float:left;	
+}
+.details_btn{
+	position:absolute;
+	right:0px;
+	bottom:-45px;
+	display:inline-block;
+	width:130px;
+	height:40px;
+	background-color:#ff536a;
+	color:#fff;
+	font-size:18px;
+	line-height:40px;
+	text-align:center;
+}
+.activity_btn_item{
+	display:inline-block;
+	width:30px;
+	height:30px;
+	border:1px solid #d4d4d4;
+	text-align:center;
+	font-size:16px;
+	line-height:30px;
+	background-color:#fff;
+	margin-right:5px;
+}
+.activity_btn_icon01{
+	background-position:-12px -61px;
+}
+.activity_btn_icon01,.activity_btn_icon02{
+	color:transparent;
+}
+.activity_btn_icon02{
+	background-position:-9px -85px;
+}
+.activity_btn_current{
+	background-color:#ff536a;
+	color:#fff;
+}
+.activity_btn{
+	text-align:center;
+	margin:30px 0 50px;
+}
+/****免责声明****/
+.disclaimer_box{
+	background-color:#f6f6f6;
+}
+.disclaimer{
+	width:670px;
+	margin:auto;
+	background-color:#fff;
+	padding:50px 35px;
+}
+.disclaimer h2{
+	font-size:16px;
+	color:#000;
+	margin: 40px 15px 20px 25px;
+	line-height:200%;
+	border-bottom:1px solid #ddd;
+}
+.disclaimer_content p{
+	font-size: 14px;
+    line-height: 160%;
+    margin: 0 15px 10px 25px;
+	color:#000;
+}
+/*********************dialog*********************/
+.btn{width:110px; height:35px; font-size:14px; font-weight:400; position:fixed;top:0;left:0;right:0; bottom:0; margin:auto; cursor:pointer;border:none; background:#F6C;color:#fff; border-radius:3px;}
+.dia-ba{position:fixed;top:0;left:0;z-index:100000;width:100%;height:100%;background:#000;opacity:.4;filter:alpha(opacity=40)}
+.dialog{position:fixed;top:0;right:0;bottom:0;left:0;z-index:100001;overflow:hidden;margin:auto;width:360px;height:174px;border:1px solid #999;border:1px solid rgba(0,0,0,.2);border-radius:5px;background:#fff;}
+.dialog .dialog-title{padding:10px;border-bottom:1px solid #ddd;color:#333;font-weight:700;font-size:14px}
+.dialog-content{
+    color: #333;
+    font-weight: 400;
+    font-size: 14px;
+    max-height: 45px;
+    text-align: left;
+    padding: 0 20px;
+    overflow: hidden;
+    margin: 20px 0;
+    min-height: 40px;
+}
+.sure{font-size: 14px;float:right;margin-right:20px;padding:7px 12px;width:55px;border-radius:4px;background:#ff536a;color:#fff !important;text-align:center;white-space:nowrap;font-weight:400;line-height:1.42857143;transition:.1s all ease-in-out}
+.sure:hover{background:#ff7d8e}
+/***************送礼物**********************/
+.gift_content1{position:relative;display:inline-block}
+.gift_content1>i{position:absolute;right:0;bottom:0;display:block;width:13px;height:13px}
+.gift_current{background-position:-9px -1px;background-repeat:no-repeat}
+.gift_current,.pop-up{background-image:url(http://www.yumukeji.com/project/xiangyuepanzhou/img/WebsiteImg/uGU51662248PP.jpg)}
+.pop-up{width:13px;height:13px}
+.gift_box{position:relative;z-index:1;width:100%;height:100%}
+.gift,.gift_zzc{position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;margin:auto}
+.gift_zzc{background-color:#000;opacity:.5;filter:alpha(opacity=50)}
+.gift{width:495px;height:500px;background-color:#fff}
+.gift_header{overflow:hidden;background-color:#fd8eb9;line-height:30px}
+.gift_header span{float:left;margin-left:8px;font-size:14px;color:#fff !important;}
+.gift_header i{float:right;margin-top:7px;margin-right:8px;background-position:-9px -15px}
+.gift_content{overflow:hidden;margin-left:30px;padding:30px 30px 0 0;width:525px}
+.gift_content img{margin:5px}
+.gift_content1{display:inline-block;margin:0 15px 15px 0;width:75px;height:75px;border:1px solid #ddd}
+.gift_content1{ display:inline-block; position:relative;}
+.gift_content1 >i{ display: block;height: 13px;width: 13px;position: absolute;bottom: 0px;right: 0px;}
+/*发信*/
+.gift_current{background-position:-9px -1px;background-repeat:no-repeat}
+.gift_current,.pop-up{background-image:url(http://www.yumukeji.com/project/xiangyuepanzhou/img/WebsiteImg/uGU51662248PP.jpg)}
+.pop-up{width:13px;height:13px}
+.gift_box{position:relative;z-index:1;width:100%;height:100%}
+.gift,.gift_zzc{position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;margin:auto}
+.gift_zzc{background-color:#000;opacity:.5;filter:alpha(opacity=50)}
+.gift{width:495px;height:500px;background-color:#fff}
+.gift_header{overflow:hidden;background-color:#fd8eb9;color:#fff;line-height:30px}
+.gift_header span{float:left;margin-left:8px;font-size:14px}
+.send_letter_content{margin:30px 30px 15px;padding:10px;width:435px;height:150px;border:1px solid #ddd}
+.pop-up_btn{float:right;display:inline-block;margin:15px 30px 0 0;width:110px;border-radius:3px;background-color:#f9a61c;color:#fff;text-align:center;font-size:14px;line-height:34px;border:none}

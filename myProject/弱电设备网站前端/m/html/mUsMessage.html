@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0" name="viewport" />
+    <title>弱电365</title>
+    <link rel='stylesheet' type='text/css' href='mCss.css'>
+    <script type='text/javascript' src='http://www.youlaole.com/library/jquery-1.11.2.min.js'></script>
+    <script type='text/javascript' src='mJs.js'></script>
+</head>
+<body>
+<!-- 网站头部 -->
+<div class="header">
+    <div class="clearfix">
+        <div class="logo fl">
+            <img src="../images/弱电365-PNG.png" alt="logo">
+        </div>
+        <div class="login fr">
+            <a href="#">VIP登录</a> |
+            <a href="#">授权登录</a>
+            <div class="phone">咨询热线：<span>023-43646686</span></div>
+        </div>
+    </div>
+</div>
+<!-- 我的信息 -->
+<div class="mUsMessage">
+    <h2>我的信息</h2>
+    <form name="mUsMessageForm">
+        <ul>
+            <li>
+                <span>登录帐号：</span>
+                <input name="accountNumber" type="text" value="<?php echo $client['accountNumber'];?>" />
+            </li>
+            <li>
+                <span>公司名称：</span>
+                <input name="companyName" type="text" value="<?php echo $client['companyName'];?>" />
+            </li>
+            <li>
+                <span>所属区域：</span>
+                <select name="province" class="select"><?php echo RepeatOption("region","province","--省份--",$Region['province']);?></select>
+                <select name="city" class="select"><?php echo RepeatOption("region where province = '$Region[province]' ","city","--城市--",$Region['city']);?></select>
+                <select name="area" class="select"><?php echo IdOption("region where province = '$Region[province]' and city = '$Region[city]'","id","area","--区县--",$kehu['regionId']);?></select>
+            </li>
+            <li>
+                <span>详细地址：</span>
+                <input name="addressMx" type="text" value="<?php echo $client['addressMx'];?>" />
+            </li>
+            <li>
+                <span>联系人姓名：</span>
+                <input name="contactName" type="text" value="<?php echo $client['contactName'];?>" />
+            </li>
+            <li>
+                <span>联系人手机号码：</span>
+                <input name="contactTel" type="text" value="<?php echo $client['contactTel'];?>" />
+            </li>
+            <li>
+                <span>登录密码：</span>
+                <input name="khpas" type="text" value="<?php echo $client['khpas'];?>" />
+            </li>
+            <li>
+                <a href="#" onClick="Sub('userForm','<?php echo root."library/usData.php?type=modifyData";?>')">修改</a>
+            </li>
+        </ul>
+    </form>
+</div>
+<div class="footer">
+    <p>公司电话：0411-83652666 公司地址：大连市西岗区胜利路121号 Copyright © 2010-2020 大连索创智能系统工程有限公司 All Right Reserved</p>
+    <p>备案号：辽ICP备07501779号-1</p>
+</div>
+
+<ul class="nav">
+    <li class="box">
+        <div class="box-icon">
+            <i class="box-phone"></i>
+        </div>
+        <span>关于我们</span>
+    </li>
+    <li class="box">
+        <div class="box-icon">
+            <i class="box-dynamic"></i>
+        </div>
+        <span>业界动态</span>
+    </li>
+    <li class="box map-btn">
+        <div class="box-icon">
+            <i class="box-assess"></i>
+        </div>
+        <span>产品评测</span>
+    </li>
+    <li class="box">
+        <div class="box-icon">
+            <i class="box-contact"></i>
+        </div>
+        <span>联系我们</span>
+    </li>
+</ul>
+</body>
+<script>
+    $(function(){
+        //轮播图
+        TouchSlide({
+            slideCell:"#index_banner",
+            titCell:"#index_banner .banner_count",
+            mainCell:"#index_banner .banner_img",
+            effect:"leftLoop",
+            autoPage:true,
+            autoPlay:true
+        });
+    })
+</script>
+</html>

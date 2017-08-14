@@ -1,0 +1,436 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type='text/javascript' src='http://www.yumukeji.com/library/jquery-1.11.2.min.js'></script>
+<style>
+body,ul{margin:0;padding:0; list-style:none;}
+.banner {
+	width: 1000px;
+	height: 500px;
+	margin: 0 auto;
+	background: #E9F4E8;
+}
+.banner_menu {
+	width: 300px;
+	height: 500px;
+	background: #D5D5D5;
+	float: left;
+}
+.banner_slider {
+	width: 700px;
+	height: 500px;
+	background: #C5C5C5;
+	float: left;
+}
+.menu_list {
+	position: relative;
+}
+.menu_children {
+	position: absolute;
+	left: 300px;
+	top: 0;
+	z-index:100;
+}
+.hide {
+	display: none;
+}
+.slider {
+	width: 2100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.slider li {
+	float: left;
+}
+.slider img {
+	width: 700px;
+	height: 500px;
+}
+.banner_slider {
+	position: relative;
+	overflow:hidden;
+}
+.button {
+	position: absolute;
+	left: 100px;
+	top: 100px;
+}
+.button li {
+	list-style: none;
+	width: 20px;
+	height: 20px;
+	background: blue;
+	margin-top: 10px;
+}
+.button .current {
+	background: yellow;
+}
+.next, .prev {
+	position: absolute;
+	bottom: 0;
+	left: 100px;
+}
+.prev {
+	left: 50px;
+}
+.amount{
+	position: absolute;
+	bottom: 0;
+	left: 200px;	
+}
+</style>
+</head>
+
+<body>
+<div class="banner">
+	<div class="banner_menu">
+		<ul class="menu_list">
+			<li>
+				<div class="menu_listTitle">
+					<div class="menu_first"> <i class="side-icon01 site-icon"></i> <a href="javascript:;">服务</a> <span>/</span> <a href="javascript:;">市场</a> <i class="menu-arrow">&gt;</i> </div>
+					<div class="menu_children hide">
+						<p> <a href="javascript:;">服务员</a> </p>
+						<p> <a href="javascript:;">销售员</a> </p>
+						<p> <a href="javascript:;">宣传</a><a href="javascript:;">促销</a> </p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="banner_slider">
+		<ul class="slider" id="slider">
+			<li><a href="#"><img src="http://www.yumukeji.com/project/youlao/img/WebsiteImg/Yqt57016164BO.jpg" /></a></li>
+			<li><a href="#"><img src="http://www.yumukeji.com/project/youlao/img/WebsiteImg/Yqt57016164BO.jpg" /></a></li>
+			<li><a href="#"><img src="http://www.yumukeji.com/project/youlao/img/WebsiteImg/Yqt57016164BO.jpg" /></a></li>
+		</ul>
+		<ul class="button" id="button">
+			<li class="current">1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<div class="prev" id="prevBtn">prev</div>
+		<div class="next" id="nextBtn">next</div>
+		<div class="amount" id="amount">0/6</div>
+	</div>
+</div>
+</body>
+<script>
+	$(function(){
+		$('.menu_listTitle').hover(function(){
+			$(this).find('.menu_children').show();	
+		},function(){
+			$(this).find('.menu_children').hide();
+		})
+		function CarouselFigure(obj){
+			this.slider = $(obj.sliderId);
+			this.button = $(obj.buttonId);
+			this.nextBtn = $(obj.nextId);
+			this.prevBtn = $(obj.prevId);
+			this.amount = $(obj.amountId);
+			this.speed = obj.speed;
+			this.time = obj.time;
+			this.direction = obj.direction;
+			this.len = this.slider.find('li').length;
+			this.dot = this.button.find('li');
+			this.count = 0;
+			this.timer = null;
+			this.distance = this.slider.find('img').width();
+			self = this;
+			this.html(this.count);
+			this.nextBtn.click(function(){
+				self.nextFn();
+			}).hover(function(){
+				clearInterval(self.timer);	
+			},function(){
+				self.autoPlay();	
+			})
+			this.prevBtn.click(function(){
+				self.prevFn();
+			}).hover(function(){
+				clearInterval(self.timer);	
+			},function(){
+				self.autoPlay();	
+			})
+			this.dot.click(function(){
+				var index = $(this).index();
+				if(!self.slider.is(':animated')){
+					self.motion(index);	
+				}
+				self.current(index);
+				self.html(index);
+			}).hover(function(){
+				clearInterval(self.timer);	
+			},function(){
+				self.autoPlay();
+			})
+			this.slider.hover(function(){
+				clearInterval(self.timer);	
+			},function(){
+				self.autoPlay();	
+			})
+			this.amount.hover(function(){
+				clearInterval(self.timer);	
+			},function(){
+				self.autoPlay();	
+			})
+			this.autoPlay();
+		}
+		CarouselFigure.prototype = {
+			motion:function(number){
+				this.slider.animate({left:'-'+this.distance*number+'px'},this.speed);
+			},
+			current:function(number){
+				this.dot.eq(number).addClass('current').siblings().removeClass('current');
+			},
+			html:function(number){
+				this.amount.html(number+1+'/'+this.len);	
+			},
+			nextFn:function(){
+				if(!this.slider.is(':animated')){
+					if(this.count == this.len-1){
+						this.count = 0;	
+					}else{
+						this.count++;	
+					}	
+					this.motion(this.count);
+					this.html(this.count);	
+					this.current(this.count);
+				}
+			},
+			prevFn:function(){
+				if(!this.slider.is(':animated')){
+					if(this.count == 0){
+						this.count = this.len-1;	
+					}else{
+						this.count--;
+					}	
+					this.motion(this.count);
+					this.html(this.count);	
+					this.current(this.count);
+				}
+			},
+			autoPlay:function(){
+				var self = this;
+				clearInterval(this.timer);
+				if(!this.time){
+					this.time = 2000;	
+				}
+				this.timer = setInterval(function(){
+					if(self.direction == 'left'){
+						self.nextFn();
+					}else if(self.direction == 'right'){
+						self.prevFn();	
+					}else{
+						self.nextFn();
+					}
+				},this.time)	
+			}
+		}
+		new CarouselFigure({
+			sliderId:'#slider',
+			buttonId:'#button',
+			nextId:'#nextBtn',
+			prevId:'#prevBtn',
+			amountId:'#amount',
+			speed:500,
+			time:2000,
+			direction:'left'	
+		});
+		/*function CarouselFigure(sliderId,buttonId,nextId,prevId,amountId,speed,time,direction){
+			this.slider = $(sliderId);
+			this.button = $(buttonId);
+			this.nextBtn = $(nextId);
+			this.prevBtn = $(prevId);
+			this.amount = $(amountId);
+			this.speed = speed;
+			this.time = time;
+			this.direction = direction;
+			this.len = this.slider.find('li').length;
+			this.dot = this.button.find('li');
+			this.count = 0;
+			this.timer = null;
+			this.distance = this.slider.find('img').width();
+			self = this;
+			this.html();
+			this.nextBtn.click(function(){
+				self.nextFn();
+			}).hover(function(){
+				clearInterval(self.timer);	
+			},function(){
+				self.autoPlay();	
+			})
+			this.prevBtn.click(function(){
+				self.prevFn();
+			}).hover(function(){
+				clearInterval(self.timer);	
+			},function(){
+				self.autoPlay();	
+			})
+			this.dot.click(function(){
+				if(!self.slider.is(':animated')){
+					self.motion($(this).index());	
+				}
+				self.dot.eq($(this).index()).addClass('current').siblings().removeClass('current');
+				self.amount.html($(this).index()+1+'/'+self.len);
+			}).hover(function(){
+				clearInterval(self.timer);	
+			},function(){
+				self.autoPlay();
+			})
+			this.slider.hover(function(){
+				clearInterval(self.timer);	
+			},function(){
+				self.autoPlay();	
+			})
+			this.amount.hover(function(){
+				clearInterval(self.timer);	
+			},function(){
+				self.autoPlay();	
+			})
+			this.autoPlay();
+		}
+		CarouselFigure.prototype = {
+			motion:function(number){
+				this.slider.animate({left:'-'+this.distance*number+'px'},this.speed);
+			},
+			current:function(){
+				this.dot.eq(this.count).addClass('current').siblings().removeClass('current');
+			},
+			html:function(){
+				this.amount.html(this.count+1+'/'+this.len);	
+			},
+			nextFn:function(){
+				if(!this.slider.is(':animated')){
+					if(this.count == this.len-1){
+						this.count = 0;	
+					}else{
+						this.count++;	
+					}	
+					this.motion(this.count);
+					this.html();	
+					this.current();
+				}
+			},
+			prevFn:function(){
+				if(!this.slider.is(':animated')){
+					if(this.count == 0){
+						this.count = this.len-1;	
+					}else{
+						this.count--;
+					}	
+					this.motion(this.count);
+					this.html();	
+					this.current();
+				}
+			},
+			autoPlay:function(){
+				var self = this;
+				clearInterval(this.timer);
+				if(!this.time){
+					this.time = 2000;	
+				}
+				this.timer = setInterval(function(){
+					if(self.direction == 'left'){
+						self.nextFn();
+					}else if(self.direction == 'right'){
+						self.prevFn();	
+					}else{
+						self.nextFn();
+					}
+				},this.time)	
+			}
+		}
+		new CarouselFigure("#slider","#button","#nextBtn","#prevBtn","#amount",500,2000,"left");*/
+		/*var slider = $('.slider');
+		var len = slider.find('li').length;
+		var dot = $('.button').find('li');
+		var count = 0;
+		var speed = 500;
+		var timer = null;
+		var distance = slider.find('img').width();
+		var amount = $('.amount');
+		function current(){
+			dot.eq(count).addClass('current').siblings().removeClass('current');
+		}
+		function motion(number){
+			slider.animate({left:'-'+distance*number+'px'},speed);	
+		}
+		function html(){
+			amount.html(count+1+'/'+len);
+		}
+		html();
+		amount.hover(function(){
+			clearInterval(timer);	
+		},function(){
+			autoPlay();	
+		})
+		function autoPlay(){
+			clearInterval(timer);
+			timer = setInterval(function(){
+				if(!slider.is(':animated')){
+					if(count == len-1){
+						count = 0;	
+					}else{
+						count++;	
+					}	
+					motion(count);
+					html();	
+				}
+				current();
+			},2000)	
+		}
+		autoPlay();
+		dot.click(function(){
+			if(!slider.is(':animated')){
+				motion($(this).index());	
+			}
+			dot.eq($(this).index()).addClass('current').siblings().removeClass('current');
+			amount.html($(this).index()+1+'/'+len);
+		}).hover(function(){
+			clearInterval(timer);	
+		},function(){
+			autoPlay();
+		})
+		slider.hover(function(){
+			clearInterval(timer);	
+		},function(){
+			autoPlay();	
+		})
+		$('.next').click(function(){
+			if(!slider.is(':animated')){
+				if(count == len-1){
+					count = 0;	
+				}else{
+					count++;	
+				}	
+				motion(count);
+				html();	
+			}
+			current();
+		}).hover(function(){
+			clearInterval(timer);	
+		},function(){
+			autoPlay();	
+		})
+		$('.prev').click(function(){
+			if(!slider.is(':animated')){
+				if(count == 0){
+					count = len-1;	
+				}else{
+					count--;
+				}	
+				motion(count);
+				html();	
+			}
+			current();
+		}).hover(function(){
+			clearInterval(timer);	
+		},function(){
+			autoPlay();	
+		})*/
+	})
+</script>
+</html>

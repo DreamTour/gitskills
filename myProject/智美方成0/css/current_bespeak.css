@@ -1,0 +1,31 @@
+*{margin:0;padding:0;-webkit-tap-highlight-color: rgba(255, 0, 0, 0)}*,:after,:before{box-sizing:border-box}a,b,big,em,h1,h2,h3,h4,h5,h6,i,ins,small,strong,u{font-style:normal}a{color:#3a3a3a;text-decoration:none}a,button,input[type=button],input[type=submit]{cursor:pointer}a,input,select,textarea{outline:0}a,img{border:none}img{display:block}button,input,select{background:#fff}li,ol,ul{list-style-type:none}fl,fr{display:inline}.fl{float:left}.fr{float:right}clear:after{clear:both;display:block;content:''}table{width:100%}table th{font-weight:400}table,table td,table th,table tr{border-collapse:collapse}body{background:#f5f5f5;color:#555;font-family:微软雅黑;min-width:320px;max-width:640px;margin:auto;
+font-size:12px;}
+b{font-weight:normal;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+.bo_r{border-right:1px solid #e2e2e3;}
+.bo_b{border-bottom:1px solid #e2e2e3;}
+body{ background:#f6f6f6;}
+.bespeak{background:#fff;border-top:1px solid #e2e2e3;margin-top:10px;}
+.bespeak .bespeak_head{font-size:15px;color:#53ceca;font-weight:normal;padding: 10px 10px 11px 15px; font-size:15px;}
+.bespeak .bespeak_head i{display:inline-block;width:5px;height:15px;background:#53ceca; position:relative;top:2px;}
+.bespeak_list{padding-left:15px;border-top:1px solid #e2e2e3;}
+.bespeak_list li{line-height:22px;font-size:16px;border-bottom:1px solid #e2e2e3; display:flex;}
+.bespeak_list .list_title{ display:inline-block;padding-top:8px;padding-left:5px;width:22%;}
+.bespeak_list .list_text{ display:inline-block;padding: 18px 5px 18px 0px; width:100%;}
+.bespeak_list li:nth-last-child(1){border:none;}
+.bespeak_list .title_time1{ display:block; }
+.bespeak_list .title_time2{display:block;color:#999999;font-size:14px;}
+.bespeak_list .text_star{ display:inline-block;}
+.bespeak_list .star_gray{display:inline-block;width:80px;height:15px; background:url(../images/bespeak/teacherList_star_gray.png) no-repeat center;
+ background-size:cover;position: relative;top: 1px;}
+.bespeak_list .star_orange{display:inline-block;height:15px;background-image:url(../images/bespeak/teacherList_star_orange.png);
+background-size:cover; position:absolute;z-index:1; width:90%;}
+.bespeak_list .text_count{ display:inline-block;width: 14%; text-align:center; color: #999999; font-size:14px;}
+.bespeak_list .text_title{display:inline-block;width:16%;}
+.bespeak_list .text_teacher{display:inline-block;width:24%;font-size:14px; color:#666666;}
+.bespeak_list .arrow_icon{ display:inline-block;width:8px;height:17px; background:url(../images/vip/arrow_icon.png) no-repeat center/cover;
+margin-left:5px; position: relative; top:3px;}
+
+
+

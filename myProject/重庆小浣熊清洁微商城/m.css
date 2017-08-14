@@ -1,0 +1,388 @@
+*{margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}
+address,applet,area,article,aside,blockquote,fieldset,figcaption,figure,footer,header,map,section,summary{display:block}
+body{overflow-x:hidden;font:12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;background:#f5f5f5}
+article,aside,div,p{word-break:break-all}
+img{border:none;width:100%;vertical-align:middle}
+em,font,i,ins,u{font-style:normal}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}
+b,big,strong{font-weight:700}
+table{width:100%}
+table,table td,table th,table tr{border-collapse:collapse}
+ol li,ul li{list-style-type:none}
+a{text-decoration:none;color:#444}
+a,button,input,option,select,textarea{outline:0;font-family:"Microsoft YaHei"}
+.clearflx:after,.clearflx:before{content:'';display:block;height:0;visibility:hidden;clear:both}
+.fl{float:left}
+.fr{float:right}
+.fn{float:none}
+.hide{display:none}
+.show{display:block}
+.container{max-width:768px;min-width:320px;margin:0 auto;overflow:hidden;background:0 0}
+.mui-fixed{position:fixed}
+.mui-dis-flex{display:-webkit-flex;display:flex;align-items: center;}
+.flex1{flex: 1;}
+.mui-dis-box{display:-webkit-box;display:box}
+.mui-ptop45 {padding-top: 45px!important;}
+.mui-mtop10 {margin-top: 10px!important;}
+.mui-mbottom60 {margin-bottom: 60px!important;}
+.border-none{border:none !important}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 253662 */
+    src: url('//at.alicdn.com/t/font_7mml40jidpw1xlxr.eot');
+    src: url('//at.alicdn.com/t/font_7mml40jidpw1xlxr.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_7mml40jidpw1xlxr.woff') format('woff'),
+    url('//at.alicdn.com/t/font_7mml40jidpw1xlxr.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_7mml40jidpw1xlxr.svg#iconfont') format('svg');
+}
+/*****************头部******************/
+.header{height:45px;position:relative;z-index:100;background-color:#a41203}
+.header .nesting{display:-webkit-flex;display:flex;display:-webkit-box;display:box;-webkit-align-items:center;align-items:center;background: url(http://www.yumukeji.com/project/kangbamizhang/img/WebsiteImg/iUK67412228Iq.jpg) repeat;background-size: 65%;}
+.header .header-btn{width:55px;height:45px;display:block;color:#fff;text-align:center;line-height:45px}
+.header .header-btn .return-ico{font-family:'iconfont' ;font-size: 26px;font-weight: bold;color:#fff;}
+.header .align-content{-webkit-flex:1;flex:1;-webkit-box-flex:1;box-flex:1}
+.header .align-text{height:45px;line-height:45px;text-align:center;font-size:16px;color:#fff}
+.level{background: #fdba12;color: #fff; padding: 0 5px; font-size: 12px;border-radius: 3px;font-style: italic;margin-left: 10px;}
+.header-fixed{position:fixed;top:0;left:0;right:0;width:100%}
+
+/*****************底部*********************/
+.footer{bottom:0;height:50px;width:100%;background: #3f3f3f;}
+.footer span{display:block;width:20px;height:22px;margin:auto;font-size:19px;}
+.footer a{display:block;color:#fff;}
+.footer li{flex:1;text-align:center;padding: 3px 0;}
+.footer li.on{background-color: #a41203;height: 50px;border-top:1px solid #a41203;}
+.footer li.on a{color: white;}
+.mindex,.mclassy,.mcar,.musercenter{font-family: 'iconfont';}
+
+/****************用户中心*****************/
+.order-state1,.order-state2,.order-state3,.order-state4{font-family: 'iconfont'; font-size: 30px;color: #a1a1a1;}
+.user-info{background:#fff;align-items:center;font-size:14px;color:#999999;padding:0 10px;}
+.head-img{width:20%;padding:10px 10px 10px 0;}
+.head-img img{border-radius:5px;}
+.more{font-family: 'iconfont';font-size: 18px;color:#999999;}
+.user-wrap-style1{background: #fff;color:#444}
+.user-wrap-style1 li{height: 50px;line-height: 50px;padding:0 10px;border-bottom: 1px solid #eaeaea;font-size: 14px;}
+.order-state{background: #fff;margin-top:5px;}
+.order-state li{width:25%;text-align: center;padding:10px 0;}
+
+/**************关于我们*************/
+.about-us .about-us-info{color: #fff;}
+.about-us .about-us-info dd label{flex: 1;}
+.about-us .about-us-info dd label img{width:80px !important;border-radius: 50%;}
+.about-us .about-us-info dd {font-size: 16px;padding:10px;display: flex;align-items: center;}
+.about-us .about-us-info dd span{width:30%;}
+.about-us .attention{text-align: center;min-height:400px;}
+.about-us .attention span{line-height: 40px;font-size: 12px;color:#fff;}
+.about-us .attention p img{width:50%;padding:0 10px;}
+.join-us{background: url(http://www.yumukeji.com/project/kangbamizhang/img/WebsiteImg/BZS67369689cs.jpg) top center;background-size:100% ;}
+
+/**************个人资料*************/
+.edit-info{background: #fff;font-size: 14px;color: #333;}
+.edit-info li{line-height: 35px;    font-size: 16px;}
+.edit-info li:before{content: "*";color:red;    font-size: 16px;}
+.edit-info li span{width: 35%;text-align: left;}
+.edit-info li label input[type="text"]{border: none;font-size: 16px;}
+.edit-info li div label{margin-right: 20px;}
+.edit-info li div label input{margin: 0 10px;}
+.edit-info li div select{width:30%;}
+.edit-info li {display: flex; padding:10px;border-bottom: 1px solid #f0f0f0;align-items: center;}
+.edit-info li img{width:30%;margin-left:40px;border-radius: 5px;}
+.bind-phone-btn1{background: #a41203;color: #fff;width: 60px;text-align: center;border-radius: 5px;}
+/***************绑定手机*****************/
+.bind-phone ul{background: #fff;padding-top:10px;}
+.bind-phone ul li{padding-left:10px;display: flex;align-items: center;border-bottom:1px solid #ddd;}
+.bind-phone ul li span{width:30%;}
+.bind-phone ul li input{flex: 1;line-height:40px;border:none;outline: none;padding:0 10px;width:50%;}
+.bind-phone_btn{
+    display: block;
+    margin: 20px auto;
+    /* position: fixed; */
+    /* bottom: 150px; */
+    /* left: 5%; */
+    width: 90%;
+    border: none;
+    background: #a41203;
+    color: #fff;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    z-index: 0;
+}
+.bind-phone_btn2{
+    position: fixed;
+    bottom: 150px;
+    left: 5%;
+    width: 90%;
+    border: none;
+    background: #a41203;
+    color: #fff;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    z-index: 0;
+}
+/*************首页***************/
+.slideBox{position: relative;}
+.classly{background: #fff;}
+.classly .classly1{border-bottom: 1px solid #f0f0f0;}
+.classly .classly1 li{flex:1 ;text-align: center;border-right: 1px solid #f0f0f0; padding:5px 0;}
+.classly .classly2 li{padding: 10px 0;}
+.classly .classly2 li{flex:1 ;text-align: center;border-right: 1px solid #f0f0f0;}
+.classly .classly2 li:last-child{border:none;}
+.culture,.strategy,.activity,.join,.classly-more,.tutor,.decorations,.specialty{ width: 50px; height: 50px; display: inline-block;line-height: 50px;text-align: center;border-radius: 50%;}
+.culture{background: #f5a623;}
+.strategy{background:  #3bd369;}
+.activity{background: #fe7373;}
+.join{background:#5ab3ec;}
+.classly-more{background:#8BC34A;}
+.tutor {
+    background-color: #2196F3;
+}
+.decorations{background:#f597b9;}
+.specialty{background: #9488e4;}
+.culture i,.strategy i,.activity i,.join i,.classly-more i,.tutor i,.decorations,.specialty i{font-family: 'iconfont'; color:#fff; font-size: 25px; }
+.classly p{font-size: 14px; color:#3e3e3e;}
+.product h2{text-align: center;line-height: 40px;color: #333;font-size: 16px;}
+.product .product-lists{flex-wrap: wrap;}
+.product .product-lists .nameSpc{height: 32px;font-size: 12px;color: #666;margin: 3px 0;line-height: 16px;overflow: hidden;}
+.product .product-lists li{width: 50%; padding:8px;}
+.product .product-lists .textSale{line-height: 24px; font-size: 14px;}
+.product .product-lists .text-price{color: #f15353;  font-size: 13px; font-weight: 700;margin-right: 5px;}
+.product .product-lists .text-sale{color: #999;}
+
+/**************产品分类列表页************/
+.mclass{position: absolute;width: 100%;height: 100%; padding-top: 45px;left: 0;top: 0;}
+.mclass-content {height: 100%;background-color: #fff;align-items: inherit !important;}
+.mclass-menu {width: 25%;background-color: #f2f2f2; overflow-y: scroll;}
+.mclass-menu  ul{margin-top:10px;}
+.mclass-panel {background-color: #fff; overflow-y: scroll;}
+.flex-ratio {-webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;flex: 1;}
+.mclass-advert {padding-left: 15px;}
+.mclass-product {padding: 15px 15px 15px 0; display: -webkit-flex; display: flex;-webkit-flex-wrap: wrap;flex-wrap: wrap;}
+.mclass-product li {width: 50%; padding-left: 15px;padding-bottom: 15px;text-align: center;}
+.mclass-product a {display: block;}
+.mclass-product img { width: 100px; height: 100px;}
+.mclass-product p { font-size: 14px; margin-top: 4px;  overflow: hidden;  height: 18px; line-height: 18px;}
+.mclass-menu li {line-height: 50px; height: 50px; text-align: center;font-size: 15px;border-bottom: 1px solid #e5e5e5;}
+.product dl{height: 80px; overflow: hidden;display: flex;padding: 10px 0;flex-wrap: wrap;width: 90%;}
+.product dl dd{width: 25%;text-align: center;ont-size: 16px;}
+.current{background:#fff;}
+.current a{color: #c40000;}
+
+/******商品明细*********/
+.goodsMx {background-color: #fff;}
+.goodsMx .goodMx-title{line-height: 20px; font-size: 14px;margin-right: 60px;padding-bottom: 16px; width: 100%;padding: 10px;}
+.goodsMx .goodMx-price{margin:0 10px;}
+.goodsMx .goodMx-price dd{display: flex;align-items:center;line-height: 30px;}
+.goodsMx .goodMx-price dd span{width:15%;font-size: 16px;text-align: left;   margin-right: 20px;}
+.goodsMx .goodMx-price dd:first-of-type label{color:red;font-size: 20px;}
+.goodsMx .goodMx-price dd:last-of-type label{display: flex;border:1px solid #ddd}
+.goodsMx .goodMx-price dd:last-of-type label em{background: #f5f5f5;color:#999;padding:6px 15px;font-size: 24px;}
+.goodsMx .goodMx-price dd:last-of-type label input{border:none;width:80px; text-align: center;}
+.goodsMx p.buy-btn{display: flex;margin:20px 0;}
+.goodsMx p.buy-btn a{display: block;margin: 0 8px; -webkit-box-flex: 1; box-flex: 1;-webkit-flex: 1; flex: 1; text-align: center; line-height: 45px;font-size: 16px;  background: #a41203; border: 1px solid rgba(0,0,0,.1);border-radius: 3px;color: #fff;}
+.goods-con p{ine-height: 30px;font-size: 16px;margin:10px;}
+.goodMx-price dt{position: relative;}
+.goodMx-price dt span{position: absolute;top:0;left: 0;width:20%;font-size: 16px;}
+.goodMx-price dt ul{margin-left: 20%;}
+.goodMx-price dt ul li{margin: 0 6px 6px 0;display: inline-block; color: #333;  border: 1px solid #ddd; padding: 0 10px; line-height: 38px; height: 38px; border-radius: 3px;overflow: hidden;}
+.goodMx-price dt ul li.on-type{border-color: #ffbf29;color: #ffbf29;}
+.goodMx-price dd i.inventory{margin-left:10px;}
+
+
+/****************************购物车****************************/
+.buycart-ctrl {background: #fff;}
+.buycart {background: #fff;}
+.buycart ul li{padding:10px;display: flex;align-items: center; margin-bottom: 10px;    border: 1px solid #e5e5e5;    border-width: 1px 0;}
+.buycart ul li img{width: 30%;height: 100px;margin:0 10px;}
+.buycart .goods-msg{display: flex;align-items: center;}
+.buycart .goods-num h2{font-size: 14px;line-height: 30px;}
+.buycart .goods-num .price{color:red; font-size: 20px;line-height: 40px;}
+.shop-total{padding:0 10px;display:flex;align-items: center;}
+.shop-total .shop-total-amount{color:red;font-size: 20px;}
+.mb180{margin-bottom: 180px;}
+.amount-box {display: -webkit-box; margin-top: 6px;}
+.amount-btn {display: block; width: 30px;  height: 30px; text-align: center; line-height: 30px;font-size: 18px;color: #999;border: 1px solid #eee; background: #f5f5f5;}
+.amount-value { display: block;width: 45px;border: 1px solid #eee; background: #fff;border-width: 1px 0; text-align: center; line-height: 28px;}
+.buycart-ctrl{font-size: 14px;}
+.delete{font-family: 'iconfont'; font-size: 28px; color:#ddd;}
+.mui-sheet { left: 0; bottom: 0;padding: 20px 0; width: 100%;}
+.mui-ov {overflow: hidden;}
+.mui-darkgray {color: #a9a9a9;}
+.mui-pauto16 { padding: 0 16px!important;}
+.mui-choose {display: inline-block;  width: 24px; height: 24px;  background: #fff; border: 1px solid #ddd; border-radius: 50%;vertical-align: middle;margin-right: 4px;}
+.mui-red {color: red;}
+.mui-btn-wrap {padding: 0 15px 0 0;display: -webkit-flex;display: flex;}
+.mui-mtop10 { margin-top: 10px!important;}
+.mui-btn-wrap a { display: block;margin-left: 15px; -webkit-box-flex: 1; box-flex: 1;-webkit-flex: 1;flex: 1; text-align: center;line-height: 45px; font-size: 16px; background: #f5a623;border: 1px solid rgba(0,0,0,.1); border-radius: 3px;color: #fff;}
+.mui-choose label { height: 22px; width: 22px;display: inline-block;border-radius: 50%;}
+.mui-choose input {width: 24px;height: 24px;visibility: hidden;}
+
+.mui-btn-wrap a.settlement{background-color:#a41203 !important;border-color:#a41203;color:#fff}
+.user-ico{font-size: 20px;font-weight: bold;}
+.cover{display:none;background: rgba(0, 0, 0, 0.35); position: fixed;width: 100%;height: 100%;top: 0; left: 0;z-index: 100;}
+.cover .cover-con{width:325px;background: #fff;margin: 100px auto;}
+.cover .cover-con h2{font-size: 16px;font-weight: 700;border-top: 4px solid #a41203; display: block; line-height: 35px;text-align: left;  padding-left: 15px;color: #666666; border-bottom: 1px solid #ecebea;}
+.cover .cover-con h2 i{display: inline-block; width: 24px; height: 24px; float: right;  padding-right: 10px;}
+.cover .cover-con ul li{overflow: hidden;line-height: 50px;margin-left: 20px; margin-right: 20px; font-weight: 700; padding-top: 10px; border-bottom: 1px solid #ecebea;}
+.cover .cover-con ul li span{font-size: 14px; line-height: 20px; color: #666666;display: inline-block;}
+.cover .cover-con ul li p{font-size: 12px;line-height: 20px;color: #666666;display: inline-block;}
+.cover .cover-con ul li a.keyRed { color: red;text-decoration:underline}
+.confrim {font-size: 18px;margin: 25px auto; width: 185px; display: block; line-height: 35px;text-align: center; background-color: #a41203; color: white;box-shadow: 1px 0px 5px #666;    border: none;}
+.cover .cover-con ul li .addressInfo p{width: 100%;height:78px; padding:5px; border:1px solid #ddd; display: block;background:#fff; overflow:auto}
+
+.option-btn{ display: inline-block; width: 24px; height: 24px;background: #fff; border: 1px solid #ddd; border-radius: 50%;vertical-align: middle; margin-right: 4px;}
+.option-btn span{background: #ffffff;height: 22px; width: 22px; display: inline-block;border-radius: 50%;}
+.option-btn span input{visibility: hidden;}
+
+/**************物流跟踪***********/
+.track-rcol{width: 900px; border: 1px solid #eee;}
+.track-list{margin: 20px; padding-left: 5px; position: relative;}
+.track-list li{position: relative; padding: 9px 0 0 25px; line-height: 18px; border-left: 1px solid #d9d9d9; color: #999;}
+.track-list li.first{color: red; padding-top: 0; border-left-color: #fff;}
+.track-list li .node-icon{position: absolute; left: -6px; top: 50%; width: 11px; height: 11px; background: url(http://www.yumukeji.com/project/kangbamizhang/img/WebsiteImg/iUS67370035Ec.jpg)  -21px -72px no-repeat;}
+.track-list li.first .node-icon{background-position:0 -72px;}
+.track-list li .time{margin-right: 20px; position: relative; top: 4px; display: inline-block; vertical-align: middle;}
+.track-list li .txt{position: relative;top: 4px;display: block;vertical-align: middle;width: 35%;height: auto;}
+.track-list li.first .time{margin-right: 20px; }
+.track-list li.first .txt{max-width: 600px; }
+
+
+/************订单管理************/
+.order{background: #fff;}
+.order .order-lists{border: 1px solid #f0f0f0;margin: 10px 0;border-width: 1px 0;}
+.order .order-lists h2{padding:6px;}
+.order dl{display:flex; align-items: center;}
+.order dl dd:first-of-type{width: 35%;padding:5px;}
+.order dl dd.info p:first-of-type{flex: 1;  font-size: 14px;  font-weight: 400; width: 200px;  overflow: hidden; display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;padding-right:10px;}
+.order dl dd.info p:last-of-type{color:red;font-size: 18px;}
+.order dl dd:last-of-type{width:20%; text-align:center;}
+.order dl dd:last-of-type p{line-height:30px;}
+.order dl dd:last-of-type p:first-of-type{color:red;}
+
+/***********旅游首页*************/
+.tourism {background: #fff;}
+.tourism .tourism-cd ul{flex-wrap: wrap;}
+.tourism .tourism-cd ul li{width: 50%;padding:2px;margin-bottom: 10px;}
+.tourism .tourism-recommendeds ul li {margin-bottom: 10px;}
+.tourism .tourism-recommendeds ul li a div{position: relative;}
+.tourism .tourism-recommendeds ul li a div p{position: absolute;color:#fff;bottom: 0;left: 10px;line-height: 30px;}
+.tourism .tourism-cd ul li img{width:100%;height: 120px;overflow: hidden;}
+.tourism-title {text-align: center;}
+.tourism-title a div label{flex:1;font-size: 16px;padding:5px 0;}
+.tourism-title a div label span{color:#ddd;}
+.class-more{font-family: 'iconfont'; color:red;margin-left: 10px;}
+
+/***********旅游列表页*************/
+.tourism-lists{background: #fff;}
+.tourism-lists h2{padding:10px;font-size: 16px;}
+.tourism-lists ul li {border-bottom: 1px solid #f0f0f0;}
+.tourism-lists ul li a{display: flex;align-items: center;}
+.tourism-lists ul li a img{width:90px;height: 90px;padding:10px;}
+.tourism-lists ul li a div{flex:1;}
+.tourism-lists ul li a div p{line-height: 40px;}
+.tourism-lists ul li a div p:first-of-type{color:#333;font-size: 16px;}
+.tourism-lists ul li a span{margin-right:10px;}
+.contain-about{background: url(http://www.yumukeji.com/project/kangbamizhang/img/WebsiteImg/BZS67369689cs.jpg) no-repeat center 0;background-size: 100%;}
+.tourism-mx{background:#fff; padding: 10px;}
+.tourism-mx dl dd{padding:10px;line-height: 30px;text-indent: 1.5rem;font-size: 14px;}
+
+/***************订单详情***************/
+.orderMx{background: #fff;}
+.orderMx dl{display: flex;align-items: center;margin-top:10px;color:#666}
+.orderMx dl dt{width:10%;text-align: center;}
+.orderMx dl dd{font-size: 14px; line-height: 30px;}
+.order-goods .order-goods-mx a {display: flex;align-items: center;padding:10px 0;background:#f0f0f0;}
+.order-goods .order-goods-mx img{width:20%;height: 60px;margin:0 10px;}
+.order-goods .order-goods-mx p{flex: 1;}
+.order-goods .order-goods-mx p{font-size: 14px; line-height: 30px;}
+.order-goods .order-goods-mx label{margin-right:10px;}
+.order-goods .order-goods-mx label p{font-size: 16px;text-align: right;}
+.order-goods .order-goods-price{margin:10px 0; padding:10px;border-bottom: 10px solid #f0f0f0;;}
+.order-goods .order-goods-price li{line-height: 30px;font-size: 14px;display: flex;}
+.order-goods .order-goods-price li span{flex:1;}
+.order-goods .order-goods-price .total-price{color:red;font-size: 16px;}
+.order-goods .order-goods-index{padding:10px;}
+.order-goods .order-goods-index li{line-height: 25px;}
+
+/****************招商加盟***************/
+.shops{background: #fff;    min-height: 400px;}
+.shops dl dt{text-align: center;line-height: 40px;font-size:16px;}
+.shops dl dd{display: flex;align-items: center;flex-wrap: wrap;}
+.shops dl dd img{width:50%;padding:5px;}
+
+/*****************公益活动********************/
+.newtop-title {margin-top: 2px; background: url(http://www.yumukeji.com/project/kangbamizhang/img/WebsiteImg/iUK67412228Iq.jpg) repeat;background-size:50%;}
+.list-category-1 { position: relative;padding: 18px 12px 6px 24px; background-size: cover; text-align: center;}
+.list-category-1 .content {z-index: 1;position: relative;font-size: 0;}
+.list-category-1 .content a {margin: 0 12px 12px 0; padding: 0 9px;border: 1px solid #fff;border-radius: 4px; font-size: 14px; line-height: 34px;display: inline-block;color: #fff;}
+.tibet label{text-align: center; padding:10px;}
+.tibet label span{margin-right: 10px;float: right;}
+.activity-con{background: #fff;}
+.activity-con h2{text-align: center;line-height: 60px;font-size: 18px;}
+.activity-con p{text-indent: 1.5rem;line-height: 30px;font-size: 14px;padding:5px;color: #4c4747; font-family: cursive;}
+
+.tibet-list dl {border-top: 10px solid #f5f5f5;padding: 10px;}
+.tibet-list dl dd:first-of-type a { display: flex;}
+.tibet-list dl dd div h2 {width: 180px;height: 30px;line-height: 30px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 14px;}
+.tibet-list  dl dd div p { height: 40px; line-height: 20px;overflow: hidden; display: -webkit-box;-webkit-box-orient: vertical; -webkit-line-clamp: 2;font-size: 14px;}
+.tibet-list dl dd img {width: 25%;}
+
+/***************************提示遮罩层*******************************/
+#cover {position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:9999;display:none;top: 0;}
+#cover #cover_con {width:15rem;height:auto;background:#fff;margin:0 auto;position: absolute;top:50%;left:50%;margin-top:-100px;margin-left:-120px;border-radius:5px;}
+#cover #cover_con p {text-align:center;padding:10px;margin:10px 0;line-height:25px;}
+#cover #cover_con div {display:flex;align-items:center;}
+#cover #cover_con div button {width:50%;padding:10px 0;border:1px solid #ccc;outline:none;}
+#cover #cover_con div button:first-of-type {background:#842323;color:#fff;border:1px solid #842323;border-bottom-left-radius:5px;}
+#cover #cover_con div button:last-of-type {border-bottom-right-radius:5px;}
+#cover_con p input {height:30px;line-height:30px;padding-left:2px;font-size:16px;}
+#addalbum_btn {flex:1;}
+
+/****************地址管理页面***************/
+.add-address-btn,.delete-address,.edit-address{font-family: 'iconfont'; }
+.add-address-list dt {border-bottom: 10px solid #f0f0f0;}
+.add-address-list dt a{width:100%;background: #fff;display: flex;align-items: center;margin: 4px;padding: 2px;}
+.add-address-list dt a em{font-family: iconfont;color: red; font-style: normal;padding: 4px;font-size: 25px;}
+.add-address-list dt label{align-items: center;}
+.add-address-list dt a label{ flex: 1; font-size: 14px;padding-left: 5px;color: #333;}
+.add-address-list dd{margin-top: 10px;background: #fff; margin: 4px;padding: 5px;display: flex;align-items: center;}
+.add-address-list dd p{ flex: 1;line-height: 30px;font-size: 14px;}
+.delete-address{color: #989595; font-size: 32px; margin-right: 10px;}
+.edit-address{margin-top: 8px;color: #ffbf29;font-style: normal;font-size: 32px;}
+.default-address{     background-color: #5e6b85 !important; color: #fff;}
+
+.wrap  li select{width:25%;}
+.wrap  li textarea{width:100%;}
+
+.search{width: 90%; border: none; border-radius: 3px;opacity: .9;padding: 10px;font-size:16px;}
+.search-btn{width: 50px;padding: 10px;background: none;color: #fff;font-size: 18px;border: none;}
+
+.page{text-align:center !important;}
+.page a{background: #fff; padding: 1px 5px; border: 1px solid #988E8E;}
+
+
+/****************新加样式***************/
+@font-face {
+    font-family: 'iconfont';  /* project id 310051 */
+    src: url('//at.alicdn.com/t/font_34l64koo4i74aemi.eot');
+    src: url('//at.alicdn.com/t/font_34l64koo4i74aemi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_34l64koo4i74aemi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_34l64koo4i74aemi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_34l64koo4i74aemi.svg#iconfont') format('svg');
+}
+.mUser {
+    padding-bottom: 50px;
+}
+.tourism-mx p {
+    text-indent: 2em;
+    font-size: 14px;
+    line-height: 26px;
+}
+.tourism-mx img {
+    padding-top: 10px;
+}
+

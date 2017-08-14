@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0;" name="viewport" />
+    <title>弱电365</title>
+    <link rel='stylesheet' type='text/css' href='mCss.css'>
+    <script type='text/javascript' src='http://www.youlaole.com/library/jquery-1.11.2.min.js'></script>
+    <script type='text/javascript' src='mJs.js'></script>
+</head>
+
+<body>
+<!-- 设备详情图片 -->
+<div id="index_banner" class="index_banner">
+    <ul class="banner_img">
+        <li><img src="../images/banner/1.png" alt="图片" /></li>
+        <li><img src="../images/banner/2.png" alt="图片" /></li>
+        <li><img src="../images/banner/1.png" alt="图片" /></li>
+        <li><img src="../images/banner/2.png" alt="图片" /></li>
+    </ul>
+    <div class="banner_wrap">
+        <ul class="banner_count"></ul>
+    </div>
+</div>
+<!-- 设备详情 -->
+<h2 class="deviceDetails-h2">爱普生投影机 EH-TW3300C</h2>
+<ul class="courseList">
+    <li>
+        <div class="courseList_title">二维码</div>
+        <div class="courseList_content"><img class="qr-code" src="../images/二维码.png" /></div>
+    </li>
+    <li>
+        <div class="courseList_title">ID：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+    <li>
+        <div class="courseList_title">名称：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+    <li>
+        <div class="courseList_title">型号：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+    <li>
+        <div class="courseList_title">品牌：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+    <li>
+        <div class="courseList_title">系统类别：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+    <li>
+        <div class="courseList_title">数量：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+    <li>
+        <div class="courseList_title">安装位置：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+    <li>
+        <div class="courseList_title">维修位置：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+    <li>
+        <div class="courseList_title">客户单位联系人：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+    <li>
+        <div class="courseList_title">客户单位联系人电话：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+    <li>
+        <div class="courseList_title">弱电365服务人员：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+    <li>
+        <div class="courseList_title">弱电365电话：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+    <li>
+        <div class="courseList_title">合同生效服务期限：</div>
+        <div class="courseList_content">未设置</div>
+    </li>
+</ul>
+<div class="deviceDetails-btn">
+    <a class="btn-reservation" href="#">预约</a>
+    <a class="btn-Complaints" href="#">投诉</a>
+    <a class="btn-back" href="#">返回首页</a>
+</div>
+<!-- 二维码弹出层 -->
+<div class="qr-code-shade hide">
+    <img class="shade-img" src="" />
+</div>
+</body>
+<script>
+    $(function(){
+        //轮播图
+        TouchSlide({
+            slideCell:"#index_banner",
+            titCell:"#index_banner .banner_count",
+            mainCell:"#index_banner .banner_img",
+            effect:"leftLoop",
+            autoPage:true,
+            autoPlay:true
+        });
+        //点击二维码弹出对应的图纸
+        Drawing('.qr-code', '.shade-img', '.qr-code-shade');
+    })
+</script>
+</html>

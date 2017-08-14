@@ -1,0 +1,74 @@
+.wrap {
+    padding-top: 45px;
+}
+.leave-message {
+    position: fixed;
+    bottom: 0;
+    left: 0px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    background: #fff;
+}
+.leave-message h3 {
+    padding: 5px 0 8px 15px;
+    font-size: 16px;
+    color: #F44336;
+}
+.leave-message .sendMessage {
+    display: block;
+    margin: 10px auto;
+    border: 0;
+    padding: 5px 30px;
+    border-radius: 5px;
+    background: #a41203;
+    color: #fff;
+}
+.leave-message textarea {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.wrap ul {
+    padding: 15px 10px 300px 10px;
+}
+.wrap ul li {
+    display: flex;
+    padding: 15px 0;
+}
+.client-li {
+    text-align: right;
+    flex-direction: row-reverse;
+}
+.client-li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.client-li span {
+    display: inline-block;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    line-height: 20px;
+    text-align: left;
+    background: #5780f4;
+    color: #fff;
+}
+.control-li {
+    display: flex;
+    text-align: left;
+}
+.control-li span {
+    display: inline-block;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    line-height: 20px;
+    background: #fff;
+    color: #2196F3;
+    flex: 1;
+}

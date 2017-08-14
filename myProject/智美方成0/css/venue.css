@@ -1,0 +1,35 @@
+*{margin:0;padding:0;-webkit-tap-highlight-color: rgba(255, 0, 0, 0)}*,:after,:before{box-sizing:border-box}a,b,big,em,h1,h2,h3,h4,h5,h6,i,ins,small,strong,u{font-style:normal}a{color:#3a3a3a;text-decoration:none}a,button,input[type=button],input[type=submit]{cursor:pointer}a,input,select,textarea{outline:0}a,img{border:none}img{display:block}button,input,select{background:#fff}li,ol,ul{list-style-type:none}fl,fr{display:inline}.fl{float:left}.fr{float:right}clear:after{clear:both;display:block;content:''}table{width:100%}table th{font-weight:400}table,table td,table th,table tr{border-collapse:collapse}body{background:#f5f5f5;color:#555;font-family:微软雅黑;min-width:320px;max-width:640px;margin:auto;
+font-size:12px;}
+b{font-weight:normal;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+.bo_r{border-right:1px solid #e2e2e3;}
+.bo_b{border-bottom:1px solid #e2e2e3;}
+body{ background:#f6f6f6;}
+html,body{width:100%;}
+.banner img{display:block;width:100%;}
+.venue_taste{ display:flex; background:#fff;border-top:1px solid #e2e2e3;}
+.venue_taste .taste_card{-webkit-flex:1;padding: 15px 20px 0px 20px; font-size:14px; color:#2e2e2e;}
+.venue_taste .card_text2{color:#999999;font-size:14px;}
+.venue_taste .taste_icon{border-left:1px solid #e2e2e3;padding: 14px 18px 13px 18px;}
+.venue_taste .taste_icon i{ display:inline-block;width:19px;height:20px; background:url(../images/venue/taste_icon.png) no-repeat center/cover;}
+.venue_see{margin-top:10px;border-top:1px solid #e2e2e3;border-bottom:1px solid #e2e2e3;background: #fff;padding: 12px 5px 18px 15px;}
+.venue_see .see_title{font-size:15px;color:#53ceca;font-weight:normal;}
+.venue_see .see_title i{display:inline-block;width:5px;height:15px;background:#53ceca;position:relative;top:2px;}
+.venue_see .see_list{ display:flex; padding-top:10px;}
+.venue_see .see_list li{-webkit-flex:1; width:20%; min-height:60px;margin-right:10px; background:#53ceca; text-align:center; color:#fff;
+padding: 14px 5px 5px 5px;}
+.venue_see .see_list{ display:flex;}
+.venue{background:#fff;border-top:1px solid #e2e2e3;margin-top:10px;padding-bottom: 60px;}
+.venue .venue_head{font-size:15px;color:#53ceca;font-weight:normal;padding: 10px 10px 5px 15px; font-size:15px;}
+.venue .venue_head i{display:inline-block;width:5px;height:15px;background:#53ceca; position:relative;top:2px;}
+.venue_list{padding-left:15px;}
+.venue_list li{line-height:22px;border-bottom:1px solid #e2e2e3; display:flex;padding: 9px 20px 8px 0px;}
+.venue_list .list_title{ display:inline-block;padding-left:5px; font-size:14px;width:100%;}
+.venue_list li:nth-last-child(1){border:none;}
+.venue_list .venue_icon{ display:inline-block;width:20px;height:20px; background:url(../images/venue/hook_icon_1.png) no-repeat center/cover;}
+.venue_list .actionIn{ display:inline-block;width:20px;height:20px; background:url(../images/payment/hook_icon_2.png) no-repeat center/cover;}
+.venue_buy{ width:100%;height:60px; position:fixed; bottom: 0; background: rgba(999,999,999,0.6); box-shadow: 5px 0px 5px #ededed;
+display:-webkit-box; -webkit-box-align:center; -webkit-box-pack:center;}
+.venue_buy .buy_button{display:block;width:80%;height:40px; text-align:center; line-height:40px; color:#fff; font-size:18px; background:#53ceca;border-radius:5px;}
+
