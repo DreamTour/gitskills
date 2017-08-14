@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>沈阳相亲—赠送礼物</title>
+<link type="text/css" rel="stylesheet" href="public_style.css">
+<link type="text/css" rel="stylesheet" href="gift.css">
+<script type='text/javascript' src='http://www.yumukeji.com/library/jquery-1.11.2.min.js'></script>
+
+</head>
+<style>
+.gift_content1{ display:inline-block; position:relative;}
+.gift_content1 >i{ display: block;
+    height: 13px;
+    width: 13px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;}
+</style>
+<body>
+<input type="button" id="show" value="显示" />
+<div class="gift_zzc" id="bg-gift" style="display:none;"></div>
+<div class="gift" id="gift" style="display:none;">
+    <div class="gift_header">
+        <span>赠送礼物</span>
+        <i class="pop-up" id="close-gift" style="cursor:pointer;"></i>
+    </div>
+    <div class="gift_content" id="bg">
+        <script>
+		for(var i = 1;i<=20;i++){
+			if(i==1){
+				document.write('<div class="gift_content1"><img src="images/gift_img1.jpg"><i class="gift_current" data-flow="yes"></i></div>');			
+			}else{
+				document.write('<div class="gift_content1"><img src="images/gift_img1.jpg"><i></i></div>');
+			}
+		}
+		</script>
+    </div>
+    <a href="javascript:;" class="pop-up_btn" id="send-mes">点击赠送</a>
+</div>
+<script>
+var G ={
+	show:function(){
+		$("#bg-gift").show();
+		$("#gift").fadeIn(300);
+	},
+	hide:function(){
+		$("#bg-gift").hide();
+		$("#gift").hide();
+	},
+	sent_gift:function(){
+		$("#bg > div").click(function(){
+			$(this).find('i').addClass('gift_current').attr("data-flow","yes");
+			$(this).siblings().find("i").removeClass('gift_current').removeAttr("data-flow");
+		});
+		$("#close-gift").click(function(){
+			G.hide();
+		});
+	}
+}
+G.sent_gift();
+</script>
+<script>
+$(function(){
+	$("#show").click(function(){
+		G.show();
+	});
+});
+</script>
+</body>
+</html>

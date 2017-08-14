@@ -1,0 +1,46 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+*, *:after, *:before {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+img{ 
+	display:block; width:100%;
+}
+ul,li{ list-style-type:none;}
+a{ text-decoration:none; color:#666;}
+a,input,textarea,select{ outline:none;}
+input,textarea,button,select{ font-family:Verdana, Geneva, sans-serif; width:100%;}
+body{color:#666; min-height:320px; /*max-width:500px;*/ background:#f1f3f6; font-size:12px;font-family:Arial;}
+s{text-decoration:none;}
+.of{overflow:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+.fz16{font-size:16px;}
+.fz14{font-size:14px;}
+.col{color:#000;}
+.col1{color:#fff;}
+.col2{color:#ff7c7c;}
+.col3{color:#ddd;}
+.bg1{background-color:#ff7c7c;}
+.bg2{background-color:#fff;}
+.fw1{font-weight:normal;}
+.fw2{font-weight:bold;}
+.tc{text-align:center;}
+/*底部导航图标*/
+.index-icon{display:block;width:25px;height:20px;margin:auto;}
+.index-icon1{background:url(images/index-icon1.png) no-repeat scroll center/25px 20px;}
+.index-icon2{background:url(images/index-icon2.png) no-repeat scroll center/25px 20px;}
+.index-icon3{background:url(images/index-icon3.png) no-repeat scroll center/25px 20px;}
+.index-icon4{background:url(images/index-icon4.png) no-repeat scroll center/25px 20px;}
+.index-icon5{background:url(images/index-icon5.png) no-repeat scroll center/25px 20px;}
+.index-icon6{background:url(images/index-icon6.png) no-repeat scroll center/25px 20px;}
+.index-icon7{background:url(images/index-icon7.png) no-repeat scroll center/25px 20px;}
+.index-icon8{background:url(images/index-icon8.png) no-repeat scroll center/25px 20px;}
+.index-icon9{background:url(images/index-icon9.png) no-repeat scroll center/25px 20px;}
+.index-icon10{background:url(images/index-icon10.png) no-repeat scroll center/25px 20px;}
+.current{color:#ff7c7c;font-weight:bold;}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<div class="input-wrap" data-placeHolder="请输入">
+	<input type="text" value="1042656">
+</div>
+
+<script>
+//占位符
+(function(){placeHolder=function(){for(var b=document.getElementsByTagName("*"),f=b.length,d=[],c=child=input=nextElm="",e=function(a){for(a=a.nextSibling;a&&1!=a.nodeType;)a=a.nextSibling;return a},c=0;c<f;c++)"input-wrap"==b[c].className.toLowerCase()&&d.push(b[c]);if(0!=d.length)for(b=0;b<d.length;b++)c=d[b].getAttribute("data-placeHolder"),null!=c&&(child=document.createElement("div"),input=d[b].getElementsByTagName("input")[0],d[b].appendChild(child),child.className="input-pseudo",child.style.zIndex=
+1E3,input.style.zIndex=1001,d[b].style.position="relative",child.style.position="absolute",input.style.position="relative",child.style.color="darkgrey",child.style.top=0,child.style.left="auto",child.style.bottom=0,child.style.height="20px",child.style.lineHeight="20px",child.style.margin="auto",child.innerHTML=c.replace(/(^\s*)|(\s*$)/g,""),""!=input.value&&(child.style.display="none"),input.onkeydown=function(a){nextElm=e(this);nextElm.style.display="none";8==a.keyCode&&""==this.value||17==a.keyCode||
+18==a.keyCode||91==a.keyCode||46==a.keyCode||27==a.keyCode||144==a.keyCode||33==a.keyCode||34==a.keyCode||36==a.keyCode||35==a.keyCode||45==a.keyCode||46==a.keyCode||112==a.keyCode||113==a.keyCode||114==a.keyCode||115==a.keyCode||116==a.keyCode||117==a.keyCode||118==a.keyCode||119==a.keyCode||120==a.keyCode||121==a.keyCode||122==a.keyCode||145==a.keyCode||19==a.keyCode||37==a.keyCode||38==a.keyCode||39==a.keyCode||40==a.keyCode||13==a.keyCode||93==a.keyCode?nextElm.style.display="block":16==a.keyCode&&
+""==this.value?(nextElm.style.display="block",a.preventDefault()):20==a.keyCode&&""==this.value&&(nextElm.style.display="block",a.preventDefault())},input.onkeyup=function(a){nextElm=e(this);nextElm.style.display=""!=this.value?"none":"block"},input.onblur=function(a){nextElm=e(this);nextElm.style.display=""!=this.value?"none":"block"},input.onfocus=function(a){nextElm=e(this);nextElm.style.display=""!=this.value?"none":"block"})}})(window);
+
+
+//init
+window.onload =placeHolder();
+</script>
+<style>
+input{ width:100%; height:25px; line-height:25px; padding:5px 0;background-color:transparent; border:none; outline:none;}
+.input-wrap{ width:380px; padding:0 10px;border:1px solid #ddd; margin-bottom:10px; font-size:12px;}
+
+</style>
+</body>
+</html>

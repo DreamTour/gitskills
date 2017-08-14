@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>课程评价</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link href="../css/course_evaluate.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+<ul class="courseList">
+	<li>
+    	<div class="courseList_title">课程：</div>
+        <div class="courseList_content">Hata 2016/11/9 14:00-16:00 井老师</div>
+    </li>
+	<li>
+    	<div class="courseList_title">会员姓名：</div>
+        <div class="courseList_content">张三</div>
+    </li>
+    <li>
+    	<div class="courseList_title">会员卡：</div>
+        <div class="courseList_content">瑜伽100次卡朝阳</div>
+    </li>
+	<li>
+    	<div class="courseList_title">预约人数：</div>
+        <div class="courseList_content">2人</div>
+    </li>
+	<li>
+    	<div class="courseList_title">本次消费：</div>
+        <div class="courseList_content">
+        	<span class="cost_count1">(标准1次/人)</span>
+            <span class="cost_count2">共2次</span>
+        </div>
+    </li>
+    <li>
+    	<div class="courseList_title">消费后余额：</div>
+        <div class="courseList_content">92次</div>
+    </li>
+</ul>
+<div class="remark clearfix">
+	<span>备注：</span>
+    <p>悠季瑜伽(中国)以印度传统瑜伽为教学体系，以印度传统哈他瑜伽为教学核心。</p>
+</div>
+<a href="#"><div class="course_button" id="course_button">评价</div></a>
+<div class="course_shade" id="course_shade">
+	<div class="shade_alert">
+    	<div class="shade_text">是否取消你的预约 ?</div>
+        <div class="shade_choice">
+        	<div class="shade_no">否</div>
+        	<div class="shade_yes">是</div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+	window.onload = function(){
+		var button = document.getElementById('course_button');
+		var shade = document.getElementById('course_shade');
+		var no = shade.getElementsByClassName('shade_no')[0];
+		var yes = shade.getElementsByClassName('shade_yes')[0];
+		button.onclick = function(){
+			shade.style.display = 'block';
+		}
+		no.onclick = function(){
+			shade.style.display = 'none';
+		}
+		yes.onclick = function(){
+			shade.style.display = 'none';
+		}
+	}
+</script>
+</html>

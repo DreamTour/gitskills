@@ -1,0 +1,29 @@
+
+2017-05-20 08:48:36 (18.0 MB/s) - ¡°oneinstack-full.tar.gz¡± saved [287561539/287561539]
+
+[root@instance-a ~]# tar xzf oneinstack-full.tar.gz
+[root@instance-a ~]# screen -S oneinstack
+Nginx install dir:              /usr/local/nginx
+
+Database install dir:           /usr/local/mysql
+Database data dir:              /data/mysql
+Database user:                  root
+Database password:              199410wahaha
+
+PHP install dir:                /usr/local/php
+Opcache Control Panel url:      http://10.140.0.2/ocp.php
+
+Pure-FTPd install dir:          /usr/local/pureftpd
+Create FTP virtual script:      ./pureftpd_vhost.sh
+
+phpMyAdmin dir:                 /data/wwwroot/default/phpMyAdmin
+phpMyAdmin Control Panel url:   http://10.140.0.2/phpMyAdmin
+
+redis install dir:              /usr/local/redis
+
+memcached install dir:          /usr/local/memcached
+
+index url:                      http://10.140.0.2/
+
+Please restart the server and see if the services start up fine.
+Do you want to restart OS ? [y/n]:

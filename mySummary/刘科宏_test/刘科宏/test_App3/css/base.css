@@ -1,0 +1,87 @@
+/**********************通用样式设置**********************/
+body{
+    font-size: 16px;
+    color: #333;
+    line-height: 24px;
+    background: #fff;
+    font-family: 'Microsoft YaHei';
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+a:hover{
+    color: #f30;
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+.clearfloat{
+    content:'';
+    display: table;
+    height: 0;
+    clear: both;
+}
+/*PC屏幕专用样式*/
+@media screen and (min-width: 991px) {
+    .container {
+        width: 990px;
+        margin: 0 auto;
+    }
+    .button{
+        display: inline-block;
+        width: 990px;
+        text-align: center;
+        border-radius: 4px;
+        background-color: blue;
+        color: white;
+        font-size: 16px;
+        margin-top: 40px;
+        margin-left: 290px;
+    }
+}
+/*PAD屏幕专用样式*/
+@media screen and (min-width: 720px) and (max-width: 991px) {
+    .container {
+        width: 720px;
+        margin: 0 auto;
+    }
+
+    .button{
+        width: 720px;
+    }
+}
+/*PHONE屏幕专用样式*/
+@media screen and (max-width: 720px) {
+    .container {
+        width: 100%;
+    }
+}
+/**nav**/
+.nav ul li{
+    float: left;
+    width: 240px;
+    text-align: center;
+}
+.test .img{
+    margin-top:50px;
+}
+.img img{
+    margin-left: 173px;
+}
+.button{
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 290px;
+}

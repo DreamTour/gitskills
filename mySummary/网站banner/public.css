@@ -1,0 +1,97 @@
+
+/**************************重置***************************/
+*{ margin: 0; padding: 0; box-sizing:border-box}
+a,input[type="button"],input[type="submit"],input[type="reset"],button,[role="button"],[role="spinbutton"]{cursor: pointer}
+input{border:none;outline:none;}
+a,ins,u,s{ text-decoration: none;}
+a{color:#333;}
+i,ins,u,em,font,small,b,big,center{ font-style: normal}
+i{display:inline-block;}
+h1,h2,h3,h4,h5,h6{font-style: normal;}
+img{ display: block; border: none;}
+ul,ol,li,dl,dt,dd{ list-style-type: none}
+table,table tr,table td,table th{ border-collapse: collapse; border-spacing: 0;}
+table{ width: 100%;}
+body{font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif; font-size: 12px; background-color: #ffffff;}
+.clearfix:after,.clearfix:before,.row:after,.row:before{ content:''; display: block; clear: both;}
+.row{width:1200px;margin:auto;}
+.overflow{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+
+/**************************公共样式***************************/
+/*页眉*/
+#top{position: fixed;z-index: 100;background: #fff;width: 100%;}
+.topBar{height:40px;background-color:#000;line-height:40px;}
+.topBar a{color:#fff;margin-right:10px;}
+
+/*导航*/
+.navBar{height:100px;line-height:100px;font-size:16px;border-bottom:1px solid #ddd;}
+.navBar li{float:left;margin-right:30px;}
+.navBar li:hover a,.selected{color:#006db2;}
+/***页脚***/
+/*顶部*/
+.footer-nav{background-color:#333;}
+.footer-top{border-bottom:1px solid #ddd;font-size:16px;color:#fff;padding: 30px 50px;}
+.footer-top li{float:left;border-right:1px solid #ddd;line-height:20px;margin-right:40px;padding-right:40px;}
+/*中间导航*/
+.footer-body{ padding: 30px 50px;}
+.footer-list{float:left;color:#ccc;margin-right:110px;}
+.footer-title{font-size:14px;margin-bottom:20px;}
+.footer-list a,.special-items a{color:#ccc;line-height:24px;}
+.special-items a{color:#fff;}
+.footer-items:hover a{color:#ff6700;}
+.footer-special{float:left;color:#fff;border-left:1px solid #fff;text-align:center;padding:20px 0 0 70px;}
+.special-title{color:#ff6700;font-size:24px;margin-bottom: 15px;}
+.special-items{margin-bottom:10px;}
+/*底部版权*/
+.footer-extra{background-color:#000;color:#ccc;padding: 20px 0 15px 0;}
+.footer-extra li{margin-bottom:5px;}
+
+/**************************首页***************************/
+/*轮播图*/
+#slider{position:relative;padding-top:140px;overflow:hidden;}
+#sort-items{position:absolute; z-index:10; width:100%; bottom:10px; text-align:center;}
+#sort-items li{color:transparent;display:inline-block;width:25px;height:6px;margin:0 3px;cursor:pointer;background:rgba(255,255,255,.6);}
+.current{background-color:#006db2 !important}
+.slider-btn{ position:absolute;margin:auto;top:0;bottom:0;width:100px;height:100px; z-index:10;}
+#slider-prev{left:50px; background:url(images/allow1.png) no-repeat center scroll;}
+#slider-next{right:50px;background:url(images/allow2.png) no-repeat center scroll;}
+/*金格奥产品*/
+.index-column-title{text-align:center;color:#006db2;}
+.index-column-title h5{font-size:24px;padding: 20px 0 5px 0;}
+.index-column-title p{margin-bottom:10px;}
+.case-picWrap {margin-top:20px;}
+.product-menu{margin:20px 0;}
+.product-menu li{float:left;text-align:center;border-bottom:1px solid #333;font-size:18px;width:390px;margin-right:10px;height:34px;line-height:34px;}
+.menu-current,.product-text:hover{ background:#333!important;color:#fff;}
+.product-items{width:390px;text-align:center;float:left;margin-right:10px;}
+.product-text{padding:20px 40px;margin-top:20px;}
+.product-text h5{font-size:16px;margin-bottom:5px;}
+.product-text p{line-height:20px;}
+/*金格奥案例*/
+.index-case{background-color:#f3f3f3;padding-bottom:20px;}
+.case-list{float:left;margin:0 10px 10px 0;}
+.photoShow,.case-list{width:390px;}
+.textShow{width:390px;height:260px;border:1px solid #ddd;padding: 15px;color: #666;overflow: hidden;background: #fff;position: relative;}
+.textShow h2{margin: 30px 0;font-weight: normal;font-size: 24px;color: #333;}
+.textShow p{font-size: 14px;line-height: 24px;}
+.textShow a{color: #006db2;position: absolute;right: 15px;bottom: 20px;}
+/*金格奥新闻*/
+.index-news{padding-top:20px;}
+.news-content{margin:50px 0;}
+.news-title img,.news-title p{margin:20px auto;}
+.news-title p{text-align:center;padding:0 20px;color:#006db2;}
+.news-left,.news-right,.dates-title,.news-body{ float:left;}
+.news-left{width:550px;text-align:justify;margin-right:50px;}
+.news-left p{line-height:24px;margin-top:20px;}
+.details{color:#006db2 !important;}
+.news-details:hover{font-weight:bold;}
+.news-right{width:600px;}
+.dates-title{padding: 10px 20px 10px 0;border-right: 1px solid #ddd;margin-right: 20px;text-align:center;}
+.dates-title p{margin-top: 5px;font-size: 14px;}
+.news-body{width:490px;}
+.news-body span{display:block;font-size:16px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.news-body p{margin: 10px 0;line-height: 20px;}
+.news-items{padding: 10px 0 0 10px;}
+.news-items:hover{background-color:#333;}
+.news-items:hover a{color:#fff;}
+.news-items a{display:block;}

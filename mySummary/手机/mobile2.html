@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="微信UI/weiui_min.css">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+
+<body>
+<style>
+*{ margin:0; padding:0; font-family:"Microsoft YaHei"; font-size:12px; box-sizing:border-box;}
+img{ width:100%; display:inherit;}
+
+ul,li{ list-style-type:none;}
+
+
+.buy-bottom-bar{ position:fixed; width:100%; bottom:0; height:50px; background:#fff; z-index:1000; padding-left:15px; box-shadow:0 0 3px rgba(153,153,153,.5);}
+.buy-bottom-bar .wrap{ display:flex; align-items:center;}
+.button{ height:50px; line-height:50px; width:130px; display:block; background:#F90; color:#fff; text-align:center; font-size:15px; text-decoration:none;}
+
+.rewrite-label{ width:15px; height:15px; border:1px solid #ddd; display:inline-block; box-shadow:inset 0 0 0.2 rgba(0,0,0,.2),inset 0 0 0.1px rgba(0,0,0,.25); border-radius:2px;}
+
+.rewrite-label,.addtext{ vertical-align:middle;}
+
+.item-add{ -webkit-flex:1; text-align:center; display:flex; padding:0 20px;}
+.item-add > div{ -webkit-flex:1; margin:0 10px; border-radius:3px; color:#fff;}
+</style>
+<body>
+<div class="buy-bottom-bar">
+  <div class="wrap">
+    <div class="item" style="width:44px">
+      <input type="checkbox" class="checked" id="bdlabel" style="display:none">
+      <label for="bdlabel" class="rewrite-label"></label>
+      <span class="addtext">全选</span> </div>
+    <div class="item item-add">
+      <div style="background:#F90">1</div>
+      <div style="background:#09F">2</div>
+    </div>
+    <div class="item"> <a href="javascript:;" class="button">结算(10)</a> </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+@charset "utf-8";
+.index-icon{display:block;width:25px;height:20px;margin:auto;}
+.index-icon2{background:url(images/index-icon2.png) no-repeat scroll center/25px 20px;}
+.index-icon4{background:url(images/index-icon4.png) no-repeat scroll center/25px 20px;}
+.index-icon5{background:url(images/index-icon5.png) no-repeat scroll center/25px 20px;}
+.index-icon8{background:url(images/index-icon8.png) no-repeat scroll center/25px 20px;}
+.index-icon10{background:url(images/index-icon10.png) no-repeat scroll center/25px 20px;}
+.current{color:#ff7c7c;font-weight:bold;}
+.search-icon{display:inline-block;width:16px;height:16px;margin-bottom:-3px;margin-right:5px;}
+.search-icon1{background:url(images/search-icon1.png) no-repeat;background-size:16px 16px;}
+.search-icon2{background:url(images/search-icon2.png) no-repeat;background-size:16px 16px;}
+.activity-icon{display:inline-block;width:15px;height:15px;margin-bottom:-3px;margin-right:5px;}
+.activity-icon1{background:url(images/activity-icon1.png);background-size:15px 15px;}
+.activity-icon2{background:url(images/activity-icon2.png);background-size:15px 15px;}
+/*头部底部*/
+.footer,.header{ position:fixed;left:0;width:100%;z-index:100;}
+.header{ height:44px; line-height:44px; text-align:center;background:#ff7c7c; color:#fff; padding:0 15px;display:-webkit-box;display:-webkit-flex; display:flex;}
+.head-center{flex:1}
+.footer{position:fixed;bottom:0;left:0;width:100%;display:flex;text-align:center;height:50px;background-color:#fff;align-items:center;border-top:1px solid #ddd;box-shadow:0 0 2px #ddd;}
+.bottom-nav{flex:1;border-right:1px solid #ddd;}
+.bottom-nav:last-child{border:none;}
+/*成功故事*/
+.story-content{padding:59px 0 0;}
+.story-list{margin-top:15px;}
+.story-item{border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:10px;margin-bottom:10px;background-color:#fff;}
+.story-item img{width:40%;border-radius:5px;}
+.story-text{width:60%;padding-left:10px;}
+.story-title{}
+.story-title h3{line-height:120%;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.story-bottom{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:3% 0 5%;line-height:150%;}
+.story-btn{display:block;padding:3%;width:80px;border-radius:3px;}

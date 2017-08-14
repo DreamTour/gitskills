@@ -1,0 +1,14 @@
+@charset "utf-8";
+/*头部底部*/
+.header{ position:fixed;left:0;width:100%;z-index:100;}
+.header{ height:44px; line-height:44px; text-align:center;background:#ff7c7c; color:#fff; padding:0 15px;display:-webkit-box;display:-webkit-flex; display:flex;}
+.head-center{flex:1}
+/*注册*/
+.register-content{padding:44px 0 0 0;}
+.register-box{margin-top:15px;padding-left:15px;border-top:1px solid #ddd;border-bottom:1px solid #ddd;}
+.register input{display:inline-block;width:75%;border:none;border-bottom:1px solid #ddd;font-size:14px;height:40px;line-height:40px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.register #re-code{width:40%;}
+.register .re-code-btn{display:inline-block;width:30%;padding:8px 0;border-radius:4px;margin-left:5px;}
+.register span{width:25%;font-size:14px;line-height:40px;display:inline-block;}
+.register-btn-box{padding:20px;}
+.register-btn{display:inline-block;width:100%;height:40px;text-align:center;line-height:40px;border-radius:5px;}

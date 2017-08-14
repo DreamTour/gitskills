@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>分类选择</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script><style>
+*{margin:0;padding:0;-webkit-tap-highlight-color: rgba(255, 0, 0, 0)}*,:after,:before{box-sizing:border-box}a,b,big,em,h1,h2,h3,h4,h5,h6,i,ins,small,strong,u{font-style:normal}a{color:#3a3a3a;text-decoration:none}a,button,input[type=button],input[type=submit]{cursor:pointer}a,input,select,textarea{outline:0}a,img{border:none}img{display:block}button,input,select{background:#fff}li,ol,ul{list-style-type:none}fl,fr{display:inline}.fl{float:left}.fr{float:right}clear:after{clear:both;display:block;content:''}table{width:100%}table th{font-weight:400}table,table td,table th,table tr{border-collapse:collapse}body{background:#f5f5f5;color:#555;font-family:微软雅黑;min-width:320px;max-width:1024px;margin:auto;
+font-size:12px;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+.header{height:48px;background:#393a3f;line-height:48px;color:#fff;font-size:19px;padding-left:16px;}
+.header .header_arrow{display:inline-block; width:20px; height:20px; background:url(images/header_arrow.png) no-repeat center; background-size: cover;
+vertical-align:middle;}
+.header .header_line{display:inline-block;width:2px;height:25px;background:#2b2c31;margin:0 10px;position:relative;top:7px;}
+.bigList .bigList_title{height:40px;background:#51c5c2;font-size:15px;line-height:40px; color:#fff;padding: 0px 16px;border-bottom: 1px solid #dfdfdf;
+font-weight:normal;}
+.bigList .bigList_num,.middleList .middleList_num{display:inline-block; width:22px; height:22px; border-radius:50%;background:#4d9ade; text-align:center; line-height: 22px;font-size:14px;margin-top: 9px;}
+.bigList .bigList_arrow,.middleList .middleList_arrow{display:inline-block; width:15px; height:8px; background:url(images/bigList_arrow.png) no-repeat center; background-size: cover;vertical-align:middle;margin-top:15px;margin-left:12px;}
+.bigList .bigList_arrow_right,.middleList .middleList_arrow_right{display:inline-block; width:8px; height:15px; 
+background:url(images/bigList_arrow_right.png) no-repeat center; background-size: cover;vertical-align:middle;margin-top:13px;margin-left:19px;}
+.middleList .middleList_title{height:40px;background:#ebebeb;font-size:14px;line-height:40px;padding-left:30px;padding-right:16px;
+border-bottom:1px solid #dfdfdf;color:#333333;font-weight:normal;}
+.middleList .middleList_title i{color:#fff;}
+.middleList .middleList_arrow{background:url(images/middleList_arrow.png) no-repeat center;background-size: cover;}
+.middleList .middleList_arrow_right{background:url(images/middleList_arrow_right.png) no-repeat center;background-size: cover;}
+.smallList{background: #fff;font-size:14px;}
+.smallList li{line-height: 22px; padding: 8px 0;padding-left:30px;padding-right: 53px;border-bottom: 1px solid #dfdfdf;position: relative;color:#333333;}
+.smallList li input{position: absolute;top: 10px;right:17px;}
+.smallList input{width:20px;height:20px;}
+</style>
+</head>
+<body>
+<div class="header">
+	<i class="header_arrow"></i><span class="header_line"></span> 分类选择
+</div>
+<form name="" action="">
+<div class="bigList">
+	<h2 class="bigList_title clearfix">输入电设备<i class="bigList_arrow fr"></i><i class="bigList_num fr"></i></h2>
+    <ul class="middleList">
+    	<li>
+            <h3 class="middleList_title clearfix">一次设备<i class="middleList_arrow fr"></i><i class="middleList_num fr"></i></h3>
+            <ol class="smallList">
+            	<li>变流变压器（用于35千伏变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            </ol>
+        </li>
+        <li>
+            <h3 class="middleList_title clearfix">一次设备<i class="middleList_arrow fr"></i><i class="middleList_num fr"></i></h3>
+            <ol class="smallList">
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            </ol>
+        </li>
+        <li>
+            <h3 class="middleList_title clearfix">一次设备<i class="middleList_arrow fr"></i><i class="middleList_num fr"></i></h3>
+            <ol class="smallList">
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            </ol>
+        </li>
+    </ul>
+</div>
+<div class="bigList">
+	<h2 class="bigList_title clearfix">输入电设备<i class="bigList_arrow fr"></i><i class="bigList_num fr"></i></h2>
+    <ul class="middleList">
+    	<li>
+            <h3 class="middleList_title clearfix">一次设备<i class="middleList_arrow fr"></i><i class="middleList_num fr"></i></h3>
+            <ol class="smallList">
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            </ol>
+        </li>
+        <li>
+            <h3 class="middleList_title clearfix">一次设备<i class="middleList_arrow fr"></i><i class="middleList_num fr"></i></h3>
+            <ol class="smallList">
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            </ol>
+        </li>
+        <li>
+            <h3 class="middleList_title clearfix">一次设备<i class="middleList_arrow fr"></i><i class="middleList_num fr"></i></h3>
+            <ol class="smallList">
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            </ol>
+        </li>
+    </ul>
+</div>
+<div class="bigList">
+	<h2 class="bigList_title clearfix">输入电设备<i class="bigList_arrow fr"></i><i class="bigList_num fr"></i></h2>
+    <ul class="middleList">
+    	<li>
+            <h3 class="middleList_title clearfix">一次设备<i class="middleList_arrow fr"></i><i class="middleList_num fr"></i></h3>
+            <ol class="smallList">
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            </ol>
+        </li>
+        <li>
+            <h3 class="middleList_title clearfix">一次设备<i class="middleList_arrow fr"></i><i class="middleList_num fr"></i></h3>
+            <ol class="smallList">
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            </ol>
+        </li>
+        <li>
+            <h3 class="middleList_title clearfix">一次设备<i class="middleList_arrow fr"></i><i class="middleList_num fr"></i></h3>
+            <ol class="smallList">
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            </ol>
+        </li>
+    </ul>
+</div>
+<div class="bigList">
+	<h2 class="bigList_title clearfix">输入电设备<i class="bigList_arrow fr"></i><i class="bigList_num fr"></i></h2>
+    <ul class="middleList">
+    	<li>
+            <h3 class="middleList_title clearfix">一次设备<i class="middleList_arrow fr"></i><i class="middleList_num fr"></i></h3>
+            <ol class="smallList">
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            </ol>
+        </li>
+        <li>
+            <h3 class="middleList_title clearfix">一次设备<i class="middleList_arrow fr"></i><i class="middleList_num fr"></i></h3>
+            <ol class="smallList">
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            </ol>
+        </li>
+        <li>
+            <h3 class="middleList_title clearfix">一次设备<i class="middleList_arrow fr"></i><i class="middleList_num fr"></i></h3>
+            <ol class="smallList">
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            	<li>变流变压器（用于35千伏及以上变电站，不包括10KV箱式变电站、35KV非晶合金变压器、移动变电站和站用变成套柜<input name="check" type="checkbox" /></li>
+            </ol>
+        </li>
+    </ul>
+</div>
+</form>
+</body>
+<script>
+	$(function(){$(".bigList_title").click(function(){$(this).next().toggle();$(this).find("i:first").toggleClass("bigList_arrow_right")});$(".middleList_title").click(function(){$(this).next().toggle();$(this).find("i:first").toggleClass("middleList_arrow_right")});var a=0,b=0;$(".middleList_num").html(0);$(".bigList_num").html(0);$('input[type="checkbox"]').change(function(){b=$(this).parent().parent().find("input:checkbox:checked").length;a=$(this).parent().parent().parent().parent().find("input:checkbox:checked").length;
+$(this).parent().parent().parent().parent().parent().find(".bigList_num").html(a);$(this).parent().parent().parent().find(".middleList_num").html(b);$(this).is(":checked")?(b++,a++):(b--,a--)})});
+</script>
+</html>

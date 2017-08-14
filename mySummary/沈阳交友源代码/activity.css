@@ -1,0 +1,145 @@
+@charset "utf-8";
+/*banner*/
+.banner{
+	height:450px;
+	margin:auto;
+	overflow:hidden;
+	position:relative;	
+}
+#banner-scontainer {
+    position: absolute;
+    overflow: hidden;
+    height: 450px;
+    top: 0;
+    width: 100%;
+}
+#banner-scontainer .list-item li{ float:left; height:450px;}
+#banner-scontainer .list-item:after{ content:''; display:block; clear:both;}
+#banner-scontainer .sort-item{ position:absolute; width:100%; bottom:20px; left:0; z-index:100; text-align:center}
+#banner-scontainer .sort-item li{ width:10px; height:10px; background:#fff; display:inline-block; margin:0 5px;}
+#banner-scontainer .sort-item .cur{ background:#C00 !important;}
+/*活动内容*/
+.activity_container_box{
+	background-color:#f6f7fb;
+	margin-top:20px;
+	overflow:hidden;	
+}
+.activity_container{
+	width:1000px;
+	margin:auto;
+}
+.activity_top{
+	height:60px;
+	background-color:#fff;
+	margin:20px 0;
+	overflow:hidden;
+}
+.my_activity,.off-line{
+	float:left;
+	line-height:60px;
+	font-size:18px;
+}
+.off-line{
+	width:130px;
+	text-align:center;
+	color:#000;
+}
+.active{background-color: #ff7c7c;color:#fff;}
+.my_activity{
+	color:#000;
+	margin-left:40px;
+}
+.activity_content01{
+	height:260px;
+	background-color:#fff;
+	border:1px solid #d4d4d4;
+	padding:20px 30px;
+	margin-bottom:15px;
+}
+.activity_content01 h1{
+	font-size:20px;
+	font-weight:bold;
+	color:#000;
+	margin-bottom:15px;
+}
+.activity_body_introduce{
+	width:560px;
+	float:right;
+	position:relative;
+}
+.activity_body_introduce p{
+	color:#000;
+	font-size:14px;
+	height:60px;
+	overflow:hidden;
+	margin-bottom:10px;
+}
+.activity_time,.activity_place{
+	margin-bottom:10px;
+}
+.activity_time i,.activity_place i{
+	width:22px;
+	height:22px;
+	margin-bottom:-4px;
+}
+.activity_time span,.activity_place span{
+	color:#747474;
+	font-size:16px;
+	margin-left:5px;
+}
+.sign_up{
+	color:#000;
+	font-size:16px;
+	margin-left:4px;
+}
+.sign_up a{
+	color:#ff7c7c;
+	font-size:16px;
+	margin:0 3px;
+	text-decoration:underline;
+}
+.sign_up_btn{
+	position:absolute;
+	right:0px;
+	bottom:-8px;
+	display:inline-block;
+	width:130px;
+	height:40px;
+	background-color:#ff7c7c;
+	color:#fff;
+	font-size:18px;
+	line-height:40px;
+	text-align:center;
+}
+.activity_icon01{
+	background-position:-18px -9px;
+}
+.activity_icon02{
+	background-position:-18px -37px;
+}
+.activity_btn_item{
+	display:inline-block;
+	width:30px;
+	height:30px;
+	border:1px solid #d4d4d4;
+	text-align:center;
+	font-size:16px;
+	line-height:30px;
+	background-color:#fff;
+	margin-right:5px;
+}
+.activity_btn_icon01{
+	background-position:-12px -61px;
+}
+.activity_btn_icon01,.activity_btn_icon02{	color:transparent;}
+.activity_btn_icon02{
+	background-position:-9px -85px;
+}
+.activity_btn_current{
+	background-color:#ff7c7c;
+	color:#fff;
+}
+.activity_btn{
+	text-align:center;
+	margin:30px 0 50px;
+}

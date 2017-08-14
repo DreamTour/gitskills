@@ -1,0 +1,116 @@
+body{
+    font-size: 16px;
+}
+.xuanxiang{
+    margin-top: 15px;
+}
+.xuanxiang_box >p{
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+.select{
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color:#FAFAFA ;
+
+}
+.xuanzhong{
+    display: inline-block;
+}
+.weixuan{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #DDDDDD;
+}
+.xuanzhong .circle{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:#1FC5FB;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.result{
+    display: inline-block;
+    background-color:#1FC5FB;
+    color: white;
+    border-radius: 4px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*PC屏幕专用样式*/
+@media screen and (min-width: 991px) {
+    .one{
+        width: 990px;
+        border-bottom: 1px solid #999999;
+    }
+    .two{
+        width: 990px;
+    }
+    .result{
+        width: 990px;
+    }
+}
+.xuanxiang_box{
+    margin: 0 10px;
+}
+/*PAD屏幕专用样式*/
+@media screen and (min-width: 720px) and (max-width: 991px) {
+    .one{
+        width: 698px;
+        border-bottom: 1px solid #999999;
+    }
+    .result{
+        width: 698px;
+    }
+}
+/*PHONE屏幕专用样式*/
+@media screen and (max-width: 720px) {
+    .one {
+        width: 100%;
+        border-bottom: 1px solid #999999;
+    }
+}
+/*PAD屏幕专用样式*/
+@media screen and (min-width: 720px) and (max-width: 991px) {
+    .two{
+        width: 718px;
+
+    }
+}
+/*PHONE屏幕专用样式*/
+@media screen and (max-width: 720px) {
+    .two {
+        width: 100%;
+    }
+}
+.xuanzhong .circle_n{
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    margin-bottom: 9px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.wenzi{
+    display: inline-block;
+    margin-left: 5px;
+}
+@media screen and (max-width: 700px) {
+    .result{
+        width: 100%;
+    }
+}

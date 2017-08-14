@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+			ul,li{list-style: none;}
+			.dom{
+				width: 400px;
+				height: 250px;
+				border: 1px solid red;
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden;
+			}
+			.slide{
+				width: 100%;
+				height: auto;
+				position: absolute;
+				top:0;
+				left: 0;
+			}
+			.slide li,.slide li img{width: 400px;height: 250px;}
+		</style>
+	</head>
+	<body>
+		<div class="dom">
+			<ul class="slide">
+				<li><img src="http://www.bz55.com/uploads/allimg/150305/139-1503051FS0.jpg"></li>
+				<li><img src="http://love.doghouse.com.tw/image/wallpaper/011102/bf1554.jpg"></li>
+				<li><img src="http://h.hiphotos.baidu.com/image/h%3D200/sign=ae2869faf003738dc14a0b22831ab073/91529822720e0cf3c0e358a10c46f21fbe09aa57.jpg"></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="jquery-3.1.1.min.js" ></script>
+	<script>
+		$(function(){
+			setInterval(function(){
+				slide();
+			},3000);
+			function slide(){
+				$('.slide').animate({'top':-250+'px'},100,function(){
+					$('.slide li:first-child').insertAfter($('.slide li:last-child'));
+					$('.slide').css('top',0);
+				});
+			}
+		});
+	</script>
+</html>

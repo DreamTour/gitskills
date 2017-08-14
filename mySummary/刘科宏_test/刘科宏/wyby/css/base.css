@@ -1,0 +1,323 @@
+/**********************通用样式设置**********************/
+body{
+    font-size: 16px;
+    color: #333;
+    line-height: 24px;
+    background: #fff;
+    font-family: 'Microsoft YaHei';
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+a:hover{
+    color: #f30;
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+.clearfloat{
+    content:'';
+    display: block;
+    clear: both;
+}
+.biaopan{
+    background-image:linear-gradient(#03A9F5,#6BDCB8);
+    height: 560px;
+    position: relative;
+}
+.b1,.b2,.b3,.b4,.point,.proj{
+    position: absolute;
+    left: 100px;
+    margin-top: 15px;
+ }
+.biaopan .b3 img{
+    width:575px;
+}
+.biaopan .b4 img{
+    width: 575px;
+}
+
+.point{
+    left: 290px;
+    top: 263px;
+    width: 200px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+.proj{
+    border: 1px solid #ffffff;
+    border-radius:10px;
+    width: 223px;
+    left: 280px;
+    top: 441px;
+    font-size: 34px;
+    line-height: 63px;
+    text-align: center;
+    color: white;
+}
+.point strong{
+    display: inline-block;
+    margin: 30px 0 22px;
+}
+.point>p:last-child{
+  font-size: 14px;
+}
+.bp_box{
+    position: absolute;
+}
+/**nav***/
+.nav>span{
+    display: inline-block;
+    width:256px;
+    text-align: center;
+    background-color: #C9F6E8;
+    float: left;
+}
+.nav>.study{
+    text-align: center;
+}
+.study>b{
+    display: inline-block;
+    width: 88px;
+    height: 88px;
+    margin-top: 10px;
+    background: url("../img/graduate-xxjh.png") no-repeat;
+}
+.my_point{
+    border-left: 1px solid #D8D8D8;
+    border-right: 1px solid #D8D8D8;
+    box-sizing: border-box;
+}
+.my_point>b{
+    display: inline-block;
+    width: 88px;
+    height: 88px;
+    margin-top: 10px;
+    background: url("../img/graduate-wdcj.png") no-repeat;
+}
+.warning>b{
+    display: inline-block;
+    width: 88px;
+    height: 88px;
+    margin-top: 10px;
+    background: url("../img/graduate-gkyj.png") no-repeat;
+}
+.nav>.qur{
+    background-color: white;
+}
+.jh_nav{
+    border-top: 1px solid #D8D8D8;
+}
+.jh_nav span{
+    float: left;
+    width: 50%;
+    text-align: center;
+    line-height:45px;
+    border-right: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D8D8D8;
+    box-sizing:border-box ;
+}
+.cur{
+    color: darkturquoise;
+}
+.xq1{
+border-bottom: 1px solid #D8D8D8;
+}
+.xq1>P>span{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 21px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.xq1>P>b.jia{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    margin-top: 10px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background: url("../img/graduate_jia.png") no-repeat;
+}
+.xq1>P>b.jian{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    margin-top: 10px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background: url("../img/graduate_jian.png") no-repeat;
+}
+.xq1_xq,.xq2_xq,.xq3_xq,.xq4_xq,.xq5_xq,.xq6_xq,.xq7_xq,.xq8_xq{
+    display: none;
+}
+.xq1_xq>li,.xq2_xq>li,.xq3_xq>li,.xq4_xq>li,.xq5_xq>li,.xq6_xq>li,.xq7_xq>li,.xq8_xq>li{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+.xq1_xq>li:first-child,.xq2_xq>li:first-child,.xq3_xq>li:first-child,.xq4_xq>li:first-child,.xq5_xq>li:first-child
+,.xq6_xq>li:first-child,.xq7_xq>li:first-child,.xq8_xq>li:first-child{
+    background-color: aquamarine;
+}
+.xq1_xq>li>span,.xq2_xq>li>span,.xq3_xq>li>span,.xq4_xq>li>span,.xq5_xq>li>span,.xq6_xq>li>span,.xq7_xq>li>span
+,.xq8_xq>li>span{
+    display: inline-block;
+    width: 25%;
+}
+/*PC屏幕专用样式*/
+
+@media screen and (min-width: 991px){
+    .big_box{
+        margin: 0 auto;
+        width: 800px;
+    }
+    .container {
+        width: 768px;
+        margin: 0 auto;
+    }
+    .box{
+        border: 1px solid #000000;
+        position: absolute;
+    }
+    .bp_box{
+        position: absolute;
+        left: 0%;
+        top:3%;
+    }
+    .biaopan .b2 img{
+        width: 300px;
+    }
+    .biaopan .b2{
+        left: 237px;
+        top: 153px;
+    }
+    .biaopan .b1{
+        left: 237px;
+        top: 153px;
+        z-index: 1;
+    }
+    .biaopan .b1 img{
+
+        width: 300px;
+    }
+
+}
+    /*PAD屏幕专用样式*/
+@media screen and (min-width:768px) and (max-width: 991px) {
+    .box{
+        border: 1px solid #000000;
+        position: absolute;
+    }
+    .container {
+        width: 768px;
+        margin: 0 auto;
+    }
+    .nav>span{
+        width:33.3%;
+    }
+    .bp_box{
+        position: absolute;
+        left: 0%;
+        top:3%;
+    }
+    .big_box{
+        margin: 0 auto;
+        width:768px;
+    }
+    .biaopan .b2 img{
+        width: 300px;
+    }
+    .biaopan .b2{
+        left: 237px;
+        top: 153px;
+    }
+    .biaopan .b1{
+        left: 237px;
+        top: 153px;
+        z-index: 1;
+    }
+    .biaopan .b1 img{
+
+        width: 300px;
+    }
+}
+/*PHONE屏幕专用样式*/
+@media screen and (max-width: 767px) {
+    .box{
+        border: 1px solid #000000;
+        position: absolute;
+        width: 100%;
+    }
+    .nav>span{
+        width:33.3%;
+    }
+    .big_box{
+        margin: 0 auto;
+    }
+    .bp_box{
+        position: relative;
+        margin: 0 auto;
+        width: 300px;
+        height: 400px;
+        text-align: center;
+    }
+    .biaopan{
+        height: 400px;
+    }
+    .b1,.b2,.b3,.b4,.point,.proj{
+        position: absolute;
+        left: 0;
+    }
+    .biaopan .b3 img{
+        width:300px;
+    }
+    .biaopan .b4 img{
+        width: 300px;
+    }
+    .biaopan .b2 img{
+        width: 177px;
+    }
+    .biaopan .b1 img{
+        width: 177px;
+    }
+    .biaopan .b2{
+        left: 63px;
+        top: 74px;
+    }
+    .biaopan .b1{
+        left: 63px;
+        top: 74px;
+        z-index: 1;
+    }
+    .point{
+        left: 62px;
+        top: 123px;
+        width: 186px;
+    }
+    .proj{
+        width: 186px;
+        left: 62px;
+        top: 274px;
+    }
+}
+.score{
+    display: none;
+}
+.warn{
+    display: none;
+}
+

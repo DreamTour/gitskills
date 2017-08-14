@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script>
+        
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;;
+        }
+        .ad-change{
+            width: 520px;
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+        .ad-change ul li{float: left; }
+        .ad-change ol{position: absolute;  bottom: 10px;  left: 235px;}
+        .ad-change ol li{
+            float: left;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 5px;
+            background: #b7b7b7;
+        }
+        .ad-change ol .active{
+            background: #ff5400;
+        }
+        .ad-change .prev, .ad-change .next{
+            position: absolute;
+            top: 120px;
+            display: block;
+            width: 20px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 20px;
+            background: rgba(66,66,66,0.5);
+        }
+        .ad-change .prev{
+            left: 0;
+        }
+        .ad-change .next{
+            right: 0;
+        }
+        .ad-change .prev:hover, .next:hover{background: rgba(66,66,66,0.8);}
+    </style>
+
+</head>
+<body>
+<div class="ad-change">
+    <ul>
+        <li><a href="#"><img src="images/ad-t-l/1.jpg" alt="" /></a></li>
+        <li><a href="#"><img src="images/ad-t-l/2.jpg" alt="" /></a></li>
+        <li><a href="#"><img src="images/ad-t-l/3.jpg" alt="" /></a></li>
+        <li><a href="#"><img src="images/ad-t-l/4.jpg" alt="" /></a></li>
+        <li><a href="#"><img src="images/ad-t-l/5.jpg" alt="" /></a></li>
+    </ul>
+    <ol>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <div class="imgTabBtn">
+        <a class="prev" href="javascript:;"><</a>
+        <a class="next" href="javascript:;">></a>
+    </div>s
+</div>
+</body>
+</html>
+<!--
+<script>
+    $(document).ready(function() {
+        var length,
+                currentIndex = 0,
+                interval,
+                hasStarted = false, //是否已经开始轮播
+                t = 3000; //轮播时间间隔
+        length = $('.ad-change ul li').length;
+
+        //将除了第一张图片隐藏
+        $('.ad-change ul li:not(:first)').hide();
+
+        //将第一个slider-item设为激活状态
+        $('.ad-change ol li:first').addClass('active');
+
+        //隐藏向前、向后翻按钮
+        $('.imgTabBtn').hide();
+
+        //鼠标上悬时显示向前、向后翻按钮,停止滑动，鼠标离开时隐藏向前、向后翻按钮，开始滑动
+        $('.ad-change').hover(function() {
+            stop();
+            $('.imgTabBtn').show();
+        }, function() {
+            $('.imgTabBtn').hide();
+            start();
+        });
+        $('.ad-change ol li').hover(function() {
+            stop();
+            var preIndex = $(".ad-change ol li").filter(".active").index();
+            currentIndex = $(this).index();
+            play(preIndex, currentIndex);
+        }, function() {
+            start();
+        });
+        $('.ad-change .prev').unbind('click');
+        $('.ad-change .prev').bind('click', function() {
+            pre();
+        });
+        $('.ad-change .next').unbind('click');
+        $('.ad-change .next').bind('click', function() {
+            next();
+        });
+
+        /**
+         * 向前翻页
+         */
+        function pre() {
+            var preIndex = currentIndex;
+            currentIndex = (&#45;&#45;currentIndex + length) % length;
+            play(preIndex, currentIndex);
+        }
+        /**
+         * 向后翻页
+         */
+        function next() {
+            var preIndex = currentIndex;
+            currentIndex = ++currentIndex % length;
+            play(preIndex, currentIndex);
+        }
+        /**
+         * 从preIndex页翻到currentIndex页
+         * preIndex 整数，翻页的起始页
+         * currentIndex 整数，翻到的那页
+         */
+        function play(preIndex, currentIndex) {
+            $('.ad-change ul li').eq(preIndex).fadeOut(500)
+                    .parent().children().eq(currentIndex).fadeIn(1000);
+            $('.ad-change ol li').removeClass('active');
+            $('.ad-change ol li').eq(currentIndex).addClass('active');
+        }
+        /**
+         * 开始轮播
+         */
+        function start() {
+            if(!hasStarted) {
+                hasStarted = true;
+                interval = setInterval(next, t);
+            }
+        }
+        /**
+         * 停止轮播
+         */
+        function stop() {
+            clearInterval(interval);
+            hasStarted = false;
+        }
+        //开始轮播
+        start();
+    });
+</script>-->

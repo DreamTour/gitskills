@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>相约盘州—赠送礼物</title>
+<link type="text/css" rel="stylesheet" href="public_style.css">
+<link type="text/css" rel="stylesheet" href="my_gift.css">
+<script type='text/javascript' src='http://www.yumukeji.com/library/jquery-1.11.2.min.js'></script>
+
+</head>
+<style>
+.gift_content1{ display:inline-block; position:relative;}
+.gift_content1 >i{ display: block;
+    height: 13px;
+    width: 13px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;}
+</style>
+<body>
+<input type="button" id="show" value="显示" />
+<div class="gift_zzc" id="bg-my-gift" style="display:none;"></div>
+<div class="gift" id="my-gift" style="display:none;">
+    <div class="gift_header">
+        <span>我收到的礼物</span>
+        <i class="pop-up" id="close-my-gift" style="cursor:pointer;"></i>
+    </div>
+    <div class="gift_content" id="bg-my">
+        <script>
+		for(var i = 1;i<=20;i++){
+			if(i==1){
+				document.write('<div class="gift_content1"><img src="images/gift_img1.jpg"><p><a href="http://www.yumukeji.com/project/xiangyuepanzhou/SearchMx.php">如果爱</a><span>赠送</span></p></div>');			
+			}else{
+				document.write('<div class="gift_content1"><img src="images/gift_img1.jpg"><p><a href="http://www.yumukeji.com/project/xiangyuepanzhou/SearchMx.php">如果爱</a><span>赠送</span></p></div>');
+			}
+		}
+		</script>
+    </div>
+    <a href="javascript:;" class="pop-up_btn" id="send-my-mes">点击确认</a>
+</div>
+<script>
+var MG ={
+	show:function(){
+		$("#bg-my-gift").show();
+		$("#my-gift").fadeIn(300);
+	},
+	hide:function(){
+		$("#bg-my-gift").hide();
+		$("#my-gift").hide();
+	},
+	sent_gift:function(){
+		$("#close-my-gift").click(function(){
+			MG.hide();
+		});
+	}
+}
+MG.sent_gift();
+</script>
+<script>
+$(function(){
+	$("#show").click(function(){
+		MG.show();
+	});
+});
+</script>
+</body>
+</html>

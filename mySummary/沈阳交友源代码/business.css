@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*广告*/
+.ad{
+	width:1000px;
+	height:90px;
+	clear:both;
+	margin:20px auto 15px;
+}
+/*商务合作*/
+.business_box{width:1000px;margin:20px auto;}
+.business_title_box{width:160px;border:1px solid #ddd;text-align:center;margin-right:20px;}
+.business_title_box li{line-height:44px;border-top:1px solid #ddd;}
+.business_title_box .business_title{color:#fff;background-color:#ff7c7c;border:none;}
+.business_content{border:1px solid #ddd;padding:30px;}
+.business_content p{max-width:750px;text-indent:2em;line-height:24px;}
+.business_content img{margin:20px;}

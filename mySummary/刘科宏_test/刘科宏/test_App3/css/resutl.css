@@ -1,0 +1,237 @@
+.result{
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin: 15px 0;
+}
+.result b{
+display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: bottom;
+    background: url("../img/cp_03.png") no-repeat;
+    margin-right: 10px;
+}
+.result>span{
+    color: blue;
+}
+
+.fenbu>p{
+    margin: 10px 0;
+    text-align: center;
+}
+.qiang{
+    display: inline-block;
+    border-right: 1px solid #0022ff;
+}
+.mingxian{
+    display: inline-block;
+    border-right: 1px solid #0022ff;
+}
+.zhongdeng{
+    display: inline-block;
+    border-right: 1px solid #0022ff;
+}
+.ruo{
+    display: inline-block;
+}
+.qr{
+    margin: 0 auto;
+    border: 1px solid #0022ff;
+    border-top: none;
+    text-align: center;
+    font-size: 14px;
+    line-height: 15px;
+}
+.test_result{
+    background-color: #eeeeee;
+    padding:5px;
+    margin-top: 20px;
+}
+/*PC屏幕专用样式*/
+@media screen and (min-width: 991px) {
+    .e,.i,.s,.n,.t,.f,.j,.p{
+        width: 990px;
+        margin: 20px 0;
+    }
+    .col2{
+        width: 180px;
+    }
+    .col6{
+        width: 540px;
+        height: 24px;
+    }
+    .col6>span.bili{
+        height: 24px;
+        width: 300px;
+    }
+    .qiang{
+
+        width: 90px;
+    }
+    .mingxian{
+
+        width: 190px;
+
+    }
+    .zhongdeng{
+        width:190px;
+    }
+    .ruo{
+        width: 67px;
+    }
+    .test_result{
+        width: 845px;
+    }
+    table{
+        width:854px;
+    }
+}
+.cont_box{
+    margin: 0 10px;
+}
+/*PAD屏幕专用样式*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .e,.i,.s,.n,.t,.f,.j,.p{
+        width: 720px;
+        margin: 20px 0;
+    }
+    .col2{
+        display: inline-block;
+        width: 135px;
+    }
+    .col6{
+        display: inline-block;
+        vertical-align: middle;
+        width: 432px;
+        height: 24px;
+        border: 1px solid #0022ff;
+    }
+    .col6>span.bili{
+        display: inline-block;
+        height: 24px;
+        width: 300px;
+        background-color: #ff3300;
+    }
+    .qr{
+        width: 432px;
+        margin: 0 auto;
+        border: 1px solid #0022ff;
+        border-top: none;
+        text-align: center;
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .qiang{
+        display: inline-block;
+        width: 80px;
+        border-right: 1px solid #0022ff;
+    }
+    .mingxian{
+        display: inline-block;
+        width: 130px;
+        border-right: 1px solid #0022ff;
+    }
+    .zhongdeng{
+        display: inline-block;
+        width: 130px;
+        border-right: 1px solid #0022ff;
+    }
+    .ruo{
+        display: inline-block;
+        width: 43px;
+    }
+}
+.col2{
+    display: inline-block;
+
+}
+.col6{
+    display: inline-block;
+    vertical-align: middle;
+    height: 24px;
+    border: 1px solid #0022ff;
+}
+.col6>span.bili{
+    display: inline-block;
+    height: 24px;
+    background-color: #ff3300;
+}
+.qr{
+    margin: 0 auto;
+    border: 1px solid #0022ff;
+    border-top: none;
+    text-align: center;
+    font-size: 14px;
+    line-height: 15px;
+}
+/*PHONE屏幕专用样式*/
+@media screen and (max-width: 767px) {
+    .e,.i,.s,.n,.t,.f,.j,.p{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .col2{
+        width: 19%;
+    }
+    .col6{
+        width: 55%;
+    }
+    .qr{
+        width: 55%;
+    }
+    .qiang{
+        width: 19%;
+    }
+    .mingxian{
+        width: 30%;
+    }
+    .zhongdeng{
+        width: 30%;
+    }
+    .ruo{
+        width: 19%;
+    }
+    table{
+        width: 100%;
+    }
+
+}
+.bfb{
+    text-align: center;
+}
+.col6>span.bili{
+    display: inline-block;
+    height: 24px;
+    background-color: #ff3300;
+    width: 40%;
+}
+.qr_box{
+    margin-top: 10px;
+    text-align: center;
+    border-top: none;
+}
+.qr_box>span{
+    float: left;
+}
+.col2 strong{
+    color: #0022ff;
+    font-weight: normal;
+}
+
+.sugg b{
+    display: inline-block;
+    vertical-align: bottom;
+    width: 24px;
+    height: 24px;
+    background: url("../img/cp_06.png");
+}
+.sugg{
+    margin-top: 15px;
+}
+table{
+    margin-top: 15px;
+}
+table span{
+    color: #0022ff;
+}

@@ -1,0 +1,37 @@
+@charset "utf-8";
+.v-icon{display:inline-block;width:15px;height:15px;margin-bottom:-3px;margin-left:2px;background:url(images/v-icon.png);background-size:15px 15px;}
+.my-icon-top{display:inline-block;width:22px;height:22px;margin-bottom:-4px;margin-right:4px;}
+.my-icon1{background:url(images/my-icon1.png);background-size:22px 22px;}
+.my-icon2{background:url(images/my-icon2.png);background-size:22px 22px;}
+.my-icon{display:inline-block;width:40px;height:40px;}
+.my-icon3{background:url(images/my-icon3.png)no-repeat scroll center/40px 40px;}
+.my-icon4{background:url(images/my-icon4.png)no-repeat scroll center/40px 40px;}
+.my-icon5{background:url(images/my-icon5.png)no-repeat scroll center/40px 40px;}
+.my-icon6{background:url(images/my-icon6.png)no-repeat scroll center/40px 40px;}
+.my-icon7{background:url(images/my-icon7.png)no-repeat scroll center/30px 30px;}
+.my-icon8{background:url(images/my-icon8.png)no-repeat scroll center/30px 30px;}
+.my-icon9{background:url(images/my-icon9.png)no-repeat scroll center/35px 35px;}
+.my-icon10{background:url(images/my-icon10.png)no-repeat scroll center/40px 40px;}
+.my-icon11{background:url(images/my-icon11.png)no-repeat scroll center/40px 40px;}
+/*头部底部*/
+.footer,.header{ position:fixed;left:0;width:100%;z-index:100;}
+.header{ height:44px; line-height:44px; text-align:center;background:#ff7c7c; color:#fff; padding:0 15px;display:-webkit-box;display:-webkit-flex; display:flex;}
+.head-center{flex:1}
+.footer{position:fixed;bottom:0;left:0;width:100%;display:flex;text-align:center;height:50px;background-color:#fff;align-items:center;border-top:1px solid #ddd;box-shadow:0 0 2px #ddd;}
+.bottom-nav{flex:1;border-right:1px solid #ddd;}
+.bottom-nav:last-child{border:none;}
+/*我的礼物*/
+/*顶部*/
+.photo-content{padding:44px 0 0;}
+.photo-top{background:url(images/my-bg.jpg) no-repeat;background-size:100% 100%;padding:18%;width:100%;position:relative;}
+.photo-in{width:56%;height:80%;margin:auto;position:absolute;left:0;right:0;top:0;bottom:0;}
+.photo-in img{width:48%;border-radius:50%;}
+.photo-title{margin-top:15%;margin-left:10px;}
+.photo-top-nav{line-height:40px;height:46px;border-top:1px solid #ddd;border-bottom:1px solid #ddd;display:flex;text-align:center;padding:3px 0;margin-bottom:15px;}
+.photo-top-nav>p{flex:1;border-right:1px solid #ddd;}
+.photo-top-nav>p:last-child{border:none;}
+/*礼物*/
+.photo-co{display:flex;display:-webkit-flex;padding:15px 5px 5px 15px;-webkit-flex-wrap:wrap; flex-wrap:wrap;}
+.photo-co li{width:33.33%;padding:0 10px 10px 0;}
+.gift-give{margin-top:3px;text-align:center;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.gift-give a{margin-right:2px;}
