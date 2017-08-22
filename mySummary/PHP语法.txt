@@ -1,0 +1,90 @@
+$GLOBALS：超全局变量
+
+mysql_num_rows：查询有多少条
+
+mb_substr($array['time'],0,10,'utf-8'):截取字符串
+
+htmlentities($_POST['userNickName'],ENT_QUOTES,'utf-8'):加密
+
+mysql_query：执行一条查询语句，返回一个结果集（这个查询语句查出来的数据库记录（可能是多条记录））
+
+mysql_fetch_array：从结果集中取出一条记录 (返回一个关联数组加上数字)
+
+select 要查询的数据库字段 from 数据库表名称: 从数据库中选取数据 （*代表所有字段）
+
+where:选取匹配指定条件的数据
+
+order by:对记录集中的数据进行排序 （后面加字段或多个字段）
+
+desc:使用 DESC 关键词来设定降序排序
+
+mysql_num_rows() 函数返回结果集中行的数目
+
+mysql_fetch_assoc: 返回一个关联数组
+
+insert into:插入一条记录（mysql数据库语言）表名称(表字段) values(要插入的值):要一一对应
+
+update 数据库表名称 set 数据库表字段名称:更新数据库记录
+
+delete from ：删除哪张表里面的数据
+
+join:
+
+preg_match：匹配正则表达式
+
+strlen()：函数返回字符串的长度
+
+mb_strlen:
+
+$_SESSION:在服务器上和客户浏览器上创建一个存储记录
+
+$_GET:存放？后面url中带的参数
+
+$_POST:存放的你传过来的字符
+
+$_FILES:存放的你传过来的文件
+
+unlink:删除服务器文件
+
+limit 1,3：从第一条记录开始，取出三条记录
+limit 1:取出一条记录
+
+like:按一定的数据模型进行匹配查询（如"%老鼠爱大米*"的含义是：左边有多个未知字符，中间有老鼠爱大米，右边有一个未知字符）
+
+time():当前时间戳
+
+foreach(数组名称as自定义变量):从数组中取出一条记录（值），直到全部取出为止
+
+$_SESSION['warn']:跳转或刷新时使用
+
+$json['warn']:AJAX异步处理的时候返回的提示信息
+
+require_once:引入一次文件
+
+avg: mysql里面求平均数的函数
+
+$:php的变量标识符
+
+require_once(dirname(dirname(__FILE__))."/control/ku/configure.php"):
+require_once：包含一次 
+dirname：查找，找到 （多包含一层，就向上查找一次）
+__FILE__：服务器根目录
+
+include:包含一次（可以多次包含）
+
+json_encode($json):把$json数组转化为json对象
+
+website:根据website表ID号查询对应的记录
+$num:分页函数里面带的一个全局变量(即sql查询语言总共有多少条记录)
+$query: 分页函数里面返回的结果集
+$dateTime = date("Y-m-d",strtotime($array['UpdateTime']));显示年月日
+$age = date("Y") - substr($array['Birthday'],0,4);算年龄
+$Region = query("region"," id = '$array[RegionId]' ");算地址
+
+/^[^0-9^a-z^A-Z]*$/u
+
+/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}(\d|x|X)$/身份证
+/^[0-9a-zA-Z]*$/u微信号  数字或字母
+/^[\x{4e00}-\x{9fa5}]+$/u中文
+/^[^0-9^a-z^A-Z]*$/u
+/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/邮箱

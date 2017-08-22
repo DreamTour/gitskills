@@ -1,0 +1,11 @@
+return new Promise((resolve, reject) {
+    ajaxPost({
+        //你的选项,
+        success: resolve,
+        error: reject
+    });
+});
+
+然后调用你的函数就是searchData(obj).then((data) => {
+    //处理数据
+});
